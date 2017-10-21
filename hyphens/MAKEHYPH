@@ -1,0 +1,3 @@
+findhyph $1.log
+./replacer.py $1
+./en-ipenata.py

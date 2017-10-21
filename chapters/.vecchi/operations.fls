@@ -1,0 +1,15 @@
+PWD /home/fouche/tmesi/chapters
+INPUT /texlive/2015/texmf.cnf
+INPUT /texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT /texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT operations.tex
+OUTPUT operations.log
+INPUT /texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+OUTPUT operations.pdf
+INPUT /texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /texlive/2015/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
+INPUT /texlive/2015/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm

@@ -1,0 +1,478 @@
+\chapter{Reflectivity and Normality}\label{chap:refnorm}
+\thispagestyle{empty}
+We now translate in the setting of $\infty$\hyp{}categories the main definitions and results outlined in \cite{CHK}, with a special attention to the setting of Lurie's stable $\infty$\hyp{}categories. We take for granted all the basic definition of stable $\infty$\hyp{}category, $t$\hyp{}structure and properties thereof, outlined in appendix \refbf{chap:stable.cats}.
+
+The paper \cite{CHK} extensively describes various types of reflective subcategories \index{Subcategory!reflective ---} of a given category $\CC$ obtained by means of factorization systems on $\CC$. A number of results are discussed and applied to additive and abelian categories, pointed categories, etc. leading to the notion of a \emph{normal torsion theory}.
+
+Among these results, one the most interesting for the present purposes is the antitone bijection established between localizations of $\CC$, collected in the poset $\Rex(\CC)$\footnote{This notation may appear deceiving: ``Rex'' stands here for \textbf{re}fle\textbf{c}tion\textbf{s}, and not for \emph{right exact}.}, and factorization system $\fF=(\EE,\MM)$ such that both classes are 3\hyp{}for\hyp{}2 in the sense of our \refbf{def:3for2}: \index{Rosetta stone@``Rosetta stone''}this analysis paves the way to the foundations for a ``theory of torsion and torsion\hyp{}free classes'' in non\hyp{}additive categories, and it is a starting point to motivate the $\infty$\hyp{}categorical translation of the theory.
+
+The present chapter profits from the blanket assumption of stability for the $\infty$\hyp{}category $\CC$; here a triangulated structure on the homotopy category $\ho(\CC)$ is induced by easy and categorically natural axioms, verified at the ``higher'' level, and universal properties utterly simplify the proof of the analogy ``co\fshyp{}reflective pairs'' = ``$t$\hyp{}structures''. From this we deduce a rather primitive statement (hinted at in \cite{tilting,Beligiannisreiten}, and others, but never extracted from the land of \emph{folklore}: for a discussion on this point, see \refbf{is.it.true.in.trcats}): this result is called ``Rosetta stone'' theorem in \refbf{thm:rosetta}, and constitutes the backbone of the thesis.
+
+We now sketch the content of \cite[\S\textbf{6}]{CHK}, and offer an $\infty$\hyp{}categorical counterpart thereof: given a \emph{reflective factorization system} $\fF= (\EE,\MM)$ (\aprop \refbf{refective}) on an $\infty$\hyp{}category with initial and terminal objects, the classes
+\begin{gather}
+\varnothing/\,\EE \defequal \{ X \in \CC \mid \varnothing\to X \in \EE \},\notag\\
+\MM / 1 \defequal \{Y \in\CC \mid Y\to 1 \in\MM\}\label{tor.and.torfre}
+\end{gather}
+are respectively a coreflective and reflective subcategory of $\CC$. A number of additional requests on $\fF$ ensure that these two subcategories behave well under several other constructions, or enjoy additional properties of mutual interaction (\eg determining each other up to equivalence, via the object\hyp{}orthogonality relation).
+\index{Subcategory!torsion and torsionfree ---}
+
+This is, again, a chapter devoted to purely categorical results; we can nevertheless outline a couple of interesting points, even at this level of abstraction. 
+
+In their review of \cite{CHK}, the authors of \cite{RT} outline a sequence of implications between the properties of \emph{(semi\hyp{}left\fshyp{}right-)exactness}\index{Factorization system!semiexact ---}, \emph{simplicity}\index{Factorization system!simple ---} and \emph{normality}\index{Factorization system!normal ---} of a torsion theory $\fF$\index{Normal torsion theory}, and confess a certain difficulty in exhibiting a non\hyp{}artificial example of a \emph{non\hyp{}normal} torsion theory; they conclude, then (with a certain coherence in the choice of notation), that the notion of non\hyp{}normality is somewhat pathological, and suggest (\cite[Remark \textbf{4.11}]{RT}) that there are few (if any) examples of non\hyp{}normal torsion theories.
+
+In \refbf{slex.simple.normal} we prove that, in the setting of stable $\infty$\hyp{}categories, the three notion of exactness, simplicity and normality collapse into a single notion (simply called \emph{normality}); this result deserves further investigation in light of the use of reflective factorization systems in \cite{BoJa} and in view of the fact that any category $\cate{A}$ has a (canonically constructed) stabilization $\smallcap{Sp}(\cate{A})$, where the asymmetry between normality, semi\hyp{}exactness and simplicity stated in \cite[\S\textbf{4.4}]{CHK} disappears.
+\begin{notat}
+A blanket assumption throughout all this chapter is that $\CC$ is an $\infty$\hyp{}category with an initial and terminal object, respectively denoted $\varnothing$ and $1$: subsequently we will specialize this assumption by asking that $\CC$ is stable (so in particular it is pointed and finitely co\fshyp{}complete). Other specializations (like in \adef \refbf{slex} or \refbf{left.simple}) will always be notified to the reader; here we do not strive for a particular sharpness in statements and proofs: several results are still valid outside our main case of interest (\ie when $\CC$ is not stable, but still has finite limits or is at least pointed).
+
+We denote by $\ter_{\CC}$ the class of the terminal morphisms $\{t_X\colon X\to 1\mid X\in\CC\}$, and $\Rex(\CC)$ be the poset of reflective subcategories $(\cate{B}, R)$ of $\CC$ (where $R\colon \CC \to \cate B$ is the reflection functor, left adjoint to the inclusion).
+\end{notat}
+\section{The fundamental connection.}\label{fundconn}\index{Galois connection!Fundamental connection}
+\epigraph{\japanese{
+菩提本無樹，明鏡亦非臺。\\
+本來無一物，何處惹塵埃。}}{Huìnéng}
+The aim of the present section is to re\hyp{}enact \cite[\aprop \textbf{2.2}]{CHK}, where the authors build a correspondence between $\pf_{\ter}(\CC)$ (see \adef \refbf{def:crumble}) and $\Rex(\CC)$.
+\begin{proposition}\label{connectio}
+There exists a(n antitone) Galois connection $\Phi\dashv \Psi$ between the posets $\Rex(\CC)$ and $\pf_{\ter}(\CC)$, where $\Psi$ sends $\fF=(\EE,\MM)$ to the subcategory $\MM/1 = \{B\in\CC\mid (B\to 1)\in\MM\}$, and $\Phi$ is defined by sending $(\cate B,R)\in\Rex(\CC)$ to the prefactorization \emph{right generated} (see Definition \refbf{df:rlgener}) by $\hom(\cate B)$. 
+\end{proposition}
+\begin{proof}
+A complete proof can be found in \cite{CHK}; we prefer to give only a sketch of such argument. The definition of the two functions $\Phi, \Psi$ turns the verification that the two form a Galois connection into a straightforward check, and all the other main steps of the proofs are resumed in the following remarks.
+\end{proof}
+\begin{remark}\label{funtoriali}
+The action of the functor $R\colon \CC\to \MM/1$ is induced on objects by a choice of $\fF$\hyp{}factorizations of terminal morphisms: $X\xto{e} RX\xto{m} 1$. On arrows it is obtained from a choice of solutions to lifting problems
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj A; & \obj RB; \\
+	\obj RA; & \obj 1; \\
+};
+\mor A ef:-> RB m:-> 1 m:<- RA <- A;
+\mor RA Rf:-> RB;
+\end{kD}
+\]
+\end{remark}
+\begin{remark}
+Showing that there is an adjunction $R\colon \CC\rightleftarrows \MM/1 \colon i$ boils down to showing that $\CC(-, X)$ inverts each reflection $A\to RA$; this is an easy consequence of the arrow\hyp{}orthogonality between $\var{A}{RA}$ and $\var{X}{1}$, equivalent to the object\hyp{}orthogonality on $\var{A}{RA}$ and $X\in \MM/1$.
+\end{remark}
+\begin{remark}
+The unit $\id_{\Rex(\CC)}\Rightarrow\Psi\Phi$ of this adjunction is an isomorphism. The comonad $\Phi\Psi\Rightarrow \id_{\pf_{\ter}(\CC)}$ is much more interesting, as it acts like an \emph{interior operator} on the poset $\pf_{\ter}(\CC)$, sending $\fF$ to a new prefactorization $\fF^\circ=(\EE^\circ,\MM^\circ)$ which is by construction \emph{reflective}, \ie satisfies $\fF^\circ=\fF$ (whereas in general we have only a proper inclusion $\fF^\circ\preceq \fF$ deduced from $\MM^\circ\subseteq \MM$). 
+\end{remark}
+What we said so far entails that
+\begin{proposition}
+The adjunction $\Phi\dashv\Psi$ restricts to an equivalence (a bijection between posets) between the reflective prefactorizations in $\fF\in \pf_{\ter}(\CC)$ and the poset $\Rex(\CC)$.
+\end{proposition}
+\begin{proposition}\label{refective}
+$\fF\in \pf_{\ter}(\CC)$ is reflective if and only if $\EE$ is a 3\hyp{}for\hyp{}2 class (see Definition \refbf{def:3for2}), or equivalently (since each $\EE$\hyp{}class of a factorization system is \smallcap{r32}) if and only if $\EE$ is \smallcap{l32}.
+\end{proposition}
+\begin{proof}
+It is an immediate consequence of \cite[Thm. \textbf{2.3}]{CHK}, where it is stated that $g\in\EE^\circ$ iff $fg\in\EE$ for a suitable $f\in \EE$.
+\end{proof}
+\begin{remark}\label{coref.and.such}
+We can also state a completely dual antitone bijection between the poset of \emph{co}reflective subcategories, $\text{CoRex}(\CC)$, and the poset of (pre)factorization systems $\pf_{\boldsymbol{\iota}}(\CC)$ factoring \emph{initial} arrows $\boldsymbol{\iota}=\{\varnothing\to X\mid X\in\CC\}$; this is defined via the correspondence $\fF \mapsto \varnothing/\EE = \{Y\in\CC\mid (\varnothing \to Y)\in\EE\}$; the coreflection of $\CC$ along $\varnothing/\EE$ is given by a functor $S$ defined by a choice of $\fF$\hyp{}factorization $\varnothing\xto{e}SX\xto{m}X$.
+\end{remark}
+\begin{remark}\label{biref}
+We can also define \emph{co}reflective factorization systems, and prove that $\fF$ is coreflective iff $\MM$ is \smallcap{r32}, and \emph{bi}reflective factorization systems as those which are reflective \emph{and} coreflective at the same time: as these will consistute the main object of study of the present and subsequent chapters, we gather these remarks into a precise definition.
+\end{remark}
+\begin{definition}[Reflective factorization system]\label{def:reflective.fs}\index{Factorization system!reflective ---}
+A \emph{bireflective (pre)factorization system} $\fF = (\EE, \MM)\in \pf(\CC)$ is a (pre)factorization system such that both classes $\EE, \MM$ are 3\hyp{}for\hyp{}2 classes.
+\end{definition}
+\section{Semiexactness and simplicity.}\index{Factorization system!semiexact ---}
+\setlength{\epigraphwidth}{.75\textwidth}
+\epigraph{The guiding motto in the life of every natural philosopher should be, seek simplicity and distrust it.}{A.N\@. Whitehead}
+\setlength{\epigraphwidth}{\DefaultEpigraphWidth}
+A fairly general theory, subsumed in \cite{CHK}, stems from the above construction, and several notable subclasses of (co)reflective factorization systems become of interest. We now concentrate on \emph{semi\hyp{}exact} and \emph{simple} factorizations:
+\begin{definition}\label{slex}
+ A \emph{semi\hyp{}left\hyp{}exact} factorization system on a finitely complete $\CC$ consists of a reflective $\fF=(\EE,\MM)\in \smallcap{fs}(\CC)$ such that the left class $\EE$ is closed under pulling back  by $\MM$ arrows; more explicitly, in the pullback
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj A; & \obj B; \\
+	\obj C; & \obj D; \\
+};
+\mor A -> B e:-> D m:<- C {e'}:<- A;
+\pullback{A}{D};
+\end{kD}
+\]
+the arrow $e'$ lies in $\EE$.
+\end{definition}
+Equivalent conditions for $\fF$ to be semi\hyp{}left\hyp{}exact are given in \cite[Thm. \textbf{4.3}]{CHK}. There is a dual definition of a semi\hyp{}\emph{right}\hyp{}exact factorization system. 
+\begin{notat}\index{Factorization system!semiexact ---}
+We call \emph{semiexact} a factorization system which is both left and right exact.
+\end{notat}
+Another important class of factorization systems is made by \emph{simple} ones in categories with finite limits and colimits, where $\fF$ gives ``a simple rule to factor morphisms''. More precisely, if $\CC$ has pullbacks, we can define
+\begin{definition}\label{left.simple}\index{Factorization system!left simple ---}
+A \emph{left simple} factorization system on $\CC$ is a reflective $\fF\in \smallcap{fs}(\CC)$ such that, if we denote by $R$ the reflection $\CC\to \MM/1$, with unit $\eta\colon 1_{\CC}\Rightarrow iR$ (often denoted simply as $\eta\colon 1_{\CC}\Rightarrow R$ with a harmless abuse of notation), associated to $\fF$, then the $\fF$\hyp{}factorization of $f\colon X\to Y$ can be obtained as $X\to RX\times_{RY}Y\to Y$ in the diagram
+\[
+\begin{kD}
+\lattice[comb]{
+\obj X; & & \\
+ & \obj (P): RX\times_{RY}Y; & \obj RX; \\
+\obj Y; & \obj RY; &\\	
+};
+\mor X \eta_X:r> RX Rf:-> RY  \eta_Y:<- Y <- P;
+\mor X -> P -> RX;
+\mor[swap] X f:L> Y;
+\pullback{P}{RY};
+\end{kD}
+\]
+obtained from the naturality square for $f$. 
+\end{definition}
+Simple factorization systems are, in other words, those such that the canonical arrow $X\to RX\times_{RY}Y$ lies in $\EE$ (the pullback arrow $RX\times_{RY}Y\to Y$ always lies in $\MM$, by the 3\hyp{}for\hyp{}2 closure property of $\MM$).
+\begin{remark}
+Every semi\hyp{}left\hyp{}exact factorization system is left simple, as proved in \cite[Thm. \textbf{4.3}]{CHK}. In the 1\hyp{}categorical setting, the converse doesn't hold in general (see \cite[Example \textbf{4.4}]{CHK}), whereas our \aprop \refbf{simplenormalexact} shows that in the stable $\infty$\hyp{}categorical world the two notions coincide. This is a first evidence of the notable and really symmetric ``internal behaviour'' of a stable $\infty$\hyp{}category (the proof of our \refbf{simplenormalexact} makes essential use of the \emph{pullout axiom}, which is only valid and nontrivial in an $\infty$\hyp{}categorical setting).
+\end{remark}
+\begin{remark}
+There is an analogous notion of \emph{right simple} factorization system: it is enough to dualize \adef \refbf{left.simple}; dualizing also \cite[Thm. \textbf{4.3}]{CHK}, it is possible to prove that semi\hyp{}right\hyp{}exact factorization systems are right simple.
+\end{remark}
+A useful result follows from the semi\hyp{}exactness of a factorization system $\fF$ both of whose classes are 3\hyp{}for\hyp{}2 (these last are called \emph{torsion theories} in \cite{RT}; see our \adef \refbf{tortorfree} for an extensive discussion).
+\begin{proposition}
+\label{facto}Let $\fF$ be a semiexact (\adef \refbf{slex}; its domain of definition is, in particular, finitely co\fshyp{}complete) torsion theory with reflection functor $R\colon \CC\to \MM/1$ and whose coreflection is $S$; then we have that
+\[
+SY \amalg_{SX}X \cong RX \times_{RY}Y 
+\]
+for any $f\colon X\to Y$.
+\end{proposition}
+\begin{proof}
+The claim holds simply because semiexactness gives the $\fF$\hyp{}factorization of $f\colon X\to Y$ as $X\to RX \times_{RY}Y \to Y$ (on the left), and $X\to SY \amalg_{SX}X\to Y$ (on the right).
+
+There is a more explicit argument which makes explicit use of the orthogonality and 3\hyp{}for\hyp{}2 closure property: consider the diagram
+\[
+\begin{kD}
+\lattice[mesh={4em}{7em}]{
+	\obj SX; & \obj X; & \obj (P):RX\times_{RY}Y; & \obj RX;\\
+	\obj SY; & \obj (Q):SY\amalg_{SX}X; & \obj Y; & \obj RY; \\
+};
+\mor SX {\sigma_X}:-> X -> P -> RX Rf:-> RY;
+\mor * swap:Sf:-> SY -> Q -> Y swap:\eta_Y:-> *;
+\mor P -> *;
+\mor X -> Q;
+\mor X \eta_X:r> RX;
+\mor Q w:dashed,-> P -> Y;
+\mor SY swap:\sigma_Y:L> Y;
+\end{kD}
+\]
+where $\eta$ is the unit of the reflection $R$, $\sigma$ is the counit of the coreflection $S$, and the diagonal of the central square is filled by $f\colon X\to Y$. Now, denote $P=RX\times_{RY}Y$ and $Q=SY\amalg_{SX}X$ the arrow $\var{X}{Q}$ is in $\EE$, and the arrow $\var{P}{Y}$ is in $\MM$, as a consequence of stability under cobase and base change (see \aprop \refbf{satu}); this entails that there is a unique $w\colon Q\to P$ making the central square commute. Now, semiexactness entails that $X\to P\to Y$ and $X\to Q\to Y$ are both $\fF$\hyp{}factorizations of $f\colon X\to Y$, and since both classes $\EE,\MM$ are 3\hyp{}for\hyp{}2, we can now conclude that $w\colon Q\to P$ lies in $\EE\cap\MM$, and hence is an equivalence (see \aprop \refbf{thereiso}).
+\end{proof}
+\section{Normal torsion theories.}\index{Factorization system!normal ---}
+\setlength{\epigraphwidth}{.75\textwidth}
+\epigraph{We have normality. I repeat: we have normality. Anything you still can't cope with is therefore your own problem.}{D\@. Adams}
+\setlength{\epigraphwidth}{\DefaultEpigraphWidth}
+Refining the blanket assumption of the initial section, we now assume that $\CC$ is a stable $\infty$\hyp{}category, with zero object $0=\varnothing=*$. Following (and slightly adapting to our particular case) \cite[\S\textbf{4}]{RT} we give the following definitions
+\begin{definition}[Torsion theory, torsion classes]\label{tortorfree}\index{Torsion theory}\index{Factorization system!torsion theory ---}
+\index{.0suE@$0/\EE$}\index{.Msu0@$\MM/0$}
+A \emph{torsion theory} in $\CC$ consists of a factorization system $\fF=(\EE,\MM)$ (see Remark \refbf{biref} and \adef \refbf{def:reflective.fs}), where both classes are 3\hyp{}for\hyp{}2 (in the sense of Definition \refbf{def:3for2}). We define
+ $\TT(\fF) = 0/\EE$ and $\F(\fF) =  \MM/0$ (see \aprop \refbf{connectio}, and Remark \refbf{coref.and.such}) to be respectively the \emph{torsion} and \emph{torsion\hyp{}free} classes associated to the torsion theory.
+\end{definition}
+\begin{remark}
+\cite[\textbf{3.1}]{RT}
+\label{firm.reflective}
+\index{Factorization system!firmly reflective ---}
+Let $\CC$ be an $\infty$\hyp{}category with terminal object $*$; then the class $\F(\fF)$ is \emph{firmly $\EE$\hyp{}reflective}, meaning that any morphism $A\to F$ with $F\in \F(\fF)$ is isomorphic to the reflection $A\to RA$. 
+This directly follows from the uniqueness of the $\fF$\hyp{}factorization.
+\end{remark}
+\begin{remark}\label{only.zero}
+In view of \aprop \refbf{refective} and its dual, the torsion and torsion\hyp{}free classes of a torsion theory $\fF\in \textsc{fs}(\CC)$ are respectively a coreflective and a reflective subcategory of $\CC$.
+
+If we $\fF$\hyp{}factor the terminal and initial morphisms of any object $X\in \CC$, we obtain the reflection $R\colon \CC\to \MM/0$ and coreflection $S\colon \CC \to 0/\EE$, and a ``complex'' 
+\[\label{eqn:the.seq}
+SX \to X \to RX
+\]
+(in the sense of pointed categories), \ie, a homotopy commutative diagram 
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj SX; & \obj X; \\
+	\obj 0; & \obj RX; \\
+};
+\mor SX -> X -> RX <- 0 <- SX;
+\end{kD}
+\]
+We deduce this commutativity from the orthogonality condition: the lifting problem
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj 0; & \obj RX; \\
+	\obj SX; & \obj (0'):0; \\
+};
+\mor 0 -> RX -> 0' <- SX <- 0;
+\end{kD}
+\]
+has unique solution the zero arrow $SX\to RX$, so that the space $\CC(SX, RX)$ is contractible: since there cannot be nonzero arrows $SX\to RX$, the claim is proved.
+\end{remark}
+\begin{proposition}\label{orthoreflex}
+Let $\CC$ be a stable $\infty$\hyp{}category with a normal torsion theory $\fF= (\EE,\MM)$, having coreflection $S \colon \CC \to 0/\EE$. Then the following conditions are equivalent for an object $X\in\CC$: 
+\begin{enumerate}
+\item $X$ is an $S$\hyp{}coalgebra, \ie there exists an arrow $c\colon X \to SX$ such that $SX \xto{\sigma_X} X \xto{c} SX$ is the identity of $SX$;
+\item $X\in \TT= 0/\EE$;
+\item $X\cong SX$;
+\item $X\in \prescript{\perp}{}{\{SA\to A\}}$, \ie $X$ is left\hyp{}object\hyp{}orthogonal (\adef \refbf{orth.between.classes}) to each coreflection arrow $SA\to A$.
+\end{enumerate} 
+\end{proposition}
+The present statement results from a mixture of \cite{RT} and \cite[Prop. 5.2]{kelly1980unified}.%; we address to these sources the interested reader.
+
+Obviously, a dual result can be stated and proved with basically no effort:
+\begin{proposition}
+Let $\CC$ be a stable $\infty$\hyp{}category with a normal torsion theory $\fF= (\EE,\MM)$. Then the following conditions are equivalent for an object $X\in\CC$ 
+\begin{enumerate}
+\item $X$ is an $R$\hyp{}algebra;
+\item $X\in \MM / 0$;
+\item $X\cong RX$;
+\item $X\in \{A\to RA\}^\perp$, \ie $X$ is object\hyp{}orthogonal (\adef \refbf{orth.between.classes}) to each reflection arrow $A\to RA$.
+\end{enumerate} 
+\end{proposition}
+\begin{remark}
+Given the closure properties of the classes $\EE, \MM$, we can define natural functors $F\colon \CC\to \F$ and $T\colon \CC\to \TT$ taking $FX$ as the homotopy pullback, and $TX$ as the homotopy pushout in the diagrams below
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj FX; & \obj SX; & \obj(FX'):X; & \obj (SX'):0; \\
+	\obj 0; & \obj X; & \obj (0'):RX; & \obj (X'):TX.; \\
+};
+\mor FX -> SX -> X <- 0 <- FX;
+\pullback{FX}{X};
+\mor FX' -> SX' -> X' <- 0' <- FX';
+\pushout{FX'}{X'};
+\end{kD}
+\]
+\end{remark}
+\index{Torsion theory}
+We now come to the gist of the present chapter, \ie the definition of a \emph{normal} torsion theory and its relation with the notion of $t$\hyp{}structures, which will occupy entirely Chapter \refbf{chap:tstruct} with the proof of the \emph{Rosetta stone} theorem.\index{Rosetta stone@``Rosetta stone''}
+
+An initial step to motivate the quest for a class of factorization system describing $t$\hyp{}structures (identified with the pair of subcategories called \emph{aisle} and \emph{coaisle} in the literature, see \cite{KVaisles}) in stable $\infty$\hyp{}categories starts precisely from the observation that suitable additional properties of a co\fshyp{}reflective subcategory $\cate{B}\subseteq \CC$ translate into properties of the associated co\fshyp{}reflective factorization system $\Phi(\cate B) = \fF$. 
+
+Torsion theories in a stable $\infty$\hyp{}category, in the form of bireflective factorization systems, produce such pairs of well\hyp{}behaved coreflective\fshyp{}reflective subcategories via the correspondence $(\EE,\MM)\mapsto (0/\EE, \MM/0)$; so we are only one step away from characterizing $t$\hyp{}structures: we only lack axiom (iii) of \adef \refbf{tistru}.
+
+It turns out that the possibility of putting every object $X$ into a distinguished triangle (or, better to say in our setting, a fiber sequence)
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj (Xge):X_{\ge 0}; & \obj X; \\
+	\obj 0; & \obj (Xle):X_{<0}; \\
+};
+\mor Xge -> X -> Xle <- 0 <- Xge;
+\pullout{Xge}{Xle};
+\end{kD}
+\]
+is equivalent to the request that $(\EE,\MM)$ be a \emph{normal} factorization system on $\CC$; in a nutshell, the idea is the following.
+
+General torsion theories generate a sequence $SX\to X\to RX$ whose composition is the zero morphism; the factorization systems rendering this composition also an \emph{exact sequence} are called \emph{normal} (the term is borrowed from \cite{CHK} who first studied the notion, reprised in \cite{RT}).
+\begin{quote}
+A normal torsion theory is a factorization system $\fF = (\EE,\MM)$ such that the diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj (Xge):SX; & \obj X; \\
+	\obj 0; & \obj (Xle):RX; \\
+};
+\mor Xge -> X -> Xle <- 0 <- Xge;
+\pullout{Xge}{Xle};
+\end{kD}
+\]
+is a pullout.
+\end{quote}
+As discussed above, it is fairly natural to define functors $F$ and $T$ taking respectively the \emph{fiber of the coreflection} and the \emph{cofiber of the reflection} morphism. Normality involves the alternate procedure, considering the fiber $KX$ of the reflection $X \to RX$ and the cofiber $QX$ of the coreflection $SX \to X$. A priori, there is no way to control the subcategory where the functors $K,Q$ take value: the idea
+behind a normal torsion theory is that in certain situation this is possible, as the two functors $K$ and $Q$ do not introduce new information, as they are respectively isomorphic to $S$ and $R$.
+\begin{remark}
+This terse characterization of normality, and especially our Remark \refbf{slex.simple.normal} which states that left, right and two\hyp{}sided normality all coincide in a stable $\infty$\hyp{}category, seems to shed a light on \cite[Remark \textbf{7.8}]{CHK} and \cite[Remark \textbf{4.11}]{RT}, where the non\hyp{}existence of a non\hyp{}artificial example of a non\hyp{}normal torsion theory is conjectured. 
+\end{remark}
+\begin{remark}\label{is.it.true.in.trcats}
+The present analysis owes to \cite{RT,CHK,Beligiannisreiten} an infinite debt; it may appear strange, hence, that such many different sources ignore the possibility of turning this suggestion into a precise statement.
+
+Indeed, somehow mysteriously, \cite[\S \textbf{4}]{RT} seems to ignore application of the formalism of torsion theories to the triangulated world, even if its authors point out clearly (see \cite[Remark \textbf{4.11.(2)}]{RT}) that
+\begin{quote}
+It [our definition of torsion theory, \emph{auth.}] applies, for example, to a triangulated category $\CC$. Such a category has only weak kernels and weak cokernels and our definition precisely corresponds to torsion theories considered there as pairs $\F$ and $\TT$ of colocalizing and localizing subcategories (see \cite{HPS}).
+\end{quote}
+Even more mysteriously, another encyclopedic source for a ``calculus of torsion theories'' in triangulated categories, \cite{Beligiannisreiten}, explicitly says (p\@. 17) that
+\begin{quote}
+Torsion pairs in triangulated categories are used in the literature mainly in the form of $t$\hyp{}structures.
+\end{quote}
+and yet it avoids, in a certain sense, to offer a more primitive characterization for $t$\hyp{}structures than the one given \emph{ibi}, Thm \textbf{2.13}.
+
+This situation indicates well a general tenet according to which working in the stable setting gives more symmetric and better motivated results. 
+
+The ``Rosetta stone'' theorem casts a shadow on the homotopy category $\cate{T}=\ho(\CC)$, giving a similar but insufficient characterization of $t$\hyp{}structures as those factorization systems in $\cate T$ which are closed under homotopy pullback and pushouts in $\cate T$.\footnote{This result is part of a work in progress \cite{tderivators} and will hopefully introduce a subsequent joint work exploring the shape of the ``Rosetta stone'' in the setting of \emph{stable derivators}.}
+\end{remark}
+\begin{definition}\index{Normal torsion theory|see {Factorization system!normal ---}}\label{normal} We call \emph{left normal} a torsion theory $\fF=(\EE,\MM)$ on $\CC$ such that the fiber $KX\to 0$ of a reflection morphism $X\to RX$ lies in $\EE$, as in the diagram 
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj (Xge):KX; & \obj X; \\
+	\obj 0; & \obj (Xle):RX; \\
+};
+\mor Xge -> X -> Xle <- 0 <- Xge;
+\pullback{Xge}{Xle};
+\end{kD}
+\]
+In other words, the $\EE$\hyp{}morphisms arising as components of the unit $\eta\colon 1\Rightarrow R$ are stable under pullback along the initial $\MM$\hyp{}morphism $0\to RX$.
+\end{definition}
+\begin{remark}
+This last sentence deserves a deeper analysis: by the very definition of $RX$ it is clear that $RX\to 0$ lies in $\MM$; but more is true (and this seemingly innocuous result is a key step of most of the proofs we are going to present): since $\MM$ enjoys the 3\hyp{}for\hyp{}2 property, and it contains all isomorphisms of $\CC$, it follows immediately that an initial arrow $0\to A$ lies in $\MM$ \emph{if and only if} the terminal arrow $A\to 0$ on the same object lies in $\MM$. The same reasoning applied to $\EE$ gives a rather notable ``specularity'' property for both classes $\EE,\MM$:
+\begin{lemma}[Sator Lemma]\label{satorlemma}\index{Sator lemma@``Sator lemma''}
+In a pointed $\infty$\hyp{}category $\CC$, an initial arrow $0\to A$ lies in a class $\EE$ or $\MM$ of a bireflective (see Remark \refbf{biref}) factorization system $\fF$ if and only if the terminal arrow $A\to 0$ lies in the same class.\footnote{The so\hyp{}called \emph{Sator square}, first found in the ruins of Pompeii, consists of the $5\times 5$ matrix 
+\[
+\xymatrix@R=-1mm@C=-1mm{ 
+\sator\\
+\arepo\\
+\tenet\\
+\opera\\
+\rotas
+}
+\]
+where the letters are arranged in such a way that the same phrase (``\textsc{sator arepo tenet opera rotas}'', approximately ``Arepo, the farmer, drives carefully the plough'') appears when it is read top\hyp{}to\hyp{}bottom, bottom\hyp{}to\hyp{}top, left\hyp{}to\hyp{}right, and right\hyp{}to\hyp{}left.}
+\end{lemma}
+\begin{notat}\label{liesin} This motivates a little abuse of notation: we can say that an object $A$ of $\CC$ \emph{lies in} a 3\hyp{}for\hyp{}2 class $\K$ if its initial or terminal arrow lies in $\K$: in this sense, a left normal factorization system is an $\fF$ such that the fiber $KX$ of $X\to RX$ lies in $\EE$, for every $X$ in $\CC$.
+\end{notat}
+\end{remark}
+Equivalent conditions for $\fF$ to be left normal are given in \cite[Thm. \textbf{4.10}]{RT} and \cite[\textbf{7.3}]{CHK}.
+\begin{remark}
+There is, obviously, a notion of \emph{right} normal factorization system: it is an $\fF$ such that the cofiber $QX$ of $SX\to X$ lies in $\MM$, for every $X$ in $\CC$. In the following we call simply \emph{normal}, or \emph{two\hyp{}sided normal} a factorization system $\fF\in \fs(\CC)$ which is both left and right normal.
+\end{remark}
+Now we come to an interesting point:
+in a stable $\infty$\hyp{}category the three notions of simple, semiexact and normal torsion theory collapse to be three equivalent conditions.
+\index{Torsion theory}
+
+To see this, we have to prove a preliminary result:
+\begin{proposition}\label{equivcondnorm}
+For every object $X$, consider the following diagram in $\CC$, where every square is a pullout. 
+\[
+\begin{kD}
+\lattice[mesh={4em}{8em}]{
+\obj (SXRX1):SX\oplus RX[-1]; & \obj SX; & \obj 0; \\
+\obj KX; & \obj X; & \obj QX; \\
+\obj (0'):0; & \obj RX; & \obj (SX1RX):SX[1]\oplus RX; \\
+};
+\mor SXRX1 -> SX -> 0 -> QX <- X <- KX -> 0' -> RX -> SX1RX;
+\mor SXRX1 swap:m'':-> KX;
+\mor SX \sigma_X:-> X \rho_X:-> RX;
+\mor QX e'':-> SX1RX;
+\end{kD}
+\]
+Then the following conditions are equivalent for a bireflective factorization system $\fF=(\EE,\MM)$ on $\CC$:
+\begin{enumerate}
+\item $\fF$ is left normal;
+\item $\fF$ is right normal;
+\item $\fF$ is normal;
+\item $RX\simeq QX$; 
+\item $SX = KX$; 
+\item $SX\to X\to RX$ is a fiber sequence.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+We start by proving that the first three conditions are equivalent. If we assume left normality, then the arrow $\var{QX}{SX[1]\oplus RX}$ lies in $\EE$, since it results as a pushout of an arrow in $\EE$. So we can consider 
+\[
+\begin{kD}
+\lattice[mesh={4em}{8em}]{
+	\obj QX; & & \obj RQX; \\
+	\obj (SX1RX):SX[1]\oplus RX; & \obj (RX):R(SX[1]\oplus RX); & \obj 0; \\
+};
+\mor QX e':-> RQX m':-> 0;
+\mor QX e'':-> SX1RX swap:e:-> RX swap:m:-> 0;
+\end{kD}
+\]
+$\fF$\hyp{}factoring the morphisms involved (notice that $R(SX[1]\oplus RX)\cong RX$): $R(SX[1]\oplus RX)=RRX=RX$ since $RS=0$. Thus $RQX\cong RX$, which entails $\var{0}{QX}\in\MM$, which entails right normality. A dual proof gives that $(2)\Rightarrow (1)$, thus right normality equals left normality and hence two\hyp{}sided normality.
+Now it is obvious that $(6)$ is equivalent to $(4)$ and $(5)$ together; the non\hyp{}trivial part of the proof consists of the implications $(1)\Rightarrow (4)$, and dually $(2)\Rightarrow (5)$. 
+
+Once this is noticed, start with the diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj SX; & & \obj X;\\
+ & \obj QX; & \\
+\obj 0; && \obj RX; \\
+};
+\mor SX m:-> X e:-> RX;
+\mor * -> 0 -> QX dashed,-> RX;
+\mor X -> QX;
+\mor 0 m':-> RX;
+\end{kD}
+\]
+and consider the canonical arrow $QX\to RX$ obtained by universal property: the arrow $\var{0}{RX}$ lies in $\MM$ (this is a general fact); left normality now entails that $\var{0}{QX}\in \MM$, so that $\var{QX}{RX}$ lies in $\MM$ too by reflectivity.
+
+A similar argument shows that since both $\var{X}{QX}, \var{X}{RX}$ lie in $\EE$, $\var{QX}{RX}$ lies in $\EE$ too by reflectivity. This entails that $\var{QX}{RX}$ is an equivalence. Conversely, if we start supposing that $QX\cong RX$, then we have (left) normality. This concludes the proof, since in the end we are left with the equality $(4)\iff (5)$.
+\end{proof}
+As previewed before, the three notions of simplicity, semiexactness and normality collapse in a single notion in the stable setting:
+\begin{proposition}\label{simplenormalexact}
+A torsion theory $\fF$ is left normal if and only it is semi\hyp{}left\hyp{}exact in the  sense of \cite[\textbf{4.3.i}]{CHK}, namely if and only if in the pullout square
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj E; & \obj X; \\
+\obj Q; & \obj RX; \\	
+};
+\mor E -> X \rho_X:-> RX;
+\mor[swap] E e':-> Q m:-> RX;
+\pullout{E}{RX};
+\end{kD}
+\]
+the arrow $e'$ lies in $\EE$. Dually, a factorization system $\fF$ is right normal if and only it is semi\hyp{}right\hyp{}exact in the  sense of (the dual of) \cite[\textbf{4.3.i}]{CHK}.
+\end{proposition}
+\begin{proof}
+Consider the diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj KX; & \obj E; & \obj X; \\
+\obj 0; & \obj Q; & \obj RX; \\	
+};
+\mor KX -> E -> X e:-> RX;
+\mor KX -> 0 -> Q m:-> RX;
+\mor E e':-> Q;
+\pullout{KX}{Q};
+\pullout{E}{RX};
+\end{kD}
+\]
+where the arrow $Q\to RX$ belongs to $\MM$. On the one hand it is obvious that if $\fF$ is semi\hyp{}left\hyp{}exact, then it is normal (just pull back two times $e$ along $\MM$\hyp{}arrows). On the other hand, the converse implication relies on the pullout axiom: if $\fF$ is normal, then $KX$ lies in $\EE$; but now since the left square is a pullout, the arrow $\var{E}{Q}$ belongs to $\EE$ too, giving semi\hyp{}left\hyp{}exactness.
+\end{proof}
+
+\begin{remark}\label{slex.simple.normal}
+The three notions coincide since ``classically'' we have
+\[
+\smallcap{slex}\to \smallcap{simple}\to \smallcap{normal},
+\]
+whereas in our setting the chain of implication proceeds one step further and closes the circle:
+\[
+\smallcap{slex}\to \smallcap{simple}\to \smallcap{normal}\xto{\star}\smallcap{slex}.
+\]
+\end{remark}
+This gives a pleasant consequence:
+\begin{remark}\label{rmk:how.to.fact}
+In a stable $\infty$\hyp{}category the $\fF$\hyp{}factorization of $f\colon A\to B$ with respect to a normal torsion theory is always
+\[
+A \to RA\times_{RB}B \to B,
+\]
+or equivalently (see \aprop \refbf{facto})
+\[
+A \to SB\amalg_{SA} A \to B.
+\]
+\end{remark}
+A useful remark appearing in \cite[\S\textbf{4.6}, \textbf{5}]{RT} (here adapted to the stable case) is the following: torsion and torsionfree classes of a torsion theory in a stable $\infty$\hyp{}category are closed under extensions.
+\begin{definition}\label{def:exteclo}
+Let $\mcal{K}\subseteq \text{Ob}(\CC)$ be a class of objects in a stable $\infty$\hyp{}category; $\mcal{K}$ is said to be \emph{closed under extensions} if for each pullout square
+\[\label{exteclo}
+\begin{kD}
+\lattice[mesh]{
+\obj A; & \obj B; \\
+\obj 0; & \obj C;\\	
+};
+\mor A -> B -> C <- 0 <- A;
+\end{kD}
+\]
+such that $A,C \in\mcal{K}$, then also $B\in\mcal{K}$.
+\end{definition}
+\begin{proposition}\label{are.exteclo}
+Let $\fF = (\EE,\MM)$ be a torsion theory in a stable $\infty$\hyp{}category $\CC$; then the classes $0/\EE$, $\MM/0$ of \adef \refbf{tortorfree} are closed under extension.
+\end{proposition}
+\begin{proof}
+We only prove the statement if $A,C$ of diagram (\refbf{exteclo}) lie in $0/\EE$; the proof for $\MM/0$ is identical. Now, it is enough to consider the diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj (0''):0; & \obj A; & \obj B; \\
+& \obj 0; & \obj C;\\
+&& \obj (0'):0; \\	
+};
+\mor A -> B -> C <- 0 <- A;
+\mor 0'' -> A; \mor C -> 0';
+\end{kD}
+\]
+where we have $A,C \in 0/\EE$, \ie $A\to 0, C\to 0$ lie in $\EE$; the arrow $B\to C$ is in $\EE$ since $\EE$ is closed under pushout; so $B\to C\to 0$ is in $\EE$.
+\end{proof}

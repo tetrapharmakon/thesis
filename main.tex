@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt, openright]{book}
+\usepackage{iftex}
+
+\ifPDFTeX
+\include{layout/preambolo}
+\else
+\include{layout/xelatex-preambolo}
+\fi
+
+\includeonly{
+	chapters/dedica,
+	chapters/intro,
+	chapters/less_intro,
+	chapters/01-fact,
+	chapters/02-refnorm,
+	chapters/03-rosetta,
+	chapters/04-cuori,
+	chapters/05-recol,
+	chapters/06-operations,
+	chapters/07-stabilities-domenico,
+	chapters/08-aA,
+}
+
+\begin{document}
+\input{titlepage2}
+
+
+% \todo[inline, caption={}]{Cose da fare:
+% 	\begin{itemize}
+% 	\item Sistemare l'ampiezza delle epigrafi (e trovarle tutte)
+% 	\item I diagrammi andranno tutti composti in {\tt koDi}.
+% 	\item alcune epigrafi vanno ancora tradotte dall'inglese (al giapponese)
+% 	\item la bibliografia fa cagare ancora una volta
+% 	\end{itemize}
+% }
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\cleardoublepage
+%
+\tableofcontents
+
+\cleardoublepage
+
+\include{chapters/dedica}
+
+
+
+
+
+\frontmatter
+\pagenumbering{roman}
+\include{chapters/intro}
+\include{chapters/less_intro}
+%
+\cleardoublepage
+
+\vspace*{\fill}
+\begin{figure}[H]
+\centering
+\input{chapters/leitfaden}
+\caption{Dependencies between chapters}
+\label{dependen}
+\end{figure}
+\cleardoublepage
+%
+\mainmatter
+\pagenumbering{arabic}
+\setcounter{chapter}{0}
+\include{chapters/01-fact}
+\include{chapters/02-refnorm}
+\include{chapters/03-rosetta}
+\include{chapters/04-cuori}
+\include{chapters/05-recol}
+\include{chapters/06-operations}
+\include{chapters/07-stabilities-domenico}
+\appendix
+\include{chapters/08-aA}
+%
+\newpage 
+\footnotesize
+\bibliography{allofthem}{}
+\bibliographystyle{amsalpha}
+\hrulefill 
+
+\cleardoublepage
+\pagenumbering{gobble}
+\printindex
+
+\newpage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+\doclicenseThis
+
+\end{document}

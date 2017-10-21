@@ -1,0 +1,6 @@
+PWD /home/fouche/tmesi/chapters
+INPUT /texlive/2015/texmf.cnf
+INPUT /texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT /texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT leitfaden.tex
+OUTPUT leitfaden.log

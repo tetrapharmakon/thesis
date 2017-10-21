@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+	echo "Holy shit BRO!?"
+else
+	git add -A
+	git commit -m "$1"
+	git push
+fi

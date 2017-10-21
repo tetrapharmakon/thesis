@@ -1,0 +1,49 @@
+\thispagestyle{empty}
+	\newlength{\maruwidth}
+	\setlength{\maruwidth}{185mm}
+	\newlength{\maruheight}
+	\setlength{\maruheight}{184mm}
+
+\newcommand{\JustifiedLine}[2][1]{\resizebox{#1\linewidth}{!}{#2}} 
+
+\backgroundsetup{
+	scale    = 1.5,
+	color    = black,
+	opacity  = .5,
+	angle    = 0,
+	position = {5.5cm,1cm},
+	contents = {%
+	  \includegraphics[width=\maruwidth,height=\maruheight]{b-marunitachibana}
+  }}
+
+\BgThispage
+\newlength{\derop}
+\setlength{\derop}{0.08\textheight}
+\newcommand{\titleAM}{\begingroup%
+	\centering
+	\vspace*{\derop}
+	{\large Fosco {\sc Loregian}}\\[\derop]
+	\JustifiedLine[.6]{\scshape $t$-structures}\\[\baselineskip]
+	\JustifiedLine[.6]{\scshape on stable}\\[\baselineskip]
+	\JustifiedLine[.6]{\scshape $(\infty,1)$-categories}%
+	\\[\derop]
+	%
+	%
+	\JustifiedLine[.3]{\scshape a thesis in Mathematics}\\
+	\JustifiedLine[.3]{\scshape with \textcolor{red}{\total{koDi}}\ diagrams}\\
+	\JustifiedLine[.3]{\scshape coded in {\tt koDi}}\\
+
+	\vspace*{\fill}
+	%
+	%
+	% \includegraphics[scale=.5]{layout/sissa_on_white}\\
+
+	\vspace*{\fill}
+	\JustifiedLine[.3]{\scshape Scuola Internazionale}\\
+	\JustifiedLine[.2]{\scshape Superiore}\\
+	\JustifiedLine[.3]{\scshape di Studi Avanzati}\par
+	{\small\scshape \oldstylenums{2016}}\par
+	\vfill\null%
+\endgroup}
+
+\titleAM

@@ -1,0 +1,943 @@
+\chapter{Hearts and towers}\label{chap:hearts}
+\thispagestyle{empty}
+
+\index{t-structure@$t$\hyp{}structure!heart of a ---}In the present section we exploit the description of $t$\hyp{}structures as normal torsion theories of \achap \refbf{chap:tstruct} to discuss two apparently separated constructions in the theory of triangulated categories: the characterization of \emph{bounded} $t$\hyp{}\emph{structures} in terms of their hearts, and \emph{semiorthogonal decompositions}\index{t-structure@$t$\hyp{}structure!semiorthogonal decomposition} on triangulated categories. In the stable setting both notions stem as particular cases of a single construction. 
+
+In analogy with the example of the Postnikov decomposition\index{Factorization system!Postnikov tower}\index{Postnikov tower|see {Factorization system!Postnikov tower}} of a morphism $f\colon X\to Y$ of spaces (or spectra, or objects of an $\infty$\hyp{}topos), we construct (\adef \refbf{tower.of.f}) the \emph{tower} $\rook_{\{i_j\}}(f)$\footnote{Pron. \emph{rook}; it is the same rook of the game of chess.} of a morphism induced by a $\Z$\hyp{}equivariant \emph{$J$\hyp{}family} \index{t-structure@$t$\hyp{}structure!J-family@$J$\hyp{}family of ---}of normal torsion theories $\{\mathbb{F}_i\}_{i\in J}$, \ie a monotone function $J \to\fs(\CC)$ ``taking normal values'', which is \emph{equivariant} with respect to an action of the group $\Z$ on both sets.
+
+As we will see along the chapter, a natural way to encompass these structures is to vary the action on the domain of the $J$\hyp{}family (choosing diffferent $J$s and different actions on $J$ will result in different kinds of $t$\hyp{}structures for the values $J(\lambda)$. We will concentrate on the following two ``extremal'' examples:
+\begin{itemize}
+\item For $J=\Z$ with its obvious self\hyp{}action, we recover the classical notion of Postnikov towers in a triangulated category endowed with a $t$\hyp{}structure (and a fortiori, the notion of Postnikov tower in the category $\cate{Sp}$ of spectra), and subsequently we give a neat, conceptual proof of the the abelianity of the \emph{heart} of a $t$\hyp{}structure in the stable setting, basically relying on the uniqueness of a suitable factorization. 
+
+\item For $J$ a finite totally ordered set, or more generally any set $J$ with trivial $\Z$\hyp{}action, we recover the theory of \emph{semiorthogonal decompositions} \cite{Bondal1995, Kuz}, showing in \athm \refbf{what.s.semiortho} that such a $J\to \fs_\nu(\CC)$ consists of a family $\{\mathbb{F}_i\}_{i\in J}$ of \emph{stable} $t$\hyp{}structures. This is a classical result.
+\end{itemize}
+\section{Posets with \texorpdfstring{$\Z$}{Z}\hyp{}actions.}\index{Z\hyp{}poset@$\Z$\hyp{}poset}\index{Group!--- of integers}
+\epigraph{\japanese{ 為無為。事無事。味無味。}}{Laozi \smallcap{lxiii}}
+This section has an introductory purpose, aiming to introduce the terminology about partially ordered groups and their actions, and then specialize the discussion to $\Z$\hyp{}actions on partially ordered sets.
+
+We do not aim at reaching a complete generality, but instead at gathering a number of useful results and nomenclature we can refer to along the present chapter. Among various possible choices, we mention specialized references as \cite{blyth2005lattices, glass1999partially, Fuch63} for an extended discussion of the theory of actions on ordered groups.\index{po-group}
+\begin{definition}
+A \emph{partially ordered group} (``po\hyp{}group'' for short) consists of a group $\mathbf{G} = (G, \cdot,1)$ endowed with a relation $\preceq$ which is a partial order and a (two\hyp{}sided) congruence on $G$, namely for any $g\preceq h$ and $a,b\in \mathbf{G}$ we have 
+\begin{itemize}
+\item[(i)] $a\cdot g\preceq a\cdot h$ and
+\item[(ii)] $g\cdot b\preceq h\cdot b$.
+\end{itemize}
+\end{definition}
+\begin{remark}
+We should draw a distinction between a \emph{left} po\hyp{}group (satisfying only property \emph{i} above) and a \emph{right} po\hyp{}group (satisfying only \emph{ii}). At the level of generality we need ignoring this subtlety is absolutely harmless.
+
+A supplementary motivation to choose this slightly looser definition is that it seems more natural for a group to be ordered by a two\hyp{}sided congruence, since in this case inversion $(-)^{-1}\colon \cate{G} \to \cate{G}$ is an antitone antiautomorphism of groups, \ie we have that
+\begin{itemize}
+\item $g\preceq h \iff h^{-1}\preceq g^{-1}$;
+\item The set $G^+$ of \emph{positive} elements, i.e. the set $\{g\in G\mid 1\preceq g\}$ is closed under conjugation.
+\end{itemize}
+\end{remark}
+\begin{definition}\index{po-group!Category of ---s}
+A \emph{homomorphism} of po\hyp{}groups consists of a group morphism $f\colon G\to H$ which is also a monotone mapping. This, with the obvious choices of identities and composition, defines a category $\cate{POGrp}$ of partially ordered groups and their morphisms.
+\end{definition}
+\begin{definition}\label{def:g.poset}\index{po-group!Action of a ---}
+Let $G$ be any group. A $G$\hyp{}poset is a partially ordered set $(P, \le)$ endowed with a group homomorphism $G\to \text{Aut}_\le (P)$ to the group of order isomorphisms of $P$.
+\end{definition}
+\begin{remark}
+Obviously, the former definition of $G$\hyp{}poset is equivalent to the following one: a $G$\hyp{}poset consists of a poset $(P,\le)$ with a map $a\colon G\times P\to P$ satisfying the well\hyp{}known properties of a group action, and furthemore such that for each $g\in G, p\le q\in P$ one has $a(g,p)\le a(g,q)$.
+\end{remark}
+\begin{lemma}
+The category $\cate{Pos}$ of partially ordered sets and monotone maps is cartesian closed.
+\end{lemma}
+\begin{proof}
+This is a classical result; there is only one way to endow the underlying set of a product $P\times Q$ of posets with a partial order in such a way that the universal property of the product is satisfied, and there is only one way to endow the set of all monotone functions between two posets with a partial order relation to obtain the adjunction
+\[
+\cate{Pos}(P\times Q, R)\cong \cate{Pos}(P, R^Q).\qedhere
+\]
+\end{proof}
+\begin{proposition}\
+When $G$ is a po\hyp{}group $(G, \preceq)$, the action map $a\colon G\times P\to P$ defining a $G$\hyp{}poset is a monotone mapping if we endow $G\times P$ with the product order; equivalently, the map $G\to \text{Aut}_\le(P)$ is monotone if we endow the codomain with the order inherithed from the inclusion $\text{Aut}_\le(P)\subseteq  P^P$.
+\end{proposition}
+\begin{proof}
+Straightforward, unwinding the definitions: \adef \refbf{def:g.poset} can be reinterpreted in light of this viewing $G$ endowed with the trivial partial order where $x\preceq y$ if and only if $x=y$.
+\end{proof}
+\begin{definition}\label{zposet}
+A \emph{$\Z $\hyp{}poset} is a partially ordered set $(P,\leq)$ together with a group action 
+\[
++_P\colon P\times \Z \to P \colon (x,n) \mapsto x+_Pn 
+\]
+ which is a morphism of partially ordered sets, when $\Z $ is regarded with its usual total order.
+\end{definition}
+\begin{remark}\label{trivial.but.useful}\index{Z\hyp{}poset@$\Z$\hyp{}poset}
+It is immediate to see that a $\Z $\hyp{}poset is equivalently the datum of a poset $(P,\leq)$ together with a monotone bijection $\rho\colon P\to P$ such that $x\leq \rho(x)$ for any $x$ in $P$. The function $\rho$ and the action are related by the identity $\rho(x)=x+_P1$.
+\end{remark}
+\begin{notat}
+To avoid a cumbersome accumulation of indices, the action $+_P$ will be often denoted as a simple ``$+$''. This is meant to evoke in the reader the two most natural examples of a $\Z $\hyp{}poset, described below:
+\end{notat}
+\begin{example}The poset $(\Z ,\leq)$ of integers with their usual order is a $\Z $\hyp{}poset with the action given by the usual sum of integers. The poset $(\mathbb{R},\leq)$ of real numbers with their usual order is a $\Z $\hyp{}poset for the action given by the sum of real numbers with integers (seen as a subring of real numbers).
+\end{example}
+\marginnote{\textdbend}
+\begin{remark}\label{rem.finite}
+ If $(P,\leq)$ is a finite poset, then the only $\Z $\hyp{}action it carries is the trivial one. Indeed, if $\rho\colon P\to P$ is the monotone bijection associated with the $\Z $\hyp{}action, one sees that $\rho$ is of finite order by the finiteness of $P$. Therefore there exists an $n\geq 1$ such that $\rho^n=\mathrm{id}_P$. It follows that, for any $x$ in $P$,
+ \[
+ x\leq x+1\leq\cdots\leq x+n=x
+ \]
+and so $x=x+1$.
+\end{remark}
+\begin{notat}
+An obvious terminology: a \emph{$G$\hyp{}fixed point} for a $G$\hyp{}poset $P$ is an element $p\in P$ kept fixed by all the elements of $G$ under the action $+_P$. An important observation is that an element $p$ of a $\Z$\hyp{}poset $P$ is a $\Z$\hyp{}fixed point if and only if $p+_P 1 = p$.
+\end{notat}
+\begin{lemma}\label{minmax}
+ If $k\in P$ is a $\le$\hyp{}maximal or $\le$\hyp{}minimal element in the $\Z $\hyp{}poset $(P,\leq)$, then it is a $\Z $\hyp{}fixed point.
+\end{lemma}
+ %Since the $\Z$\hyp{}action on $P$ is monotone, $k\leq k+1$ and so $k+1=k$ by maximality. The same kind of argument applies in the dual case, and in the particular case where $P$ has a maximum $\max(P)$ or a minimum $\min(P)$.
+\begin{remark}\index{Z\hyp{}poset@$\Z$\hyp{}poset!Extension of a ---}
+ Given a poset $P$ we can always define a partial order on the set $P\cup\{-\infty,+\infty\}$ which extends the partial order on $P$ by the rule $-\infty\leq x\leq +\infty$ for any $x\in P$. 
+\end{remark}
+\begin{lemma}
+ If $(P,\leq)$ is a $\Z $\hyp{}poset, then $(P\cup\{\pm\infty\},\leq)$ carries a natural $\Z $\hyp{}action extending the $\Z $\hyp{}action on $P$, by declaring both $-\infty$ and $+\infty$ to be $\Z $\hyp{}fixed points.
+\end{lemma}
+\begin{proof}
+ Adding a fixed point always gives an extension of an action, so we only need to check that the extended action is compatible with the partial order. This is equivalent to checking that also on $P\cup\{\pm\infty\}$ the map $x\to x+1$ is a monotone bijection such that $x\leq x+1$, which is immediate. 
+\end{proof}
+Posets with $\Z $\hyp{}actions naturally form a category, whose morphisms are \emph{$\Z $\hyp{}equivariant} morphisms of posets. More explicitly, if $P$ and $Q$ are $\Z $\hyp{}posets with actions $+_P$ and $+_Q$, then a morphism of $\Z $\hyp{}posets between them is a morphism of posets $\varphi\colon P\to Q$ such that
+\[
+\varphi(x+_P n)=\varphi(x)+_Q n,
+\]
+for any $x\in P$ and any $n\in \Z $.
+\begin{lemma}\label{trivial.but.useful2}\index{Z\hyp{}poset@$\Z$\hyp{}poset!Fixed point of a ---}
+The choice of an element $x$ in a $\Z $\hyp{}poset $P$ is equivalent to the datum of a $\Z $\hyp{}equivariant morphism $\varphi\colon(\Z ,\leq)\to (P,\leq)$. Moreover $x$ is a $\Z $\hyp{}fixed point if and only if the corresponding morphism $\varphi$ factors $\Z $\hyp{}equivariantly through $(*,\leq)$, where $*$ denotes the terminal object of $\cate{Pos}$. 
+ \end{lemma}
+\begin{proof}
+To the element $x$ one associates the $\Z $\hyp{}equivariant morphism $\varphi_x$ defined by $\varphi_x(n)=x+n$. To the $\Z $\hyp{}equivariant morphism $\varphi$ one associates the element $x_\varphi=\varphi(0)$. It is immediate to check that the two constructions are mutually inverse. The proof of the second part of the statement is straightforward.
+\end{proof}
+\begin{lemma}
+Let $\varphi\colon(\Z ,\leq)\to (P,\leq)$ be a $\Z $\hyp{}equivariant morphism of $\Z $\hyp{}posets. Then $\varphi$ is either injective or constant.
+\end{lemma}
+\begin{proof}
+Assume $\varphi$ is not injective. then there exist two integers $n$ and $m$ with $n>m$ such that $\varphi(n)=\varphi(m)$. By $\Z $\hyp{}equivariancy we therefore have
+\[
+x_\varphi+(n-m)=x_\varphi,
+\]
+with $n-m\geq 1$ and $x_\varphi=\varphi(0)$. The conclusion then follows by the same argument used in Remark \refbf{rem.finite}.
+\end{proof}
+\begin{lemma}\label{extends}
+Let $\varphi\colon (P,\leq)\to (Q,\leq)$ be a morphism of $\Z $\hyp{}posets. Assume $Q$ has a minimum and a maximum. Then $\varphi$ extends to a morphism of $\Z $\hyp{}posets $(P\cup\{\pm\infty\},\leq)\to (Q,\leq)$ by setting $\varphi(-\infty)=\min(Q)$ and $\varphi(+\infty)=\max(Q)$.
+\end{lemma}
+\begin{proof}
+Since $\min(Q)$ and $\max(Q)$ are $\Z $\hyp{}fixed points by Lemma \refbf{minmax}, the extended $\varphi$ is a morphism of $\Z $\hyp{}posets. Moreover, since $\min(Q)$ and $\max(Q)$ are the minimum and the maximum of $Q$, respectively, the extended $\varphi$ is indeed a morphism of posets, and so it is a morphism of $\Z $\hyp{}posets.
+\end{proof}
+\subsection{\texorpdfstring{$J$}{J}\hyp{}families of $t$\hyp{}structures.}\index{J-family@$J$-family}
+The main reason why we are interested in the theory of $\Z $\hyp{}poset is the following result we already used in \achap \refbf{chap:refnorm}, \achap \refbf{chap:tstruct} (and recalled also in \refbf{slicing}):
+\begin{remark}\label{slicing.cotow}
+Let $\CC$ be a stable $\infty$\hyp{}category. \index{Z\hyp{}poset@$\Z$\hyp{}poset!$\ts(\CC)$ as a ---}Then, the collection $\ts(\CC)$ of all $t$\hyp{}structures on $\CC$ is a poset with respect to following order relation: given two $t$\hyp{}structures $\tee_a=(\CC_{\ge_a 0}, \CC_{<_a0})$\footnote{The baffled reader is invited to look at Notation \refbf{magictrick}.} and  $\tee_b=(\CC_{\ge_b 0}, \CC_{<_b0})$, one has  $\tee_a \preceq \tee_b$ iff $\CC_{<_a0}\subseteq \CC_{<_b0}$. 
+
+The ordered group $\Z $ acts on $\ts(\CC)$ in a way that is fixed (Remark \refbf{trivial.but.useful}) by the action of the generator $+1$; this maps a $t$\hyp{}structure $\tee=(\CC_{\geq 0},\CC_{<0})$ to the \emph{shifted} $t$\hyp{}structure $\tee[1]=(\CC_{\geq 0}[1],\CC_{<0}[1])$.
+
+Since $\tee\preceq\tee[1]$ one sees that $\ts(\CC)$ is naturally a $\Z $\hyp{}poset (this follows from \refbf{slicing}). 
+\end{remark}
+\begin{notat}\label{avoid.cumbersomeness}
+If $\tee=(\CC_{\geq 0},\CC_{<0})$ is a $t$\hyp{}structure on $\CC$, it is customary to write $\CC_{\geq 1}$ for $\CC_{\geq 0}[1]$ and $\CC_{<1}$ for $\CC_{<0}[1]$, so that $\tee[1]=(\CC_{\geq 1},\CC_{<1})$, and more generally $\CC_{\ge n} := \CC_{\ge 0}[n]$, $\CC_{<n} := \CC_{<0}[n]$ for each $n\in\Z$, so that $\tee[n]=(\CC_{\geq n},\CC_{<n})$.
+\end{notat}
+We now have the natural desire to consider families of $t$\hyp{}structures on $\CC$ indexed by an \emph{arbitrary} $\Z $\hyp{}poset $J$, as in the following
+\begin{definition}
+Let $(J,\leq)$ be a $\Z $\hyp{}poset. A \emph{$J$\hyp{}family} of $t$\hyp{}structures on a stable $\infty$\hyp{}category $\CC$ is a $\Z $\hyp{}equivariant morphism of posets $\tee\colon J\to \ts(\CC)$.
+ \end{definition}
+ More explicitly, a $J$\hyp{}family is a family $\{\tee_j\}_{j\in J}$ of $t$\hyp{}structures on $\CC$ such that
+ \begin{enumerate}
+\item $\tee_i\preceq \tee_j$ if $i\leq j$ in $J$;
+\item $\tee_{i+1}=\tee_i[1]$ for any $i\in J$.
+ \end{enumerate}
+\begin{remark}
+A natural choice of notation, motivated by the ``Rosetta stone'' \refbf{thm:rosetta}, is the following: a $J$\hyp{}family of $t$\hyp{}structures is the same as a $J$\hyp{}family of normal torsion theories on $\CC$ (or, more formally, the maps $\fF(-)$ and $\tee(-)$ defined in the proof of the Rosetta stone become isomorphisms \emph{in the category $\Z\text{-}\cate{Pos}$} for a suitable choice of partial order and $\Z$\hyp{}action on normal torsion theories).
+
+Motivated by this remark, we feel free to call ``$J$\hyp{}family of normal torsion theories'' any monotone function $J\to \smallcap{ntt}(\CC)$ which is also $\Z$\hyp{}equivariant.
+\end{remark}
+\begin{notat}\label{magictrick}
+For $i\in J$, we will write $\CC_{\leq i}$ and $\CC_{>i}$ for $\CC_{\leq_i0}$ and $\CC_{<_i0}$, respectively. With this notation we have that $\tee_i=(\CC_{\geq i},\CC_{<i})$. Note that, by $\Z $\hyp{}equivariancy, this notation is consistent. Namely $\tee_{i+1}=\tee_i[1]$ implies $\CC_{\geq_{i+1}0}=\CC_{\geq_i0}[1]$ and so
+\[
+\CC_{\geq i+1}=\CC_{\geq i}[1].
+\]
+Similarly, one has
+\[
+\CC_{< i+1}=\CC_{< i}[1].
+\]
+We underline how in this choice of notation the condition $\tee_i\preceq \tee_j$ for $i\leq j$ translates to the very natural condition $\CC_{<i}\subseteq \CC_{<j}$ for $i\leq j$. Notice that this is basically \cite[\adef \textbf{3.1}]{GKR}.
+\end{notat}
+\begin{example}\index{Z-family@$\Z$\hyp{}family}
+A $\Z $\hyp{}family of $t$\hyp{}structures is, by Lemma \refbf{trivial.but.useful}, equivalent to the datum of a $t$\hyp{}structure $\tee_0=(\CC_{\geq 0},\CC_{<0})$. One has $\tee_1=(\CC_{\geq 1},\CC_{<1})$ consistently with the notations in Remark \refbf{slicing.cotow}. Notice that by our Remark \refbf{rem.finite}, as soon as $\CC_{\ge 0}[1]\subset \CC_{\ge 0}$ (proper inclusion), then this proper inclusion is valid for all $n\in\Z$, \ie the orbit $\tee + \Z$ is an infinite set.
+\end{example}
+\begin{example}\label{what.s.slici}
+An $\mathbb{R}$\hyp{}family of $t$\hyp{}structures is the datum of a $t$\hyp{}structure $\tee_\lambda=(\CC_{\geq \lambda},\CC_{<\lambda})$ on $\CC$ for any $\lambda\in \mathbb{R}$ in such a way that $\tee_{\lambda+1}=\tee_\lambda[1]$. Such a structure is called a \emph{slicing} \index{Slicing}of $\CC$ in \cite{Brid}.\footnote{This is not entirely true, as will appear clear in \achap \refbf{chap:stabilities}, but it's a good approximation of the definition given there. \cite{Brid} imposes more restrictive conditions to ensure ``compactness'' of the factorization. Compare also \cite{GKR}.} 
+\end{example}
+\begin{example}[A tautological example]
+By taking $J=\ts(\CC)$ and $\tee$ to be the identity of $\ts(\CC)$ one sees that the whole $\ts(\CC)$ can be looked at as a particular $J$\hyp{}family of $t$\hyp{}structures on $\CC$.
+\end{example}
+\begin{remark}\label{infinity}
+The poset $\ts(\CC)$ has a minimum and a maximum given by
+\[
+\min(\ts(\CC))=(\CC,\mathbf{0});\qquad \max(\ts(\CC))=(\mathbf{0},\CC).
+\]
+which correspond under the bijection of \athm \refbf{thm:rosetta} to the maximal and minimal factorizations on $\CC$ respectively, and will be called the \emph{trivial} factorizations\fshyp{}$t$\hyp{}structures. 
+
+Hence, by Lemma \refbf{extends}, any $J$\hyp{}family of $t$\hyp{}structures $\tee\colon J\to \ts(\CC)$ extends to a $(J\cup\{\pm\infty\})$\hyp{}family by setting $\tee_{-\infty}=(\CC,\mathbf{0})$ and $\tee_{+\infty}=(\mathbf{0},\CC)$. 
+\end{remark}
+\begin{definition}\label{std.endocardium}
+Let $\tee$ be a $J$\hyp{}family of $t$\hyp{}structures. For $i$ and $j$ in $J$ we set
+\[
+\CC_{[i,j)}=\CC_{\geq i}\cap \CC_{<j}.
+\]
+Consistently with Remark \refbf{infinity} and Notation \refbf{magictrick}, we also set
+\[
+\CC_{[i,+\infty)}=\CC_{\geq i};\qquad \CC_{[-\infty,i)}= \CC_{<i}
+\]
+for any $i$ in $J$. We say that $\CC$ is \emph{$J$\hyp{}bounded} if 
+\[
+\CC=\bigcup_{i,j\in J}\CC_{[i,j)}.
+\]\index{t-structure@$t$\hyp{}structure!bounded ---}
+Similarly, we say that $\CC$ is \emph{$J$\hyp{}left\hyp{}bounded} if $\CC=\bigcup_{i\in J}\CC_{[i,+\infty)}$ and \emph{$J$\hyp{}right\hyp{}bounded} if $\CC=\bigcup_{i\in J}\CC_{[-\infty,i)}$. This notion is well known in the classical as well as in the quasicategorical setting: see \cite{BBDPervers,LurieHA}.
+\end{definition}
+\begin{remark}
+Since $\CC_{[i,j)}=\CC_{[i,+\infty)}\cap \CC_{[-\infty,j)}$ one immediately sees that $\CC$ is $J$\hyp{}bounded if and only if $\CC$ is both $J$\hyp{}left- and $J$\hyp{}right\hyp{}bounded.
+\end{remark}
+\begin{remark}
+As it is natural to expect, if $i\geq j$, then $\CC_{[i,j)}$ is contractible. Namely, since $j\leq i$ one has $\CC_{<j}\subseteq \CC_{<i}$ and so 
+\[
+\CC_{[i,j)}=\CC_{\geq i}\cap \CC_{<j}\subseteq \CC_{\geq i}\cap \CC_{<i}=\CC_{\geq_i0}\cap \CC_{<_i0}
+\]
+which corresponds to the contractible subcategory of zero objects in $\CC$ (this is immediate, in view of the definition of the two classes).
+\end{remark}
+\begin{remark}
+\index{Left bounded|see {$t$\hyp{}structure}}\index{Z-family@$\Z$\hyp{}family}
+Let $\tee$ be a $\Z $\hyp{}family of $t$\hyp{}structures on $\CC$. Then $\CC$ is $\Z $\hyp{}bounded (resp., $\Z $\hyp{}left\hyp{}bounded, $\Z $\hyp{}right\hyp{}bounded) if and only if $\CC$ is bounded (resp., left\hyp{}bounded, right\hyp{}bounded)with respect to the $t$\hyp{}structure $\tee_0$, agreeing with the classical definition of boundedness as given, \eg, in \cite{BBDPervers}.
+\end{remark}
+\begin{remark}
+If $\tee$ is an $\mathbb{R}$\hyp{}family of $t$\hyp{}structures on $\CC$, then one can define
+\[
+\CC_\lambda=\bigcap_{\epsilon>0}\CC_{[\lambda,\lambda+\epsilon)}.
+\]
+These subcategories $\CC_\lambda$ are the \emph{slices} \index{Factorization system!slicing}of $\CC$ in the terminology of \cite{Brid}.
+\end{remark}
+\begin{remark}\label{oss.perp}
+For any $i,j,h,k$ in $J$ with $j\le h$ one has
+\[
+\CC_{[i,j)}\subseteq \CC_{[h,k)}^\perp,
+\]
+\ie, $\CC(X,Y)$ is contractible whenever $X\in \CC_{[h,k)}$ and $Y\in \CC_{[i,j)}$ (one says that $\CC_{[i,j)}$ is \emph{right\hyp{}orthogonal} to $\CC_{[h,k)}$, see Notation \refbf{orth.between.classes}).
+Indeed, since $\CC_{< j}=\CC_{<_j0}=\CC_{\geq_j0}^\perp=\CC_{\geq j}^\perp$, and passing to the orthogonal reverses the inclusions, we have
+\[
+\CC_{[i,j)}\subseteq \CC_{<j} = \CC_{\ge j}^\perp \subseteq \CC_{\ge h}^\perp\subseteq \CC_{[h,k)}^\perp.
+\]
+\end{remark}
+\begin{definition}
+Let $(\CC, \tee)$ be a stable $\infty$\hyp{}category endowed with a $t$\hyp{}structure, arising from the normal torsion theory $\fF=(\EE,\MM)$. For each $n\in\mathbb Z$, let $\CC_{\ge n}$ and $\CC_{<n}$ be the reflective and coreflective subcategories of $\CC$ determined by the $t$\hyp{}structure $\tee$.
+
+Then $\tee$ is said to be
+\begin{itemize}
+\item \emph{bounded} if $\bigcup  \CC_{\ge n}= \CC$;\index{t-structure@$t$\hyp{}structure!bounded ---}
+\item \emph{limited} if every $f \colon  X\to Y$ fits into a fiber sequence\index{t-structure@$t$\hyp{}structure!narrow and limited ---}
+\[
+\label{limited}
+\begin{kD}
+\lattice[mesh]{
+	\obj F; & \obj X; & \obj 0; \\
+	\obj (0'):0; & \obj Y; & \obj C; \\
+};
+\mor F -> X -> 0 {e[b]}:-> C <- Y <- 0' {m[a]}:<- F;
+\mor X f:-> Y;
+\pullout{F}{Y};
+\pullout{X}{C};
+\end{kD}
+\]
+where $F=\fib(f), C=\cofib(f)$, and $m[a]\in\MM[a], e[b]\in \EE[b]$ for suitable integers $a,b\in\mathbb Z$;
+\item \emph{narrow} if $\CC = \bigcup_{a\le b} \CC_{[a,b)}$, where $\CC_{[a,b)}=\CC_{\ge a} \cap \CC_{<b}$.
+\end{itemize}
+\end{definition}
+\begin{proposition}
+Let $(\CC, \tee)$ be a stable $\infty$\hyp{}category endowed with a $t$\hyp{}structure. Then $\tee$ is narrow if and only if it is bounded, if and only if it is limited.
+\end{proposition}
+\begin{remark}
+We say that an $f\colon X\to Y$ in $(\CC, \tee)$ is \emph{limited between $a,b\in\mathbb Z$} if there exists a diagram like (\refbf{limited}) for $f$; we say that $f$ is \emph{limited} if it is limited between $a,b$ for some $a,b\in\mathbb Z$. In this terminology, a $t$\hyp{}structure $\tee$ is limited if and only if every $f\colon X\to Y$ is limited with respect to $\tee$.
+\end{remark}
+\begin{proof}
+It is rather obvious that $\tee$ is narrow if and only if it is limited, so we can reduce ourselves to prove that bounded and limited $t$\hyp{}structures coincide.
+
+This is a consequence of the application of the following
+\begin{lemma}\label{limit}
+Let $f\colon X\to Y$ be limited between $a,b$; then $f$ belongs to $\MM[a+1]\cap \EE[b-1]$.
+\end{lemma}
+\begin{proof}
+We can reduce the result to an easy consequence of the Sator Lemma \refbf{satorlemma}. Moreover, we only prove that $f\in \MM[a+1]$, the proof that $f\in \EE[b-1]$ being dual.
+
+By the abovementioned Sator Lemma, $\var{F}{0}\in \MM[a]$ if and only if $\var{0}{F}\in \MM[a]$; but now $F\simeq C[-1]$ in diagram (\refbf{limited}), and $\var{0}{C[-1]}\in \MM[a]$ implies that $\var{0}{C}\in \MM[a+1]$.
+\end{proof}
+Now we can return to the proof of the initial result, implicitly invoking Lemma \refbf{limit} when needed: if $\tee$ is a limited $t$\hyp{}structure, then every $\var{X}{0}$ is limited between $a_X, b_X$, hence $\var{X}{0}\in \MM[a_X+1]$, so that $X\in \CC_{ < a_X}$; in the same way $\var{0}{X}\in \EE[b_X-1]$, so that $X\in \CC_{\ge b_X -1}$ and $X\in \bigcup_{u,v}\CC_{[u,v)}$. The other inclusion is obvious.
+
+Conversely, if $\tee$ is bounded, we have that each object $X$ lies in $\EE[u_X]\cap \MM[v_X]$; so if we consider the following diagram of pullout squares
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj Y[-1]; & \obj 0; & \\
+	\obj F; & \obj X; & \obj (0'):0; \\
+	\obj (0''):0; & \obj Y; & \obj C; \\
+};
+\mor Y[-1] -> 0 swap:{m[v_X]}:-> X -> Y -> C <- 0' <- X <- F -> 0'' -> Y;
+\mor Y[-1] -> F;
+\mor Y[-1] L> 0'';
+\mor 0 {near end}:{m[v_Y]}:r> Y;
+\end{kD}
+\]
+we deduce that the arrow $\var{F}{0}$ belongs to $\MM[v]$, where $v =\max\{v_X, v_Y\}$, as a consequence of the stability under pullbacks and the 3\hyp{}for\hyp{}2 closure property of each class $\MM[n]$.
+
+Reasoning in a perfectly dual fashion, we deduce that $\var{0}{C}\in \EE[u]$, where $u=\min\{u_X, u_Y\}$, so that each $f\colon X\to Y$ is limited between $u,v$.
+\end{proof}
+\section{Towers of morphisms.}
+\index{Towers}
+\HebrewEpigraph{הָבָה, נֵרְדָה, וְנָבְלָה שָׁם, שְׂפָתָם--אֲשֶׁר לֹא יִשְׁמְעוּ, אִישׁ שְׂפַת רֵעֵהוּ.}{\cite{BHS}, \smallcap{Genesis} 11:7}
+In the remainder of this section, $J$ will be a fixed $\Z$\hyp{}poset and $\tee_i$ will be the $i^\text{th}$ element of a $J$\hyp{}family of $t$\hyp{}structures on $\CC$; $\mathbb{F}_i$ will denote the corresponding $J$\hyp{}family of factorization systems.
+
+We recall \adef \refbf{mult.fs}, and in particular that
+\begin{lemma}\label{k.fold.fact}
+The chain $i_1\leq i_2\leq\cdots\leq i_k$ determines a $k$\hyp{}fold factorization system in $\CC$ in the sense of \adef \refbf{mult.fs}. Namely, every arrow $f\colon X\to Y$ in $\CC$ can be uniquely factored into a composition
+\[
+X \xto{\EE_{i_k}} Z_{i_k} \xto{\EE_{i_{k-1}}\cap \MM_{i_k}} Z_{i_{k-1}}\to\dots\to Z_{i_{2}} \xto{\EE_{i_{1}}\cap \MM_{i_{2}}} Z_{i_1} \xto{\MM_{i_{1}}} Y.
+\]
+\end{lemma}
+\begin{proof}
+This was proved in Lemma \refbf{multiple.fact}.
+\end{proof}
+\begin{lemma}\label{versa.vice}
+Let $i,j$ be elements in $J$ and let $X$ be an object in $\CC_{\geq j}$ (see Definition \refbf{std.endocardium}). If a morphism $f\colon X\to Y$ is in $\EE_{i}\cap \MM_{j}$, then $\cofib(f)$ is in $\CC_{[i,j)}$.\end{lemma}
+\begin{proof}
+Since $X$ is in $\CC_{\geq j}$, $0\to X\xrightarrow{f} Y$ is the $(\EE_j,\MM_j)$\hyp{}factorization of $0\to Y$ (in particular, $X\cong S_jY$ if $S_j$ denotes the coreflection of $\CC$ on $\CC_{\ge j}$; see our \adef \refbf{firm.reflective} of ``firm reflectivity'' and \cite[Prop \textbf{3.2}]{RT}). Since the factorization system $\mathbb{F}_j$ is normal, hence semi\hyp{}right\hyp{}exact, we have the following pullout diagram:
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj X; & \obj Y; \\
+	\obj 0; & \obj (cofib):\cofib(f); \\
+};
+\mor X {\EE_j}:-> Y {\MM_j}:-> cofib {\MM_j}:<- 0 {\EE_j}:<- X;
+\end{kD}
+\]
+Hence $\cofib(f)$ is in $\CC_{<j}$. On the other hand, $f$ is in $\EE_i$, which is closed under pushouts, and so $0\to \cofib(f)$ is in $\EE_i$, \ie, $\cofib(f)$ is in $\CC_{\geq i}$.
+\end{proof}
+An immediate corollary of \refbf{versa.vice} is that the cofibers of each $f_j\colon Y_{i_j}\to Y_{i_{j-1}}$ in the $k$\hyp{}fold factorization obtained via \refbf{k.fold.fact} belong to the subcategories $\CC_{[i_{j-1},i_j)}$. This remark is the basic building block of the \emph{tower} of $f$.
+\begin{corollary} \label{cor:perPostnikov}
+Let $i_1\leq i_2\leq\cdots\leq i_k$ an ascending chain in $J$. Then for any object $Y$ in $\CC$, the arrows $f_j\colon Y_{i_j}\to Y_{i_{j-1}}$ in the $k$\hyp{}fold factorization of the initial morphism $0\to Y$ are such that $\cofib(f_j)\in \CC_{[i_{j-1},i_j)}$, where we have set $i_{k+1}=+\infty$ and $Y_{+\infty}=0$ (and, similarly, $i_{0}=-\infty$ and $Y_{-\infty}=Y$) consistently with Remark \refbf{infinity} (and its dual).
+\end{corollary}
+\begin{proof}
+From the $k$\hyp{}fold factorization
+\[
+0 \xto{\EE_{i_k}} Y_{i_k} \xto{\EE_{i_{k-1}}\cap \MM_{i_k}} Y_{i_{k-1}}\to\dots\to Y_{i_{2}} \xto{\EE_{i_{1}}\cap \MM_{i_{2}}} Y_{i_1} \xto{\MM_{i_{1}}} Y,
+\]
+and from the fact that $\EE_{i_1}\supseteq \EE_{i_2} \supseteq\dots\supseteq \EE_{i_k}$ and each class $\EE_{i_j}$ is closed for composition, we see that $Y_{i_j}$ is in $\CC_{i_{j}}$ and the previous lemma applies.
+\end{proof}
+Firm reflectivity implies the converse of \refbf{versa.vice}:
+\begin{lemma}\label{lemma.vice.versa}
+Let $i\leq j$ be elements in $J$ and let $f\colon X\to Y$ be a morphism in $\CC$. If $X$ is in $\CC_{[j,+\infty)}$ and $\cofib(f)$ is in $\CC_{[i,j)}$ then $0\to X\xto{f}Y$ is the $(\EE_j,\MM_j)$\hyp{}factorization of the initial morphism $0\to Y$ and $Y$ is in $\CC_{[i,+\infty)}$. In particular $f$ is in $\EE_i\cap \MM_j$. \end{lemma}
+\begin{proof}
+
+Since $X$ is in $\CC_{\geq j}$, the morphism $0\to X$ is in $\EE_j$, and so (reasoning up to equivalence) to show that $0\to X\to Y$ is the $(\EE_j,\MM_j)$\hyp{}factorization of $0\to Y$ we are reduced to showing that $f\colon X\to Y$ is in $\MM_j$. Since $\cofib(f)$ is in $\CC_{[i,j)}$, we have in particular that $\cofib(f)\to 0$ is in $\MM_j$ and so $0\to \cofib(f)$ is in $\MM_j$ by the Sator lemma. Then we have a homotopy pullback diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj X; & \obj 0; \\
+	\obj Y; & \obj (cofib):\cofib(f); \\
+};
+\mor X swap:f:-> 0 {\MM_j}:-> cofib <- Y <- X;
+\end{kD}
+\]
+and so $f$ is in $\MM_j$ by the fact that $\MM_j$ is closed under pullbacks. 
+
+To show that also $f\in \EE_i$ let $0\to X\to T\to Y$ be the ternary factorization of $f$. We can consider the diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj 0; \\
+\obj X; & \obj (0'):0; \\
+\obj T; & \obj U; & \obj (0''):0; \\
+\obj Y; & \obj (cofib):\cofib(f); & \obj V; & \obj (0'''):0; \\
+};
+\mor[swap] 0 {\EE_j}:-> X {\EE_i\cap \MM_j}:-> T {\MM_i}:-> Y {\EE_j}:-> cofib {\EE_i\cap \MM_j}:-> V {\MM_i}:-> 0''';
+\mor X {\EE_j}:-> 0' {\EE_i\cap \MM_j}:-> U {\EE_i\cap \MM_j}:-> 0'' {\MM_i}:-> V;
+\mor T {\EE_j}:-> U {\MM_i}:-> cofib;
+\end{kD}
+\]
+where all the squares are pullouts, and where we have used the Sator lemma, the fact that the classes $\EE$ are closed for pushouts while the classes $\MM$ are closed for pullbacks, and the 3\hyp{}for\hyp{}2 property for both classes. 
+
+\end{proof}
+\begin{lemma}\label{perPostnikov} Let $Y$ an object in $\CC$ and let $i_1\leq i_2\leq\cdots\leq i_k$ be an ascending chain in $J$. If a factorization 
+\[
+0 \xto{f_{k+1}} Y_{i_k} \xto{f_k}Y_{i_{k-1}}\to\dots\to Y_{i_{2}} \xto{f_2} Y_{i_1} \xto{f_1} Y,
+\]
+of the initial morphism $0\to Y$ is such that $\cofib(f_j)$ is in $\CC_{[i_{j-1},i_j)}$ (with $i_{k+1}=+\infty$ and $i_0=-\infty$) then this factorization is the $k$\hyp{}fold factorization of $0\to Y$ associated with the chain $i_1\leq\cdots\leq i_k$. 
+\end{lemma}
+\begin{proof}
+By uniqueness of the $k$\hyp{}fold factorization we only need to prove that $f_j\in \EE_{i_{k-1}}\cap \MM_{i_k}$, which is immediate by repeated application of Lemma \refbf{lemma.vice.versa}. 
+\end{proof}
+This paves the way to the definition of the tower of $f$: the basic idea is to ``pull back'' the factorization of the initial morphism $0\to \cofib(f)$ using Lemma \refbf{perPostnikov}.
+\begin{definition}[Tower of a morphism]\index{Tower} \label{tower.of.f}Let $f\colon X\to Y$ be a morphism in $\CC$ and let $i_1\leq i_2\leq\cdots \leq i_k$ be an ascending chain in $J$. We say that a factorization 
+\[
+X \xto{f_{k+1}} Z_{i_k} \xto{f_k}Z_{i_{k-1}}\to\dots\to Z_{i_{2}} \xto{f_2} Z_{i_1} \xto{f_1} Y,
+\]
+of $f$ is a \emph{tower} of $f$ relative to the chain $\{i_j\} = \{i_1\leq i_2\leq\cdots \leq i_k\}$ if for any $j=1,\dots,k+1$ one has
+$\cofib(f_j)\in \CC_{[i_{j-1},i_j)}$ (with $i_{k+1}=+\infty$ and $i_0=-\infty$).
+\end{definition}
+\begin{proposition}\label{prop:perPostnikov} Let $f\colon X\to Y$ be a morphism in $\CC$ and let $i_1\leq i_2\leq\cdots \leq i_k$ be an ascending chain in $J$. Then a tower for $f$ relative to $\{i_j\}$, denoted $\rook_{\{i_j\}}(f)$, exists and it is unique up to isomorphisms.
+\end{proposition}
+\begin{proof}
+We split the proof in two parts: existence and uniqueness of the tower;
+\begin{enumerate}
+\item Consider the pullout diagram
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj X; & \obj 0; \\
+	\obj Y; & \obj (cofib):\cofib(f); \\
+};
+\mor X swap:f:-> 0 {\MM_j}:-> cofib <- Y <- X;
+\end{kD}
+\]
+By Corollary \refbf{cor:perPostnikov}, the $k$\hyp{}fold factorization 
+\[
+0 \xto{\varphi_{k+1}} A_{i_k} \xto{\varphi_k}A_{i_{k-1}}\to\dots\to A_{i_{2}} \xto{\varphi_2} A_{i_1} \xto{\varphi_1} \cofib(f)
+\]
+of the initial morphism $0\to \cofib(f)$ is such that $\cofib(\varphi_{i_j})\in \CC_{[i_{j-1},i_j)}$. Pulling back this factorization along $Y\to \cofib(f)$ we obtain a factorization
+\[
+\begin{kD}
+\lattice[mesh]{
+	\obj X; & \obj 0; \\
+	\obj (zik):Z_{i_k}; & \obj (aik):A_{i_k}; \\
+	\obj (ldots):\vdots; & \obj (rdots):\vdots; \\
+	\obj (zi1):Z_{i_1}; & \obj (ai1):A_{i_1}; \\
+	\obj Y; & \obj (cofib):\cofib(f); \\
+};
+\mor X -> 0 \phi_{k+1}:-> aik \phi_k:-> rdots \phi_2:-> ai1 \phi_1:-> cofib <- Y {f_1}:<- zi1 {f_2}:<- ldots {f_k}:<- zik {f_{k+1}}:<- X;
+\mor zik -> aik;
+\mor zi1 -> ai1;
+\mor[semilightgray] X f:semilightgray,L> Y;
+\end{kD}
+\]
+of $f$, and the pasting of pullout diagrams
+\[
+\begin{kD}
+\lattice[mesh]{ 
+\obj (zij):Z_{i_j};       & \obj (aij):A_{i_j};       & \obj 0; \\
+\obj (zij1):Z_{i_{j-1}}; & \obj (aij1):A_{i_{j-1}}; & \obj (cof):\cofib(\varphi_{j}); \\
+};
+\mor zij -> aij -> 0 -> cof <- aij1 <- zij1 f_j:<- zij;
+\mor aij \phi_j:-> aij1;
+\end{kD}
+\]
+shows that $\cofib(f_{j})=\cofib(\varphi_{j})$ and so $\cofib(f_{j})\in \CC_{[i_{j-1},i_j)}$. This proves the existence of the tower. 
+\item To prove uniqueness, start with a tower $\rook_{\{i_j\}}(f)$ for $f$ and push it out along $Y\to \cofib(f)$ to obtain a tower for the initial morphism $0\to \cofib(f)$. By Lemma \refbf{perPostnikov}, this is the $k$\hyp{}fold factorization of $0\to \cofib(f)$ associated with the chain $\{i_j\}$ and so $\rook_{\{i_j\}}(f)$ is precisely the tower constructed in the first part of the proof. Note how the pullout axiom of stable $\infty$\hyp{}categories plays a crucial role.\qedhere
+\end{enumerate}
+\end{proof}
+\begin{remark}
+A tower for $f$ relative to an ascending chain $\{i_j\}$ can be equivalently defined as a factorization of $f$ such that $\mathrm{fib}(f)\in \CC_{[i_{j-1}-1,i_j-1)}$, for any $j=0,\dots,k+1$.
+\end{remark}
+\begin{remark}
+\marginnote{\textdbend} 
+It's an unavoidable temptation to think of the tower $\rook_{\{i_j\}}(f)$ relative to an ascending chain $\{i_j\}$ as the $k$\hyp{}fold factorization of $f$ associated with the chain $\{i_j\}$. 
+
+As the following counterexample shows, when $f$ is not an initial morphism this is in general not true.\footnote{When $f\colon A\to 0$ is the terminal morphism, our notation and construction is in line with the classical \cite{LurieHA}, where the ``Postnikov tower'' of $A$ is the sequence
+\[
+A\to \dots \to R_2A\to R_1A\to R_0A \to 0
+\]
+of factorizations obtained from the (stable image of) the $n$\hyp{}connected factorization system of \cite{Joy}.} Let $J=\Z $ and take an ascending chain consisting of solely the element $0$. Now take a morphism $f\colon X\to Y$ between two elements in $\CC_{[-1,0)}$. The object $\cofib(f)$ will lie in $\CC_{[-1,+\infty)}$, since $\EE_{-1}$ is closed for pushouts, but in general it will not be an element in $\CC_{[0,+\infty)}$. In other words, we will have, in general, a nontrivial $(\EE_0,\MM_0)$\hyp{}factorization of the initial morphism $0\to \cofib(f)$. Pulling this back along $Y\to \cofib(f)$ we obtain the tower $X\xto{f_2} Z\xto{f_1} Y$ of $f$, and this factorization will be nontrivial since its pushout is nontrivial. It follows that $(f_2,f_1)$, cannot be the $(\EE_0,\MM_0)$\hyp{}factorization of $f$. Indeed, by the 3\hyp{}for-2 property of $\MM_0$, the morphism $f$ is in $\MM_0$, so its $(\EE_0,\MM_0)$\hyp{}factorization is trivial. 
+\end{remark}
+\section{Hearts of $t$\hyp{}structures.}\index{t-structure@$t$\hyp{}structure!heart of a ---}
+\setlength{\epigraphwidth}{.75\textwidth}
+\epigraph{I watched a snail crawl along the edge of a straight razor. That's my dream. That's my nightmare. Crawling, slithering, along the edge of a straight razor\dots\ and surviving.
+}{Col. Walter E. Kurtz}
+\setlength{\epigraphwidth}{\DefaultEpigraphWidth}
+We now focus in the case $J=\Z $. As indicated in remark \refbf{trivial.but.useful} this is equivalent to a single distinguished $t$\hyp{}structure $\tee=\tee_0$ on the stable $\infty$\hyp{}category $\CC$, together with its orbit $\{\tee_j = \tee_0[j]\}_{j\in\Z}$. As the set of indices for our family of $t$\hyp{}structures is the ordered set of integers, we will always consider complete ascending chains of the form
+\[
+n<n+1<n+2<\cdots n+k-1
+\]
+in what follows. In particular Proposition \refbf{prop:perPostnikov} becomes
+\begin{proposition}
+Let $f\colon X\to Y$ be a morphism in $\CC$. Then for any integer $n$ and any positive integer $k$ there exists a unique tower for $f$ associated with the ascending chain $n<n+1<\cdots<n+k-1$. Denoting this tower by
+\[
+X \xto{f_{n+k}} Z_{n+k-1} \xto{f_{n+k-1}}Z_{n+k-2}\to\dots\to Z_{n+1} \xto{f_{n}} Z_{n} \xto{f_{n-1}} Y,
+\]
+one has
+$\cofib(f_j)\in \CC_{[j,j+1)}$ for any $j=n,\dots,n+k-1$,  $\cofib(f_{n-1})\in \CC_{<n}$  and $\cofib(f_{n+k})\in \CC_{\geq n+k}$.
+\end{proposition}
+Since $\CC_{[j,j+1)}=\CC_{[0,1)}[j]$ for any $j\in\Z$, the above Proposition suggests to focus on the subcategory $\CC_{[0,1)}$ of $\CC$. This subcategory has a special name and special properties (it is an \emph{abelian} subcategory).
+\begin{definition}\label{coeur}
+Let $\CC$ be a stable $\infty$\hyp{}category equipped with a $t$\hyp{}structure $\tee=(\CC_{\ge 0}, \CC_{<0})$; the \emph{heart} $\CC^\heart$ of $\tee$ is the subcategory $\CC_{[0,1)}$ defined following \adef \refbf{std.endocardium}.
+\end{definition}
+\begin{remark}\label{evocative}
+There is a rather evocative pictorial representation of the heart of a $t$\hyp{}structure, manifestly inspired by \cite{Brid}:
+ if we depict $\CC_{<0}$ and $\CC_{\geq 0}$ as contiguous half\hyp{}planes, like in the following picture,
+\begin{center}
+\begin{figure}[H]
+\begin{tikzpicture}%[yscale=.95]
+\filldraw[gray!15] (5,-2) -- (-5,-2) -- (-5,2) -- (5, 2) -- cycle;
+\filldraw[gray!40] (.5, -2) -- (0,-2) -- (0,2) -- (.5,2) -- cycle;
+\draw[thick] (0,-2) -- (0,2);
+\fill (2,1) circle (2pt) node[left] (X) {$X$};
+\fill (-1,-1) circle (2pt) node[right] (Y) {$Y$};
+\node at (4.5,-1.5) {$\CC_{\geq 0}$};
+\node at (-4.5,-1.5) {$\CC_{<0}$};
+\draw[->] (2.2,1) -- (2.8,1);
+\draw[->] (-1.2,-1) -- (-1.8,-1);
+\fill[xshift=1cm] (2,1) circle (2pt) node[right] (X) {$X[1]$};
+\fill[xshift=-1cm] (-1,-1) circle (2pt) node[left] (Y) {$Y[-1]$};
+\draw (.25,0.5) circle (2pt) node[right] {$Z$};
+\draw (-.75,0.5) circle (2pt) node[left] {$Z[-1]$};
+\draw[thick, ->, red] (.05,0.5) to (-.55,0.5);
+\draw[->, xshift=-.5cm, yshift=-.5cm] (-5,-2) -- (6,-2) node[below, pos=.9] {\text{shift}};
+\end{tikzpicture}
+\caption{Heart of a $t$-structure}
+\end{figure}
+\end{center}
+then the action of the shift functor can be represented as an horizontal shift, and the closure properties of the two classes $\CC_{\geq 0},\CC_{<0}$ under positive and negative shifts are a direct consequence of the shape of these areas. With these notations, an object $Z$ is in the heart of $\tee$ if it lies in a ``boundary region'', \ie if it lies in $\CC_{\geq 0}$, but $Z[-1]$ lies in $\CC_{<0}$.
+\end{remark}
+Having introduced this notation, we can rephrase the existence of the tower for $f$ as follows: given a morphism  $f\colon X\to Y$  in $\CC$, for any integer $n$ and any positive integer $k$ there exists a unique factorization of $f$ 
+\[
+X \xto{f_{n+k}} Z_{n+k-1} \xto{f_{n+k-1}}Z_{n+k-2}\to\dots\to Z_{n+1} \xto{f_{n}} Z_{n} \xto{f_{n-1}} Y,
+\]
+such that
+$\cofib(f_j)\in \CC^\heart[j]$ for any $j=n,\dots,n+k-1$,  $\cofib(f_{n-1})\in \CC_{<n}$  and $\cofib(f_{n+k})\in \CC_{\geq n+k}$. 
+\index{t-structure@$t$\hyp{}structure!bounded ---}
+
+The content of this statement becomes more interesting when $\CC$ is \emph{bounded} with respect to the $t$\hyp{}structure $\tee$ (see Definition \refbf{std.endocardium}). If $\CC$ is bounded, then the $(\EE_n,\MM_n)$\hyp{}factorizations of an initial morphism $0\to Y$ are trivial (see Definition \refbf{std.endocardium} and the subsequent Remark) for $|n|\gg 0$. 
+
+As an immediate consequence, the morphisms $X \xto{f_{n+k}} Z_{n+k-1}$ and $Z_{n} \xto{f_{n-1}} Y$ in the tower of $f$ associated with the chain $n<n+1<\dots<n+k-1$ are isomorphisms for $n\ll 0$ and $k \gg 0$. One notices, as it is obvious, that the class of isomorphisms in $\CC$ is closed under transfinite composition this leads to the following
+\begin{proposition}\label{prop.Z.Postnikov}
+Let $\CC$ be a stable $\infty$\hyp{}category which is bounded with respect to a given $t$\hyp{}structure $\tee$. 
+Then for any morphism $f\colon X\to Y$  in $\CC$ there exists an integer $n_0$ and a positive integer $k_0$ such that for any integer $n\leq n_0$ and any positive integer $k$ with $k\geq n_0-n+k_0$ there exists a unique factorization of $f$ 
+\[
+X \xto{\sim} Z_{n+k-1} \xto{f_{n+k-1}}Z_{n+k-2}\to\dots\to Z_{n+1} \xto{f_{n}} Z_{n} \xto{\sim} Y
+\]
+such that
+$\cofib(f_j)\in \CC^\heart[j]$ for any $j=n,\dots,n+k-1$.
+\end{proposition}
+\begin{remark}\label{oss.Z.Postnikov}
+By uniqueness in Proposition \refbf{prop.Z.Postnikov}, one has a well defined $\Z $\hyp{}factorization
+\[
+X=\lim(Z_j) \to\cdots \to Z_{j+1} \xto{f_{j}} Z_{j} \xto{f_{j-1}}Z_{j-1}\to \cdots\to \mathrm{colim}(Z_j)=Y
+\]
+with 
+with $j$ ranging over the integers, $\cofib(f_j)\in \CC^\heart[j]$ for any $j\in \Z $ and with $f_m$ being an isomorphism for $|j|\gg 0$. We will refer to this factorization as the \emph{$\Z $\hyp{}tower} of $f$. Notice how the boundedness of $\CC$ has played an essential role: when $\CC$ is not bounded, one still has towers for any finite ascending chain, but in general they do not stabilize.
+\end{remark}
+\begin{remark}\label{oss.for.Heart.to.t}
+Since we know that the tower of an initial morphism is its $k$\hyp{}fold $(\EE_j,\MM_j)$\hyp{}factorization, we see that in a stable $\infty$\hyp{}category $\CC$ which is bounded with respect to a $t$\hyp{}structure $\tee=(\CC_{\geq 0},\CC_{<0})$ the $\Z $\hyp{}tower of $0\to Y$,
+\[
+0=\lim(Y_j) \to\cdots \to Y_{j+1} \xto{f_{j}} Y_{j} \xto{f_{j-1}}Y_{j-1}\to \cdots\to \mathrm{colim}(Y_j)=Y
+\]
+is such that $f_j\in \EE_j\cap\MM_{j+1}$ for any $j\in \Z $. It follows that an object $Y$ is in $\CC_{\geq 0}$ if and only if the $\Z $\hyp{}tower of $0\to Y$
+satisfies $\cofib(f_j)=0$ for any $j< 0$, while $Y$ is in $\CC_{<0}$ if and only if  $\cofib(f_j)=0$ for any $j\geq 0$.
+\end{remark}
+\subsection{Abelianity of the heart.}\index{Category!Abelian $\infty$---}
+In the following section we present a complete proof, in the stable setting, of the fact that the heart of a $t$\hyp{}structure, as defined in \cite[Def. \textbf{1.2.1.11}]{LurieHA}, is an abelian $\infty$\hyp{}category. 
+
+In other words, $\CC^\heart$ is homotopy equivalent to its homotopy category $h\CC^\heart$, which is an abelian category; this is the higher\hyp{}categorical counterpart of a classical result, first proved in \cite[Thm. \textbf{1.3.6}]{BBDPervers}, 
+which 
+only relies on properties stated in terms of normal torsion theories in a stable $\infty$\hyp{}category. We begin with the following
+\begin{definition}[Abelian $\infty$\hyp{}category]\label{df:abelinfty}
+An \emph{abelian $\infty$\hyp{}category} is a quasicategory $\cate{A}$ such that
+\begin{enumerate}
+\item the hom space $\cate{A}(X,Y)$ is a homotopically discrete infinite loop space for any $X, Y$, \ie, there exists an infinite sequence of $\infty$\hyp{}groupoids $Z_0, Z_1,Z_2,\dots$, with $Z_0\cong \CC(X,Y)$ and homotopy equivalences $Z_i\cong \Omega Z_{i+1}$ for any $i\geq 0$, such that $\pi_n Z_0=0$ for any $n\geq 1$;
+\item $\cate{A}$ has a zero object, (homotopy) kernels, cokernels and biproducts;
+\item for any morphism $f$ in $\cate{A}$, the natural morphism from the \emph{coimage} of $f$ to the \emph{image} (see Definition \refbf{imcoim}) of $f$ is an equivalence.
+\end{enumerate}
+\end{definition}
+\begin{remark}
+Axiom (i) is the homotopically\hyp{}correct version of $\cate{A}(X,Y)$ being an abelian group. For instance, if the abelian group is $\Z $, then the corresponding homotopy discrete space is the Eilenberg\hyp{}Mac Lane spectrum $\Z ,K(\Z ,1), K(\Z ,2),\dots$. The homotopy category of such an $\cate{A}$ is an abelian category in the classical sense (note that $\cate{A}(X,Y)$ being homotopically discrete is necessary in order that kernels and cokernels in $\cate{A}$ induce kernels and cokernels in $h\cate{A}$). Moreover, since the hom spaces $\cate{A}(X,Y)$ are homotopically discrete, the natural morphism $\cate{A}\to h\cate{A}$ is actually an equivalence.
+\end{remark}
+The rest of the section is devoted to the proof of the following result:
+\begin{theorem}\label{heart.is.abelian}
+The heart $\CC^\heart$ of a $t$\hyp{}structure $\tee$ on a stable $\infty$\hyp{}category $\CC$ is an abelian $\infty$\hyp{}category; its homotopy category $h\CC^\heart$ is the abelian category arising as the heart of the $t$\hyp{}structure $h(\tee)$ on the triangulated category $h\CC$.
+\end{theorem}
+\begin{lemma}
+For any $X$ and $Y$ in $\CC^\heart$, the hom space $\CC^\heart(X,Y)$ is a homotopically discrete infinite loop space.
+\end{lemma}
+\begin{proof}
+Since $\CC^\heart$ is a full subcategory of $\CC$, we have $\CC^\heart(X,Y)=\CC(X,Y)$, which is an infinite loop space since $\CC$ is a stable $\infty$\hyp{}category. 
+
+So we are left to prove that $\pi_n\CC(X,Y)=0$ for $n\geq 1$. Since $\pi_n\CC(X,Y)=\pi_{n-1}\Omega\CC(X,Y)=\pi_{n-1}\CC(X,Y[-1])$, this is equivalent to showing that 
+$\CC(X,Y[-1])$ is contractible. Since $X$ and $Y$ are objects in $\CC^\heart$, we have $X\in \CC_{[0,1)}$ and $Y[-1]\in \CC_{[-1,0)}$. But $\CC_{[-1,0)}$ is right object\hyp{}orthogonal to $\CC_{[0,1)}$ (see Remark \refbf{oss.perp}), therefore $\CC(X,Y[-1])$ is contractible.
+\end{proof}
+
+The subcategory $\CC^\heart$ inherits the $0$ object and biproducts (in fact, all finite limits) from $\CC$, so in order to prove it is is abelian we are left to prove that it has kernels and cokernels, and that the canonical morphism from the coimage to the image is an equivalence.
+\begin{lemma}\label{lemma.qua.e.la}
+Let $f\colon X\to Y$ be a morphism in $\CC^\heart$. Then $\mathrm{fib}(f)$ is in $\CC_{<1}$ and $\cofib(f)$ is in $\CC_{\geq 0}$.
+\end{lemma}
+\begin{proof}
+Since both $X\to 0$ and $Y\to 0$ are in $\MM[1]$, by the 3\hyp{}for\hyp{}2 property also $f$ is in $\MM[1]$. Since $\MM[1]$ is closed for pullbacks, $\mathrm{fib}(f)\to 0$ is in $\MM[1]$ and so $\mathrm{fib}(f)$ is in $\CC_{<1}$. The proof for $\cofib(f)$ is completely dual.
+\end{proof}
+\begin{definition}\index{Kernels and cokernels}
+Denote by
+\[
+\xymatrix{
+0\ar[r]^{\EE}&\ker(f)\ar[r]^{\MM}&\fib(f)
+}
+\]
+the $(\EE,\MM)$\hyp{}factorization of the morphism $0\to \fib(f)$
+and by
+\[
+\xymatrix{
+\cofib(f)\ar[r]^{\EE[1]}&\coker(f)\ar[r]^-{\MM[1]} &0
+}
+\]
+the $(\EE[1],\MM[1])$\hyp{}factorization of the morphism $\cofib(f)\to 0$. We call $S\fib(f)=\ker(f)$ and $R_{[1]}\cofib(f)=\coker(f)$ respectively the \emph{kernel} and the \emph{cokernel} of $f$ in $\CC^\heart$.
+\end{definition}
+\begin{remark}\label{oss.miracle}
+Since $\cofib(f)[-1]\cong \fib{f}$, one can equivalently define $\coker(f)$ by declaring the $(\EE,\MM)$\hyp{}factorization of $\fib(f)\to 0$ to be $\fib(f)\xto{\EE}\coker(f)[-1]\xto{\MM} 0$. Similarly, one can define $\ker(f)$ by declaring the $(\EE[1],\MM[1])$\hyp{}factorization of $0\to \cofib(f)$ to be $0\xto{\EE[1]}\ker(f)[1]\xto{\MM[1]} \cofib(f)$.
+By normality of the factorization system we therefore have the homotopy commutative diagram 
+\[
+\begin{kD}
+\lattice[mesh={4em}{6.5em}]{
+	\obj 0;  &\obj (ker):\ker(f); & \obj (fib):\fib(f);\\
+	& \obj (0'):0; &\obj (coker):\coker(f)[-1];\\
+	&& \obj (0''):0; \\
+};
+\mor 0 {\EE}:-> ker \MM:-> fib \EE:-> coker \MM:-> 0'';
+\mor ker \EE:-> 0' \MM:-> coker \MM:-> 0'';
+\end{kD}
+\]
+whose square sub\hyp{}diagram is a homotopy pullout.
+\end{remark}
+\begin{lemma}
+Both $\ker(f)$ and $\coker(f)$ are in $\CC^\heart$.
+\end{lemma}
+\begin{proof}
+By construction $\ker(f)$ is in $\CC_{\geq 0}$, so we only need to show that $\ker(f)$ is in $\CC_{<1}$. By definition of $\ker(f)$, we have that $\ker(f)\to \fib(f)$ is in $\MM$. Since $\MM[-1]\subseteq \MM$, we have that also $\ker(f)[-1]\to \fib(f)[-1]$ is in $\MM$.
+By Lemma \refbf{lemma.qua.e.la}, $\fib(f)[-1]\to 0$ is in $\MM$ and so we find that also $\ker(f)[-1]\to 0$ is in $\MM$. 
+The proof for $\coker(f)$ is perfectly dual.
+\end{proof}
+By definition of $\ker(f)$ and $\coker(f)$, the defining diagram of $\fib(f)$ and $\cofib(f)$ can be enlarged as
+\[
+\begin{kD}
+\lattice[mesh]{
+\obj 0; & \obj (ker):\ker(f); & \obj (fib):\fib(f); & \obj X; & \obj (01):0; \\
+& &\obj (02):0; & \obj Y; & \obj (cofib):\cofib(f); & \obj (coker):\coker(f); & \obj (03):0;\\	
+};
+\mor 0 -> ker -> fib -> X -> 01 -> cofib -> coker -> 03;
+\mor fib -> 02 -> Y -> cofib;
+\mor X f:-> Y;
+\mor ker k_f:r> X; \mor Y c_f:L> coker;
+\end{kD}
+\]
+where $k_f$ and $c_f$ are morphisms in $\CC^\heart$.
+\begin{definition}\label{imcoim}\index{Image}\index{Coimage|see {image}}
+Let $f\colon X\to Y$ be a morphism in $\CC^\heart$. The \emph{image} $\im(f)$ and the \emph{coimage} $\coim(f)$ of $f$ are defined as $\im(f)=\ker(c_f)$ and  $\coim(f)=\coker(k_f)$. 
+\end{definition}
+The following lemma shows that $\ker(f)$ does indeed have the defining property of a kernel:
+\begin{lemma}\label{is.a.kernel}
+The homotopy commutative diagram
+\[
+\xymatrix{
+\ker(f)\ar[r]^{k_f}\ar[d]&X\ar[d]^{f}\\
+0\ar[r]&Y}
+\]
+is a pullback diagram in $\CC^\heart$.
+\end{lemma}
+\begin{proof}
+A homotopy commutative diagram 
+\[
+\xymatrix{
+K\ar[r]\ar[d]&X\ar[d]^{f}\\
+0\ar[r]&Y}
+\]
+between objects in the heart is in particular a homotopy commutative diagram in $\CC$ so it is equivalent to the datum of a morphism $k'\colon K\to \fib(f)$ in $\CC$, with $K$ an object in $\CC^\heart$. By the orthogonality of $(\EE,\MM)$, this is equivalent to a morphism $\tilde{k}\colon K\to\ker(f)$:
+\[\xymatrix{
+0\ar[r]\ar[d]_{\EE}&\ker(f)\ar[d]^{\MM}\\
+K\ar[ru]^{\tilde{k}}\ar[r]_{k'}&\fib(f)
+}. \qedhere 
+\]
+\end{proof}
+There is, obviously, a dual result showing that $\coker(f)$ is indeed a cokernel.
+\begin{lemma}
+The homotopy commutative diagram
+\[\xymatrix{
+X\ar[r]\ar[d]_{f}&0\ar[d]\\
+Y\ar[r]^-{c_f}&\coker(f)
+}\]
+is a pushout diagram in $\CC^\heart$.
+\end{lemma}
+\begin{lemma}\label{lemma.titanic}
+For $f\colon X\to Y$ a morphism in $\CC$, there is a homotopy commutative diagram where all squares are homotopy pullouts:
+\[
+\begin{kD}
+\lattice[mesh={4em}{6em}]{
+\obj (ker):\ker(f); & \obj (fib):\fib(f); & \obj X; & \obj 0; \\
+\obj (01):0; &\obj (coker-1):\coker(f)[-1]; & \obj (Z):Z_f; &\obj (ker1):\ker(f)[1]; & \obj (02):0; \\
+& \obj (03):0; & \obj Y; & \obj (cofib):\cofib(f); & \obj (coker):\coker(f); \\
+};
+\mor ker -> fib -> X -> 0 {\EE[1]}:-> ker1 -> 02 {\MM[1]}:-> coker;
+\mor ker {\EE}:-> 01 -> coker-1 -> Z -> ker1 {\MM[1]}:-> cofib -> coker;
+\mor fib {\EE}:-> coker-1 {\MM}:-> 03 -> Y -> cofib;
+\mor[swap] X {\EE}:-> Z {\MM[1]}:-> Y;
+\mor X {near start}:f:dashed,r> Y; \mor ker k_f:r> X; \mor[swap] Y c_F:L> coker;
+\end{kD}\]
+uniquely determining an object $Z_f\in \CC^\heart$.
+\end{lemma}
+\begin{proof}
+Define $Z_f$ as the homotopy pullout
+\[
+\xymatrix{
+\fib(f)\ar[r]\ar[d]_{\EE} \pp & X\ar[d]^{\EE}\\
+\coker(f)[-1]\ar[r]& Z_f}
+\]
+Here the vertical arrow on the right is in $\EE$ since the vertical arrow on the left is in $\EE$ by definition of $\coker(f)$ (see Remark \refbf{oss.miracle}) and $\EE$ is preserved by pushouts. Next, paste on the left of this diagram the pullout given by Remark \refbf{oss.miracle} and build the rest of the 
+diagram by taking pullbacks or pushouts. Use again Remark \refbf{oss.miracle} and the fact that $\MM[1]$ is closed under pullbacks to see that $Z_f\to Y$ is in $\MM[1]$. 
+Finally, we have 
+\[
+0\xto{\EE} X\xto{\EE} Z_f\xto{\MM[1]} Y\xto{\MM[1]} 0,
+\]
+and so $Z_f$ is in $\CC^\heart$.
+\end{proof}
+\begin{proposition}\label{im.iso.coim}
+There is an isomorphism $\im (f)\cong\coim (f)$.\end{proposition}
+\begin{proof}
+By definition, $\im(f)$ and $\coim(f)$ are defined by the factorizations
+\[
+\xymatrix{
+0\ar[r]^{\EE}&\im(f)\ar[r]^{\MM}&\fib(c_f)
+}
+\]
+and
+\[
+\xymatrix{
+\cofib(k_f)\ar[r]^{\EE[1]}&\coim(f)\ar[r]^-{\MM[1]} &0
+}
+\]
+The diagram in Lemma \refbf{lemma.titanic} shows that we have $\fib(c_f)=Z_f=\cofib(k_f)$. Therefore, 
+what we need to exhibit are the $(\EE,\MM)$ factorizations of $0\to Z_f$ and the $(\EE[1],\MM[1])$ factorization of $Z_f\to 0$. Since $Z_f$ is an object in $\CC^\heart$, these are
+\[
+0\xrightarrow{\EE}Z_f\xrightarrow{\mathrm{id}_{Z_f}}Z_f
+\]
+and 
+\[
+Z_f\xrightarrow{\mathrm{id}_{Z_f}}Z_f\xrightarrow{\MM[1]}0,
+\]
+respectively, thus giving $\im(f)\cong Z_f\cong \coim(f)$.
+\end{proof}
+\subsection{Abelian subcategories as hearts.}
+\begin{proposition}\label{to.be.repeated.verbatim}
+Let $\A$ be an abelian full subcategory of a stable $\infty$-category $\CC$, such that any morphism $f\colon X\to Y$  in $\CC$ has a unique $\A$-weaved $\mathbb{Z}$-Postnikov tower. Let
+$\CC_{\A,\geq 0}$ be the full subcategory of $\CC$ on those objects $Y$ such that  the $\A$-weaved $\mathbb{Z}$-Postnikov tower
+\[
+0 =\lim(Y_j)\to\cdots \to Y_{j+1} \xrightarrow{f_{j}} Y_{j} \xrightarrow{f_{j-1}}Y_{j-1}\to \cdots\to \mathrm{colim}(Y_j)=Y
+\]
+of the initial morphism $0\to Y$ is such that $\mathrm{cofib}(f_j)=0$ for any $j< 0$, and let $\CC_{\A,< 0}$ be the full subcategory of $\CC$ on those objects $Y$ such that $\mathrm{cofib}(f_j)=0$ for any $j\geq 0$. Then $\mathfrak{t}_{\A}=(\CC_{\A,\geq 0}, \CC_{\A,<0})$ is a $t$-structure on $\CC$, the stable $\infty$-category $\CC$ is bounded with respect to $\mathfrak{t}_{\A}$, and the heart of $\mathfrak{t}_{\A}$ is (equivalent to) $\A$.
+\end{proposition}
+ The proof is split in several Lemmas. We begin introducing the following
+\begin{notat}
+For $\mathbf{S}$ a subcategory of $\CC$, we write $\langle \mathbf{S}\rangle$ for the smallest extension closed full subcategory of $\CC$ containing $S$.
+\end{notat}
+\begin{remark}\label{extensions}
+Set  $\langle \mathbf{S}\rangle_0=\mathbf{0}$,  define $\langle \mathbf{S}\rangle_1$ as the full subcategory of $\CC$ generated by $\mathbf{S}$ and $\mathbf{0}$, and define inductively $\langle \mathbf{S}\rangle_n$ as the full subcategory of $\CC$ on those objects $X$ which fall into a homotopy fiber sequence
+\[
+\xymatrix{
+X_h\ar[r]\ar[d]& X\ar[d]\\
+0\ar[r] &X_k
+}
+\]
+with $h,k\geq 1$, $X_h$ in $\langle \mathbf{S}\rangle_h$, $X_k$ in $\langle \mathbf{S}\rangle_k$ and $h+k=n$. One clearly has 
+\[
+\langle \mathbf{S}\rangle_0\subseteq \langle \mathbf{S}\rangle_1 \subseteq \langle \mathbf{S}\rangle_2\subseteq\cdots \subseteq \langle \mathbf{S}\rangle.
+\]
+Moreover $\bigcup_n \langle \mathbf{S}\rangle_n$ is clearly extension closed, so that
+\[
+\langle \mathbf{S}\rangle =\bigcup_n \langle \mathbf{S}\rangle_n.
+\] 
+\end{remark}
+\begin{lemma}\label{closure}
+Let $\mathbf{S}_1,\mathbf{S}_2$ be two subcategories of $\CC$ with $\mathbf{S}_1\perp \mathbf{S}_2$. Then $\mathbf{S}_1\perp \langle\mathbf{S}_2\rangle$ and $\langle\mathbf{S}_1\rangle\perp \mathbf{S}_2$, and so $\langle\mathbf{S}_1\rangle\perp \langle\mathbf{S}_2\rangle$
+\end{lemma}
+\begin{proof}
+By Remark \refbf{extensions}, to prove the first statement we are reduced to show that, if $Y\in \mathbf{S}_1$ and $X\in \langle\mathbf{S}_2\rangle_n$ then $\CC(Y,X)$ is contractible. We prove this by induction on $n$. For $n=0,1$ there is nothing to prove by the assumption $\mathbf{S}_1\perp \mathbf{S}_2$. For $n\geq 2$, consider a fiber sequence $X_h\to X\to X_k$ with $1\leq h,k$ and $h+k=n$ as in Remark \refbf{extensions}. Since $\CC(Y,-)$ preserves homotopy fiber sequences, we get a homotopy fiber sequence of $\infty$-groupoids
+\[
+\xymatrix{
+\CC(Y,X_h)\ar[r]\ar[d]& \CC(Y,X)\ar[d]\\
+{*}\ar[r] &\CC(Y,X_k)
+}.
+\]
+By the inductive hypothesis both $\CC(Y,X_h)$ and $\CC(Y,X_k)$ are contractible, so $\CC(Y,X)$ also is. The proof of the second statement is perfectly dual, due to the fact that in $\CC$ every fiber sequence is also a cofiber sequence, and $\CC(-,Y)$ transforms a cofiber sequence into a fiber sequence.
+\end{proof}
+\begin{lemma}\label{uno}
+Let $\A$ be an abelian full subcategory of $\CC$. Then $\langle \{\A[s]\}_{s\geq 0}\rangle\perp \langle \{\A[s]\}_{s<0}\rangle$. In particular, in the hypothesis of Proposition \refbf{to.be.repeated.verbatim} we have $\CC_{\A,\geq 0}\perp \CC_{\A,<0}$
+\end{lemma}
+\begin{proof}
+By Lemma \refbf{closure}, we only need to show that $\A[s_1]\perp \A[s_2]$ whenever $s_1\geq 0> s_2$. Let $X\in \A[s_1]$ and $Y\in\A[s_2]$. Then $X=Z_1[s_1]$ and $Y=Z_2[s_2]$ for suitable $Z_1,Z_2\in \A$ and so 
+\begin{align*}
+\CC(X,Y)&=\CC(Z_1[s_1],Z_2[s_2])\cong  \CC(Z_1,Z_2[s_2-s_1])\\
+&\cong \Omega^{s_1-s_2}\CC(Z_1,Z_2)=\Omega^{s_1-s_2}\A(Z_1,Z_2),
+\end{align*}
+where in the last equality we used the fact that $\A$ is full. Since $s_1-s_2>0$, the space $\Omega^{s_1-s_2}\A(Z_1,Z_2)$ is contractible by definition of abelian $\infty$-category.
+Finally, in the hypothesis of Proposition \refbf{to.be.repeated.verbatim}  one clearly has $\CC_{\A,< 0}\subseteq \langle \{\A[s]\}_{s<0}\rangle$ and $\CC_{\A,\geq 0}\subseteq \langle \{\A[s]\}_{s\geq 0}\rangle$.
+\end{proof}
+\begin{lemma}\label{due}
+In the hypothesis of Proposition \refbf{to.be.repeated.verbatim} every object $Y$ of $\CC$ sits into a homotopy fiber sequence $Y_{\geq 0}\to Y\to Y_{<0}$ with $Y_{\geq 0}\in \CC_{\A,\geq 0}$ and $Y_{< 0}\in \CC_{\A,< 0}$.
+\end{lemma}
+\begin{proof}
+Let
+\[
+0 =\lim(Y_j)\to\cdots \to Y_{1} \xrightarrow{f_{0}} Y_{0} \xrightarrow{f_{-1}}Y_{-1}\to \cdots\to \mathrm{colim}(Y_j)=Y
+\]
+be teh $\A$-weaved Postnikov tower of $0\to Y$ and consider the pullout diagram
+\[
+\xymatrix{
+Y_0\ar[r]\ar[d]_{f_{<0}}&0\ar[d]\\
+Y\ar[r]&\mathrm{cofib}(f_{<0})
+}\]
+together with the $\A$-weaved $\mathbb{Z}$-Postnikov towers
+\[
+0 =\lim(Y_j)\to\cdots \to Y_{1} \xrightarrow{f_{0}} Y_{0} 
+\]
+and
+\[
+Y_{0}\xrightarrow{f_{-1}}Y_{-1}\to \cdots\to \mathrm{colim}(Y_j)=Y.
+\]
+The first Postnikov tower shows that $Y_0\in \CC_{\A,\geq 0}$ while the second Postnikov tower shows that $\mathrm{cofib}(f_{<0})\in  \CC_{\A,<0}$.
+\end{proof}
+\begin{lemma}\label{tre}
+In the hypothesis of Proposition \refbf{to.be.repeated.verbatim}, for any $\lambda\in \mathbb{R}$ let
+$\CC_{\A,\geq \lambda}$ be the full subcategory of $\CC$ on those objects $Y$ such that  the $\A$-weaved $\mathbb{Z}$-Postnikov tower
+\[
+0 =\lim(Y_j)\to\cdots \to Y_{j+1} \xrightarrow{f_{j}} Y_{j} \xrightarrow{f_{j-1}}Y_{j-1}\to \cdots\to \mathrm{colim}(Y_j)=Y
+\]
+of the initial morphism $0\to Y$ is such that $\mathrm{cofib}(f_j)=0$ for any $j<\lambda$, and let $\CC_{\A,< \lambda}$ be the full subcategory of $\CC$ on those objects $Y$ such that $\mathrm{cofib}(f_j)=0$ for any $j\geq \lambda$. 
+Then, for any $n\in\mathbb{Z}$, one has $\CC_{\A,< \lambda}[n]=\CC_{\A,< \lambda+n}$ and $\CC_{\A,\geq \lambda}[n]=\CC_{\A,\geq \lambda+n}$. In particular, $\CC_{\A,<0}[-1]\subseteq \CC_{\A,<0}$ and $\CC_{\A,\geq 0}[1]\subseteq\CC_{\A,\geq 0}$.
+\end{lemma}
+\begin{proof}
+Since the shift functor commutes with the formation of  $\A$-weaved $\mathbb{Z}$-Postnikov towers, an object $Y$ lies in $\CC_{\A,< \lambda}[n]$ if and only if $\mathrm{cofib}(f_{j+n}[-n])=0$ for any $j\geq \lambda$, i.e.,  if and only if $\mathrm{cofib}(f_j)=0$ for any $j\geq \lambda+n$.
+The proof for $\CC_{\A,\geq \lambda}[n]$ is identical.
+\end{proof}
+\begin{proof}[Proof of Proposition \refbf{to.be.repeated.verbatim}]
+Lemmas \refbf{uno}, \refbf{due} and \refbf{tre} together show that $\mathfrak{t}_\A=(\CC_{\A,\geq 0}, \CC_{\A,<0})$ is a bounded $t$-structure on $\CC$. To see that the heart of  $\mathfrak{t}_\A$ is $\A$ notice that an object $Y$ lies in $\CC_{\A,[0,1)}$ if and only if the $\A$-weaved $\mathbb{Z}$-Postnikov tower
+\[
+0 =\lim(Y_j)\to\cdots \to Y_{j+1} \xrightarrow{f_{j}} Y_{j} \xrightarrow{f_{j-1}}Y_{j-1}\to \cdots\to \mathrm{colim}(Y_j)=Y
+\]
+of its initial morphism has $\mathrm{cofib}(f_j)=0$ for every $j\neq0$, and so it is of the form
+\[
+\cdots 0 \to 0\to \cdots \to 0\xrightarrow{f_{0}} Y \xrightarrow{\mathrm{id}_Y}Y\xrightarrow{\mathrm{id}_Y} \cdots\xrightarrow{\mathrm{id}_Y}Y\xrightarrow{\mathrm{id}_Y}\cdots,\] 
+with $Y=\mathrm{cofib}(f_0)\in \A$.
+\end{proof}
+\begin{remark}The same reasoning used in the proof of Proposition \refbf{to.be.repeated.verbatim}, shows that $(\CC_{\A,\geq \lambda}, \CC_{\A,<\lambda})$ is a bounded $t$-structure on $\CC$ for every $\lambda\in \mathbb{R}$, and that the assignment $\lambda\mapsto (\CC_{\A,\geq \lambda}, \CC_{\A,<\lambda})$ is a $\mathbb{Z}$-equivariant morphisms of posets $\mathbb{R}\to \textsc{ts}(\CC)$, so it is a slicing of $\CC$. The heart of $(\CC_{\A,\geq \lambda}, \CC_{\A,<\lambda})$ is $\A[\left \lceil{\lambda}\right \rceil]$, where $\left \lceil{\lambda}\right \rceil=\min\{n\in \mathbb{Z}\,|\, n\geq\lambda\}$.
+\end{remark}
+\section{Semiorthogonal decompositions.}
+\setlength{\epigraphwidth}{.75\textwidth}
+\epigraph{La vie c'est ce qui se décompose à tout moment; c'est une perte monotone de lumière, une dissolution insipide dans la nuit, sans sceptres, sans auréoles, sans nimbes.}{E. Cioran, \emph{Pr\'ecis de décomposition}.}
+\setlength{\epigraphwidth}{\DefaultEpigraphWidth}
+At the opposite end of the transitive case studied in the previous section, there is the \emph{finite case}, where $J$ is a finite totally ordered set. As we are going to show, this is another well investigated case in the literature: $J$\hyp{}familes of $t$\hyp{}structures with a finite $J$ capture (and slightly generalize) the notion of \emph{semiorthogonal decompositions} for the stable $\infty$\hyp{}category $\CC$ (see \cite{Bondal1995, Kuz} for the notion of semiorthogonal decomposition in the classical triangulated context).
+
+To fix notations for this section, let $J=\Delta[k-1]$ be the totally ordered set on $k$ elements seen as a poset, \ie, $J=\{i_1,i_2,\dots,i_k\}$ with $i_1\leq i_2\leq\cdots\leq i_k$, and let $\tee\colon \Delta[k-1]\to \ts(\CC)$ be a $\Z $\hyp{}equivariant $\Delta[k-1]$\hyp{}family of $t$\hyp{}structures on $\CC$. We also set, for any $j=1,\dots,k+1$,
+\[
+\mathbf{A}_j=\CC_{[i_{j-i}, i_j)}
+\]
+where, as usual, $i_0=-\infty$ and $i_{k+1}=+\infty$. We have that any morphism $f\colon X\to Y$ in $\CC$ has a unique factorization
+\[
+X \xto{f_{k+1}} Z_{i_k} \xto{f_k}Z_{i_{k-1}}\to\dots\to Z_{i_{2}} \xto{f_2} Z_{i_1} \xto{f_1} Y,
+\]
+with $\cofib(f_j)\in \mathbf{A}_j$, and $\mathbf{A}_j\subseteq \mathbf{A}_h^\perp$, for any $1\leq j <h\leq k+1$. 
+
+What we are left to investigate are therefore the special features of the $t$\hyp{}structures $\tee_{i_j}=(\CC_{\geq i_j},\CC_{< i_j})$ coming from the finiteness assumption on $J$.
+As we noticed in Remark \refbf{rem.finite}, a $\Z $\hyp{}action on a finite poset $J$ is necessarily trivial. By $\Z $\hyp{}equivariancy of the map $\Delta[k-1]\to \ts(\CC)$ we have therefore that all the $t$\hyp{}structures $\tee_{i_j}$ are $\Z $\hyp{}fixed points for the natural $\Z $\hyp{}action on $ \ts(\CC)$. 
+
+Now, a rather pleasant fact is that fixed points of the $\Z$\hyp{}action on $\ts(\CC)$ are precisely those $t$\hyp{}structures $\tee=(\CC_{\ge 0}, \CC_{<0})$ for which $\CC_{\ge 0}$ is a stable sub\hyp{}$\infty$\hyp{}category of $\CC$. We will make use of the following
+\begin{lemma}\label{magicstable}
+Let $\cate{B}$ be a full sub\hyp{}$\infty$\hyp{}category of the stable $\infty$\hyp{}category $\CC$; then, $\cate{B}$ is a stable sub\hyp{}$\infty$\hyp{}category of $\CC$ if and only if $\cate{B}$ is closed under shifts in both directions and under pushouts in $\CC$.
+\end{lemma}
+\begin{proof}
+The ``only if'' part is trivial, so let us prove the ``if'' part.
+
+First of all let us see that under these assumptions $\cate{B}$ is closed under fibers. This is immediate: if $f\colon X\to Y$ is an arrow in $\cate{B}$ (\ie an arrow of $\CC$ between objects of $\cate{B}$, by fullness), then $f[-1]$ is again in $\cate{B}$ since $\cate{B}$ is closed with respect to the left shift. Since $\cate{B}$ is closed under pushouts in $\CC$, also  $\fib(f)=\cofib(f[-1])$ is in $\cate{B}$. It remains to show how this implies that $\cate{B}$ is actually stable, \ie it is closed under all finite limits and satisfies the pullout axiom. Unwinding the assumptions on $\cate{B}$, this boils down to showing that in the square
+\[
+\xymatrix{
+B \ar[r]\ar[d] \pb &  X\ar[d]^f \\
+Y \ar[r]_g& Z
+}
+\]
+the pullback $B$ of $f,g \in \hom(\cate{B})$ done in $\CC$ is actually an object of $\cate{B}$; indeed, once this is shown, the square above will satisfy the pullout axiom in $\CC$, 
+so \emph{a fortiori} it will have the universal property of a pushout in $\cate{B}$. To this aim, let us consider the enlarged diagram of pullout squares in $\CC$
+\[
+\xymatrix{
+Z[-1]\ar[r]\ar[d] \ar@{}[dr]|\star & \fib(g)\ar[r]\ar[d] & 0\ar[d] \\
+\fib(f)\ar[r]\ar[d] & B\ar[r]\ar[d] & X \ar[d]^f\\
+0\ar[r] & Y \ar[r]_g & Z.
+}
+\]
+The objects $Z[-1], \fib(f)$ and $\fib(g)$ lie in $\cate{B}$ by the first part of the proof, so the square $(\star)$ is in particular a pushout of morphism in $\cate{B}$; by assumption, this entails that $B\in\cate{B}$.
+\end{proof}
+\begin{remark}\label{oss.shifts.pullback}
+Obviously, a completely dual statement can be proved in a completely dual fashion:  a full sub\hyp{}$\infty$\hyp{}category $\cate{B}$ of a stable $\infty$\hyp{}category $\CC$ is a stable sub\hyp{}$\infty$\hyp{}category if and only if it is closed under shifts in both directions and under pullbacks in $\CC$.
+\end{remark}
+\begin{proposition}\label{stableare}
+Let $\tee=(\CC_{\geq 0},\CC_{<0})$ be a $t$\hyp{}structure on a stable $\infty$\hyp{}category $\CC$; then the following conditions are equivalent:
+\begin{enumerate}
+\item $\tee$ is a fixed point for the $\Z $\hyp{}action on $\ts(\CC)$, \ie, $\tee[1]=\tee$ (or equivalently in view of remark \refbf{determines.the.other}, $\CC_{\geq 1}= \CC_{\geq 0}$);
+\item $\CC_{\geq 0}$ is a stable sub\hyp{}$\infty$\hyp{}category of $\CC$.
+\end{enumerate}
+\end{proposition}
+\index{t-structure@$t$\hyp{}structure!stable ---|see {semiorthogonal decompositions}}
+\begin{proof}
+`(2) implies (1)' is obvious. Namely, if  $\CC_{\ge 0}$ is a stable sub\hyp{}$\infty$\hyp{}category of $\CC$, then it is closed under shifts in both directions. Therefore $\CC_{\ge 1}=\CC_{\geq 0}[1]\subseteq \CC_{\ge 0}$. Since, by definition of $t$\hyp{}structure, $\CC_{\geq 1}\subseteq \CC_{\geq 0}$, we have $\CC_{\geq 1}= \CC_{\geq 0}$. To prove that `(1) implies (2)', assume $\CC_{\geq 1}=\CC_{\geq 0}$. This means that not only $\CC_{\geq 0}[1]\subseteq \CC_{\geq 0}$ as for any $t$\hyp{}structure, but also $\CC_{\geq 0}\subseteq \CC_{\geq 0}[1]$, which implies that $\CC_{\geq 0}[-1]\subseteq \CC_{\geq 0}$. Therefore $\CC_{\geq 0}$ is closed under shifts in both directions. By Lemma \refbf{magicstable},  we then have only to show that $\CC_{\geq 0}$ is closed under pushouts in $\CC$ to conclude that $\CC_{\geq 0}$ is a stable $\infty$\hyp{}subcategory of $\CC$. Consider a pushout diagram
+\[
+\xymatrix{
+ A \ar[r]\ar[d]_h \po & B\ar[d]^k \\
+ C \ar[r] & P
+}
+\]
+in $\CC$ with $A$, $B$ and $C$ in $\CC_{\geq 0}$, and let $\fF=(\EE,\MM)$ be the normal torsion theory associated to $\tee$. Since $A$ and $C$ are in $\CC_{\geq 0} = 0/\EE$ we have that both $0\to A$ and $0\to C$ are in $\EE$. But $\EE$ has the 3\hyp{}for\hyp{}2 property, so also $A\to C$ is $\EE$. Since $\EE$ is closed for pushouts, this implies that also $B\to P$ is in $\EE$. But $0\to B$ in in $\EE$ since $B$ is in $\CC_{\geq 0}$, and therefore also $0\to P$ is in $\EE$, \ie, $P$ is in $\CC_{\geq 0}$.
+\end{proof}
+\begin{remark}\label{dual.of.the.above}
+The statement of \aprop \refbf{stableare} can easily be dualized: $\Z $\hyp{}fixed points in $\ts(\CC)$ as those $t$\hyp{}structures $(\CC_{\geq 0},\CC_{<0})$ for which $\CC_{<0}$ is a stable sub\hyp{}$\infty$\hyp{}category of $\CC$, as well as those such that $\CC_{<0} = \CC_{<1}$.
+\end{remark}
+Proposition \refbf{stableare} and remark \refbf{dual.of.the.above} characterize $\Z $\hyp{}fixed points on $\ts(\CC)$ as the $t$\hyp{}structures with stable classes $\CC_{\geq 0}$ and $\CC_{<0}$. By the correspondence between $t$\hyp{}structures and normal factorization systems, one should expect that these should be equally characterized as the normal factorization systems  $\fF=(\EE,\MM)$ for which the classes $\EE$ and $\MM$ are ``stable on both sides'', \ie, are closed both for pullbacks and for pushouts.
+\begin{theorem}\label{enactedstableare}
+Let $\tee$ be a $t$\hyp{}structure on a stable $\infty$\hyp{}category $\CC$ and let $\fF=(\EE,\MM)$ be the corresponding normal factorization system; then the following conditions are equivalent:
+\begin{enumerate}
+\item $\tee[1]=\tee$;
+\item $\CC_{\geq 0}$ is a stable $\infty$\hyp{}category;
+\item $\CC_{< 0}$ is a stable $\infty$\hyp{}category;
+\item $\EE$ is closed under pullback;
+\item $\MM$ is closed under pushout.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+In view of the previous results, the only implication we need to prove is that `(1) is equivalent to (4)'. Assume $\EE$ is closed under pullbacks. Then for any $X$ in $\CC_{\geq 0}$ we have that $0\to X$ is in $\EE$, and so $X[-1]\to 0$ is in $\EE$. By the Sator lemma this implies that $0\to X[-1]$ is in $\EE$, \ie, that $X[-1]$ is in $\CC_{\geq 0}$. This shows that $\CC_{\geq 0}[-1]\subseteq \CC_{\geq 0}$ and therefore that $\tee[1]= \tee$. 
+
+Conversely, assume $\tee[1]=\tee$,
+and consider a morphism $f\colon X\to Y$ in $\EE$. For any morphism $B\to Y$ in $\CC$
+consider the diagram
+\[
+\xymatrix{
+\mathrm{fib}(f)\ar[r]\ar[d] & A\ar[r]\ar[d] & X\ar[r]\ar[d]^{f} & 0\ar[d]\\
+0 \ar[r] & B\ar[r]  & Y\ar[r]  & \cofib(f)
+}
+\]
+where all the squares are pullouts in $\CC$. Since $f$ is in $\EE$ and $\EE$ is closed for pushouts, also $0\to \cofib(f)$ is in $\EE$. This means that $\cofib(f)$ is in $\CC_{\geq 0}$ and so, since we are assuming that $\CC_{\geq 0}=\CC_{\geq 0}[-1]$, also $\mathrm{fib}(f)=\cofib(f)[-1]$ is in $\CC_{\geq 0}$, \ie,  $0\to \mathrm{fib}(f)$ is in $\EE$. By the Sator lemma, $\mathrm{fib}(f)\to 0$ is in $\EE$, which is closed for pushouts, and so $A\to B$ is in $\EE$.
+\end{proof}
+\begin{remark}\label{oss.hereditary}
+In the literature, a factorization system $(\EE,\MM)$ for which the class $\EE$ is closed for pullbacks is sometimes called an \emph{exact reflective} factorization, see, \eg, \cite{CHK}. This is equivalent to saying that the associated reflection functor is left exact (this is called a \emph{localization} in the jargon of \cite{CHK}). Dually,  one characterizes \emph{colocalizations} of a category $\CC$ with an initial object as \emph{coexact coreflective} factorizations where the right class $\MM$ of $\fF$ is closed under pushouts.  Therefore, in the stable $\infty$\hyp{}case, we see that a $\Z $\hyp{}fixed point in $\ts(\CC)$ is a $t$\hyp{}structure $(\CC_{\geq 0},\CC_{<0})$ such that the truncation functors $\tau_{\ge 0}\colon \CC\to \CC_{\ge 0}$ and $\tau_{<0}\colon \CC\to \CC_{<0}$ respectively form a colocalizations and a localization of $\CC$. In the terminology of \cite{Beligiannisreiten} we therefore find that in the stable $\infty$\hyp{}case $\Z $\hyp{}fixed point in $\ts(\CC)$ correspond to \emph{hereditary torsion pairs} on $\CC$. Since we have seen that for a $\Z $\hyp{}fixed point in $\ts(\CC)$ both $\CC_{\geq 0}$ and $\CC_{<0}$ are stable $\infty$\hyp{}categories, this result could be deduced also from \cite[Prop. \textbf{1.1.4.1}]{LurieHA}: a left (resp., right) exact functor between stable $\infty$\hyp{}categories is also right (resp., left) exact.
+ \end{remark}
+We can now precisely relate semiorthogonal decompositions\index{Semiorthogonal decompositions} in a stable $\infty$\hyp{}category $\CC$ to $\Delta[k-1]$\hyp{}families of $t$\hyp{}structures on $\CC$. The only thing we still need is the following definition, which is an immediate adaptation to the stable setting of the classical definition given for triangulated categories (see, \eg, \cite{Bondal1995, Kuz} ).
+\begin{definition}
+Let $\CC$ be a stable $\infty$\hyp{}category. A \emph{semiorthogonal decomposition} with $k$ classes on $\CC$ is the datum of $k+1$ stable $\infty$\hyp{}subcategories $\mathbf{A}_1$, $\mathbf{A}_2$,\dots, $\mathbf{A}_{k+1}$ of $\CC$ such that
+\begin{enumerate}
+\item one has $\mathbf{A}_i\subseteq \mathbf{A}_j^\perp$ for $i<j$ (semiorthogonality);
+\item for any object $Y$ in $\CC$ there exists a unique $\{\mathbf{A}_i\}$\hyp{}weaved tower, \ie, a factorization of the initial morphism $0\to Y$ as \index{Z-family@$\Z$-family!weaved}
+\[
+0 =Y_0\to\cdots \to Y_{j+1} \xto{f_{j}} Y_{j} \xto{f_{j-1}}Y_{j-1}\to \cdots\to Y_{k+1}=Y
+\]
+with $\cofib(f_j)\in \mathbf{A}_j$ for any $j=1,\dots, k+1$. 
+\end{enumerate} 
+\end{definition}
+\begin{remark}
+Since $\{\mathbf{A}_i\}$\hyp{}weaved Postnikow towers are preserved by pullouts, one can equivalently require that any morphism $f\colon X\to Y$ in $\CC$ has a unique factorization of the form 
+\[
+X =Z_0\to\cdots \to Z_{j+1} \xto{f_{j}} Z_{j} \xto{f_{j-1}}Z_{j-1}\to \cdots\to Z_{k+1}=Y
+\]
+with $\cofib(f_j)\in \mathbf{A}_j$ for any $j=1,\dots, k+1$. 
+\end{remark} 
+\begin{theorem}\label{what.s.semiortho}
+Let $\CC$ be a stable $\infty$\hyp{}category. Then the datum of a semiorthogonal decompositions with $k$ classes on $\CC$ is equivalent to the datum of a $\Z $\hyp{}equivariant $\Delta[k-1]$\hyp{}family of $t$\hyp{}structures on $\CC$
+\end{theorem}
+\begin{proof}
+Let us start with a $\Z $\hyp{}equivariant $\Delta[k-1]$\hyp{}family of $t$\hyp{}structures $\tee$, and write $i_1<i_2<\cdots<i_k$ for the elements of $\Delta[k-1]$ and $\tee_{i_j}=(\CC_{\geq i_j},\CC_{<i_j})$ for the corresponding $t$\hyp{}structures on $\CC$. Then, setting $\mathbf{A}_j=\CC_{[i_{j-1}, i_j)}$ we have semiorthogonality between the $\mathbf{A}_j$'s and the existence of $\{\mathbf{A}_j\}$\hyp{}weaved Postnikow towers by the general argument recalled at the beginning of this section. So we are only left to prove that the subcategories $\mathbf{A}_j$ are stable. This is immediate: by Theorem \refbf{enactedstableare} both the sub\hyp{}$\infty$\hyp{}categories $\CC_{\geq i_{j-1}}$ and $\CC_{<i_j}$ are stable, and so also their intersection is stable (see, \cite{LurieHA}). Vice versa, if we start with a semiorthogonal decomposition, then repeating verbatim the argument in the proof of Proposition \refbf{to.be.repeated.verbatim} one defines 
+a $\Z $\hyp{}equivariant $\Delta[k-1]$\hyp{}family of $t$\hyp{}structures on $\CC$.
+\end{proof}
+\begin{remark}By Remark \refbf{oss.hereditary}, we recover in the stable $\infty$\hyp{}setting the well known fact (see \cite[\textbf{IV.4}]{Beligiannisreiten}) that semiorthogonal decompositions with a single class correspond to \emph{hereditary torsion pairs} on the category.
+\end{remark}
+\index{t-structure@$t$\hyp{}structure!bounded ---}

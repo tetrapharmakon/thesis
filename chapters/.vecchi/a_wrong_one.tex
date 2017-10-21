@@ -1,0 +1,522 @@
+\begin{gather}
+\EE_0\glue\EE_1 = \big\{f\in\hom(\D)\mid 
+\{q, i_L\}(f)\in \EE 
+\big\};\label{BBDleftclass}\\
+\MM_0\glue\MM_1 = \big\{g\in\hom(\D)\mid 
+\{q, i_R\}(g) \in \MM
+\big\}.
+\end{gather}
+In fact this is true, and is (half of) our \abbrv{Thm}\refbf{thm:trueglued}. 
+\todo[inline]{Qui comincia il casino}
+But something more, and more beautiful, as hinted in Scholium \refbf{samerecol} is true: the choice of arrows $f\in\hom(\D)$ such that $\{q, i_R\}(f)\in \EE$ gives as well the left class of $\fF_0 \glue \fF_1$, whereas the right class can also be characterized as $\{g\in\hom(\D)\mid \{q, i_L\}(g) \in \MM\}$. 
+
+We now prove what we decided to call \emph{\ror lemma} to hint a ``sneering specularity'' arising from the stable structure of the categories in exam, of which this result is a consequence.
+\begin{lemma}[\ror lemma\protect{\footnote{Walter Joseph Kovacs, also known as \textsl{\ror} (New York \oldstylenums{1940} -- Antarctica \oldstylenums{1985}).}}]\label{rorschach}
+Let $\D$ be a stable $\infty$\hyp{}category, in a recollement 
+$$
+(i,q)\colon \D^0 \lrlarrows  \D  \lrlarrows  \D^1.
+$$ 
+Let $\fF_i = (\EE_i,\MM_i)$ be a normal torsion theory on $\D^i$ for $i=0,1$, and consider the $t$\hyp{}structure $\tee_0\glue \tee_1$ on $\D$, as described in \abbrv{Thm}\refbf{gluing}. Set 
+\begin{gather*}
+(\D^0\glue \D^1)_{\ge 0} = \{X\in \D\mid \{q, i_L\}(X)\in \EE \};\\
+(\D^0\glue \D^1)_{\ge 0}^\sneet = \{X\in \D\mid \{q, i_R\}(X)\in \EE \}.
+\end{gather*}
+Then the two classes $(\D^0\glue \D^1)_{\ge 0} $ and $(\D^0\glue \D^1)_{\ge 0}^\sneet$ are equal.
+
+Similarly, if we define
+\begin{gather*}
+(\D^0\glue \D^1)_{<0} = \{Y\in \D\mid \{q, i_R\}(Y)\in \MM \};\\
+(\D^0\glue \D^1)_{<0}^\sneet = \{Y\in \D\mid \{q, i_L\}(Y)\in \MM \}
+\end{gather*}
+these two classes are equal.
+\end{lemma}
+\begin{proof}
+We only have to prove the equality $(\D^0\glue \D^1)_{\ge 0}^\sneet=(\D^0\glue \D^1)_{\ge 0}$, since the other is dual after a series of evident interchanges.
+
+We have the following characterizations holding by definition:
+\begin{align*}
+(\D^0\glue \D^1)_{\ge 0} & \defequal \{X\mid \{q, i_L\}(X)\in \EE\}\\
+& = \{X\mid  RX\cong 0\}\\
+(\D^0\glue \D^1)_{\ge 0}^\sneet &\defequal \{X\mid \{q, i_R\}(X)\in \EE\}
+\end{align*}
+This entails that the first half of \ror lemma is equivalent to prove that 
+\[
+\{q, i_R\}(X)\in \EE \quad\text{iff}\quad RX\cong 0:
+\]
+a fundamental step to do this is the procedure outlined in \refbf{generalproced}:
+\begin{itemize}
+\item[$(\Leftarrow)$] Here it is enough to apply the functors $\{q, i_R\}$ to diagram (\refbf{star}), to obtain the diagrams of pullouts
+\[
+\xymatrix{
+  qSX	& qW	& qX \\
+  0	& 0	& 0 \\
+  	& 0	& \cancel{R_1X}
+  \ar^\sim "1,1";"1,2" 
+  \ar "1,1";"2,1" 
+  \ar^\sim "1,2";"1,3" 
+  \ar "1,2";"2,2" 
+  \ar "1,3";"2,3" 
+  \ar@{=} "2,1";"2,2" 
+  \ar@{=} "2,2";"2,3" 
+  \ar@{=} "2,2";"3,2" 
+  \ar "2,3";"3,3" 
+  \ar "3,2";"3,3" 
+}\qquad
+\xymatrix{
+  i_R SX	& i_R W	& i_R X \\
+  0	& \cancel{R_0 i_L W}	& 0 \\
+  	& 0	& 0
+  \ar^\sim "1,1";"1,2" 
+  \ar "1,1";"2,1" 
+  \ar^\sim "1,2";"1,3" 
+  \ar "1,2";"2,2" 
+  \ar "1,3";"2,3" 
+  \ar "2,1";"2,2" 
+  \ar^\sim "2,2";"2,3" 
+  \ar "2,2";"3,2" 
+  \ar@{=} "2,3";"3,3" 
+  \ar@{=} "3,2";"3,3" 
+}
+\]
+  From these pullout diagrams we can deduce that
+\begin{itemize}
+\item $qX\cong qSX\in\EE_1$;
+\item $i_R X\cong i_R SX\in \EE_0$.
+\end{itemize}
+\item[$(\Rightarrow)$] Now we assume that $\{q, i_R\}(X)\in \EE$; first of all we show that $qRX\cong 0$: it is enough to consider the diagram% the proof here becomes a little more tricky and we prefer to use the more symmetric ``Jacob ladder'' (\refbf{ladder:arrows}) instead of (\refbf{star}); we want to show that $RX\cong 0$ applying again the functors $\{q, i_R\}$:% to diagram (\refbf{star}):% we obtain
+\[
+\xymatrix{
+  qA	& qW	& qX \\
+  0	& 0	& qB \\
+  	& 0	& \cancel{R_1 qX}
+  \ar^\sim "1,1";"1,2" 
+  \ar "1,1";"2,1" 
+  \ar "1,2";"1,3" 
+  \ar "1,2";"2,2" 
+  \ar "1,3";"2,3" 
+  \ar@{=} "2,1";"2,2" 
+  \ar "2,2";"2,3" 
+  \ar@{=} "2,2";"3,2" 
+  \ar^\wr "2,3";"3,3" 
+  \ar "3,2";"3,3" 
+}%\qquad
+% \xymatrix{
+%   i_R A	& i_R W	& i_R X \\
+%   0	& R_0 i_L W	& i_R B \\
+%   	& 0	& 0
+%   \ar "1,1";"1,2" 
+%   \ar@{->>} "1,1";"2,1" _{\EE}
+%   \ar "1,2";"1,3" 
+%   \ar@{->>} "1,2";"2,2" _{\EE}
+%   \ar@{->>} "1,3";"2,3" ^{\EE}
+%   \ar@{->>}@/^2pc/ "1,3";"3,3" ^{\EE}_{\due}
+%   \ar@{} "1,3";"3,3" 
+%   \ar "2,1";"2,2" 
+%   \ar^\sim "2,2";"2,3" 
+%   \ar@{} "2,2";"3,3" |{\uno}
+%   \ar@{>->} "2,2";"3,2" _{\MM}
+%   \ar "2,3";"3,3" 
+%   \ar@{=} "3,2";"3,3" 
+% }
+\]
+to obtain that $R_1 qX\cong 0$ since $qX\in \EE_1$; this means that $qRX\cong 0$. Proving that also $i_RX\cong 0$ is a little bit more tricky, and the best way to proceed is to apply $i_R$ to the more symmetric ``Jacob ladder'' (\refbf{ladder:arrows}) instead of (\refbf{star}); we have the diagram
+\[
+a
+\]
+where first of all $i_R q_LS_1 qX \cong i_R X\in\EE_0$ by both assumptions $qX\in \EE_1, i_R X\in \EE_0$; pushing out this arrow we obtain that $\var{i_R SX}{S_0 i_R K}, \var{i_R W}{i_R C}, \var{i_R X}{i_R K}$ all lie in $\EE_0$. Moreover, $S_0 i_R K$, since it is a coreflection arrow; pushing out this arrow we obtain that $\var{i_R C}{R_0 i_L W}, \var{i_R K}{i_R RX}$ both lie in $\EE_0$. Now the 3-for-2 property applied to $i_R X \to i_R RX \to 0$ entails that $i_R RX\to 0$ is invertible.
+%  where $R_1 qX\cong 0$ since $qX\in \EE_1$ (which means that $qB\cong 0$), and $\var{i_R B}{0}\in \EE_0\cap \MM_0$ (since it is a pushout of an $\EE$-arrow, $\var{i_R W}{R_0 i_R W}$), thanks to the 3-for-2 property applied to sub-diagrams \uno, \ding{193}.
+
+Now, the joint reflectivity of the pair $\{q, i_R\}$ (Lemma \refbf{reflectsall}) gives that $B\cong 0$.\qedhere
+\end{itemize}
+\end{proof}
+\begin{scholium}\label{samerecol}
+As noticed in the introduction, a pleasant consequence of \ror lemma is that, since according to \cite[pag.\@\xspace \textbf{45}]{BBDPervers} the diagram of $2$\hyp{}categories obtained reversing 2-cells in \abbrv{Def} \refbf{def:recol} (namely, the diagram where the r\^oles of \marginnote{\textdbend}$i_L, i_R$ and $q_L, q_R$ are interchanged) is again a recollement (denoted $\rec^\text{co}$), given $\tee_i\in  \ts (\D^i)$ the $t$\hyp{}structure $\tee_0\glue\tee_1$ glued along $\rec$ is the same as the $t$\hyp{}structure $\tee_0\glue\tee_1$ glued along $\rec^\text{co}$.
+\end{scholium}
+The refined gluing theorem for normal torsion theories acquires the following form:
+\begin{theorem}[The Sneetches' Theorem\protect{\footnote{See \cite{suess1961sneetches}: here the ``star-belly'' Sneetches are, rather obviously, the morphisms of $(\EE_0\glue \EE_1)^\sneet$, whereas the ``plain-belly'' Sneetches are the morphisms of $(\EE_0\glue \EE_1)$.}}]
+\label{thm:trueglued}
+Let $\D$ be a stable $\infty$\hyp{}category, in a recollement 
+$$
+(i,q)\colon \D^0 \lrlarrows  \D  \lrlarrows  \D^1,
+$$
+and let $\tee_i$ be a $t$\hyp{}structure on $\D^i$. Then the recoll\'ee $t$\hyp{}structure $\tee_0\glue \tee_1$ is induced by the normal torsion theory $(\EE_0\glue\EE_1,\MM_0\glue\MM_1)$ with classes
+\begin{align*}
+(\EE_0\glue \EE_1) & \defequal \big\{f\in\hom(\D)\left|\right. \{q, i_L\}(f)\in \EE \big\} \\
+&= \big\{f\in\hom(\D)\left|\right. \{q, i_R\}(f)\in \EE \big\} \defequal (\EE_0\glue \EE_1)^\sneet; \\
+(\MM_0\glue \MM_1) &\defequal \big\{g\in\hom(\D)\left|\right. \{q, i_R\}(g)\in \MM \big\}\\
+&= \big\{g\in\hom(\D)\left|\right. \{q, i_L\}(g)\in \MM \big\} \defequal (\MM_0\glue \MM_1)^\sneet.
+\end{align*}
+\end{theorem}
+The proof of \abbrv{Thm}\refbf{thm:trueglued} will occupy the rest of the section.
+\begin{proof}
+Since (thanks to the characterization (\refbf{charac}) of section \S\refbf{classical}) an arrow $f\in\hom(\D)$ lies in $\EE_0\glue \EE_1$ if and only if $R(f)$ (as constructed in the Jacob ladder (\refbf{functorial-ladder})) is an isomorphism in $\D$, we are left to prove the following chain of equivalences, given $f\in\hom(\D)$:
+\begin{enumerate}[label=(\oldstylenums{\arabic*})]
+\item $\{q, i_R\}(f)\in \EE$;
+\item $R(f)$ is an isomorphism in $\D$;
+\item $\{q, i_L\}(f)\in \EE$.
+\end{enumerate}
+For the sake of clarity, we split the proof in different parts: we separately prove the implications 
+\begin{itemize}
+\item (\oldstylenums{1}) implies (\oldstylenums{2});
+\item (\oldstylenums{3}) implies (\oldstylenums{2});
+\item (\oldstylenums{2}) implies that $\{q, i_R, i_L\}(f)\in \EE$ (this part is, itself, divided again in three sub-lemmas, one for each functor $\{q, i_R, i_L\}$).
+\end{itemize}
+\subsection*{$\{ q, i_R\}(f)\in \EE$ implies that $R(f)$ is invertible.}\label{para:firstsneetch}
+Apply the functor $q$ to the Jacob ladder (\refbf{functorial-ladder}), to obtain
+
+\[\label{q-of-Jacob}
+\scalebox{.8}{ 
+\xymatrix@R=2mm@C=3mm{
+  	& S_1 q Y	& 	& q SY	& 	& q WY	& 	& q Y \\
+  S_1 qX	& 	& q SX	& 	& q WX	& 	& q X \\
+  	& 	& 	& 	& 	& 	& 	& q KY \\
+  0	& 	& 0	& 	& \cancel{q CX }	& 	& q KX \\
+  	& 	& 	& 	& 	& 	& 	& q RY \\
+  	& 	& 0	& 	& 0	& 	& qRX \\
+  	& 	& 	& 	& 	& 	& 	& R_1 qY \\
+  	& 	& 	& 	& 0	& 	& R_1 qX
+  \ar^\sim "1,2";"1,4" 
+  \ar^\sim "1,4";"1,6" 
+  \ar "1,6";"1,8" 
+  \ar "1,8";"3,8" 
+  \ar "2,1";"1,2" 
+  \ar^\sim "2,1";"2,3" 
+  \ar "2,1";"4,1" 
+  \ar "2,3";"1,4" 
+  \ar^\sim "2,3";"2,5" 
+  \ar "2,3";"4,3" 
+  \ar "2,5";"1,6" 
+  \ar "2,5";"2,7" 
+  \ar "2,5";"4,5" 
+  \ar "2,7";"4,7" 
+  \ar "2,7";"1,8" 
+  \ar^\wr "3,8";"5,8" 
+  \ar@{=} "4,1";"4,3" 
+  \ar@{=} "4,3";"6,3" 
+  \ar^\sim "4,3";"4,5" 
+  \ar^\wr "4,5";"6,5" 
+  \ar "4,5";"4,7" 
+  \ar^\wr "4,7";"6,7" 
+  \ar "4,7";"3,8" 
+  \ar^\wr "5,8";"7,8" 
+  \ar@{=} "6,3";"6,5" 
+  \ar "6,5";"6,7" 
+  \ar@{=} "6,5";"8,5" 
+  \ar^\wr "6,7";"8,7" 
+  \ar "6,7";"5,8" 
+  \ar "8,5";"8,7" 
+  \ar "8,7";"7,8" 
+}}
+\] The fact that $qf\in \EE_1$ entails $R_1q f\colon R_1 q X\to R_1 q Y$ is an isomorphism, hence $qRf$ is an isomorphism as well, since it fits into the square
+\[
+	\xymatrix{
+	  q R X	& q R Y \\
+	  R_1 q X	& R_1 q Y.
+	  \ar "1,1";"1,2" 
+	  \ar_\wr "1,1";"2,1" 
+	  \ar^\wr "1,2";"2,2" 
+	  \ar_\sim "2,1";"2,2" 
+	}
+\] Our next aim is to prove that $i_R(Rf)$ is invertible too: we proceed in two steps showing that it lies both in $\EE_0$ and $\MM_0$; when this is done the joint conservativity of the pair $\{q, i_R\}$ (Lemma \refbf{reflectsall}) concludes.
+
+The arrow $i_RRf$ lies in $\MM_0$, as it is immediate to notice from the commutative triangle
+\[
+	\xymatrix{
+	  i_RRX	& i_RRY \\
+	  0	& 0
+	  \ar@{>->} "1,1";"2,1" 
+	  \ar "1,1";"1,2" 
+	  \ar@{>->} "1,2";"2,2" 
+	  \ar@{=} "2,1";"2,2" 
+	}
+\] as a consequence of the 3-for-2 closure property for $\MM_0$, in the diagram below:\footnote{Several arrows in diagram (\refbf{diag2}) are decorated with a ``two-headed'' arrow $\twoheadrightarrow$ to denote they belong to $\EE_0$: the crucial fact from which this is deduced is that $i_RSX \in \EE_0$ (the curved, dotted arrow) by the \ror lemma, as it will be repeated in a while. Nothing interesting happens in the corner filled with \#'s.} 
+
+\[
+\scalebox{.8}{
+\label{diag2}
+ 	\xymatrix@R=2mm@C=3mm{
+ 	  	& \#	& 	& i_R SY	& 	& i_R WY	& 	& i_R Y \\
+ 	  \#	& 	& i_R SX	& 	& i_R WX	& 	& i_R X \\
+ 	  	& 	& 	& 	& 	& 	& 	& i_R KY \\
+ 	  0	& 	& S_0 i_R KX	& 	& i_R CX	& 	& i_R KX \\
+ 	  	& 	& 	& 	& 	& 	& 	& i_R RY \\
+ 	  	& 	& 0	& 	& R_0 i_L WX	& 	& i_R RX \\
+ 	  	& 	& 	& 	& 	& 	& 	& 0 \\
+ 	  	& 	& 	& 	& 0	& 	& 0
+ 	  \ar "1,2";"1,4" 
+ 	  \ar "1,4";"1,6" 
+ 	  \ar^\sim "1,6";"1,8" 
+ 	  \ar@{->>} "1,8";"3,8" 
+ 	  \ar "2,1";"2,3" 
+ 	  \ar "2,1";"4,1" 
+ 	  \ar "2,3";"2,5" 
+ 	  \ar@{.>>}@/_3pc/|\hole "2,3";"6,3" 
+ 	  \ar@{->>} "2,3";"4,3" 
+ 	  \ar "2,3";"1,4" 
+ 	  \ar^\sim "2,5";"2,7" 
+ 	  \ar@{->>} "2,5";"4,5" 
+ 	  \ar "2,5";"1,6" 
+ 	  \ar@{->>} "2,7";"4,7" 
+ 	  \ar@{->>} "2,7";"1,8" 
+ 	  \ar@{->>} "3,8";"5,8" 
+ 	  \ar "4,1";"4,3" 
+ 	  \ar "4,3";"4,5" 
+ 	  \ar@{->>} "4,3";"6,3" 
+ 	  \ar^\sim "4,5";"4,7" 
+ 	  \ar@{->>} "4,5";"6,5" 
+ 	  \ar@{->>} "4,7";"6,7" 
+ 	  \ar "4,7";"3,8" 
+ 	  \ar "5,8";"7,8" 
+ 	  \ar "6,3";"6,5" 
+ 	  \ar^\sim "6,5";"6,7" 
+ 	  \ar "6,5";"8,5" 
+ 	  \ar "6,7";"5,8" 
+ 	  \ar "6,7";"8,7" 
+ 	  \ar@{=} "8,5";"8,7" 
+ 	  \ar@{=} "8,7";"7,8" 
+ 	}}
+ \] 
+ Showing that $i_RRf$ lies in $\EE_0$ is slightly more involved: from the diagram above, we deduce that $i_RRf\in \EE_0$ is equivalent to several other conditions, and in particular it is implied from $\var{i_R X}{i_R KX}\in \EE_0$: given this the commutativity of the square
+\[
+	\xymatrix{
+	  i_R X	& i_R Y \\
+	  i_R KX	& i_R KY \\
+	  i_R R X	& i_R R Y
+	  \ar@{->>} "1,1";"1,2" 
+	  \ar@{->>} "1,1";"2,1" 
+	  \ar@{->>} "1,2";"2,2" 
+	  \ar "2,1";"2,2" 
+	  \ar@{->>} "2,1";"3,1" 
+	  \ar@{->>} "2,2";"3,2" 
+	  \ar "3,1";"3,2" 
+	}
+\] gives the result, thanks to the 3-for-2 closure property for $\EE_0$. To prove that $\var{i_R X}{i_R KX}\in \EE_0$, return to diagram (\refbf{diag2}): by the \ror lemma $i_R SX\in \EE_0$ too; now consider the commutative triangle
+\[
+	\xymatrix{
+	  i_R SX	& S_0 i_R KX \\
+	  0	& 0
+	  \ar@{->>} "1,1";"2,1" 
+	  \ar "1,1";"1,2" 
+	  \ar@{->>} "1,2";"2,2" 
+	  \ar@{=} "2,1";"2,2" 
+	}
+\] from which we deduce that $\var{i_R SX}{S_0 i_R KX}\in \EE_0$. Finally, consider the pullout square
+\[
+	\xymatrix{
+	  i_R SX	& i_R X \\
+	  S_0 i_R KX	& i_R KX
+	  \ar "1,1";"1,2" 
+	  \ar@{->>} "1,1";"2,1" 
+	  \ar "1,2";"2,2" 
+	  \ar "2,1";"2,2" 
+	}
+\] This entails that $\var{i_R X }{i_R KX}\in \EE_0$, since $\EE_0$ is closed under pushouts in $\D^0$.
+\subsection*{$\{ q, i_L\}(f)\in \EE$ implies that $R(f)$ is invertible.}
+Applying $q$ to the Jacob ladder and reasoning as before we obtain that $q(Rf)$ is an isomorphism. It remains to show that $i_LRf$ is an isomorphism too, to conclude thanks to the joint reflectivity of the pair $\{q, i_L\}$. 
+
+To see this last statement, apply the functor $i_L$ to the Jacob ladder, obtaining 
+\[ 
+\label{diag1bis}
+\scalebox{.8}{
+\xymatrix@R=2mm@C=3mm{
+  	& 0	& 	& i_L SY	& 	& i_L WY	& 	& i_L Y \\
+  0	& 	& i_L SX	& 	& i_L WX	& 	& i_L X \\
+  	& 	& 	& 	& 	& 	& 	& i_L KY \\
+  0	& 	& S_0 i_L KX	& 	& i_L CX	& 	& i_L KX \\
+  	& 	& 	& 	& 	& 	& 	& i_L RY \\
+  	& 	& 0	& 	& R_0 i_L WX	& 	& i_L RX \\
+  	& 	& 	& 	& 	& 	& 	& \# \\
+  	& 	& 	& 	& 0	& 	& \#
+  \ar "1,2";"1,4" 
+  \ar "1,4";"1,6" 
+  \ar "1,6";"1,8" 
+  \ar_\wr "1,8";"3,8" 
+  \ar "2,1";"2,3" 
+  \ar@{=} "2,1";"4,1" 
+  \ar "2,3";"2,5" 
+  \ar_\wr "2,3";"4,3" 
+  \ar "2,3";"1,4" 
+  \ar "2,5";"2,7" 
+  \ar_\wr "2,5";"4,5" 
+  \ar "2,5";"1,6" 
+  \ar@{} "2,7";"3,8" |{\uno}%{\text{\large \uno}}
+  \ar_\wr "2,7";"4,7" 
+  \ar@{->>} "2,7";"1,8" 
+  \ar@{->>} "3,8";"5,8" 
+  \ar "4,1";"4,3" 
+  \ar "4,3";"4,5" 
+  \ar "4,3";"6,3" 
+  \ar "4,5";"4,7" 
+  \ar@{->>} "4,5";"6,5" 
+  \ar@{} "4,7";"5,8" |{\due}%{\text{\large \ding{193}}}
+  \ar@{->>} "4,7";"6,7" 
+  \ar "4,7";"3,8" 
+  \ar "5,8";"7,8" 
+  \ar "6,3";"6,5" 
+  \ar "6,5";"6,7" 
+  \ar "6,5";"8,5" 
+  \ar "6,7";"5,8" 
+  \ar "6,7";"8,7" 
+  \ar "8,5";"8,7" 
+}}
+\]
+Notice that the arrow $i_LRf\colon i_L RX\to i_LRY$ lies in $\EE_0$ by the 3-for-2 property. To see that it also lies in $\MM_0$ recall that by \ror lemma $i_R RX, i_R RY\in \MM_0$ iff $i_L RX, i_L RY\in \MM_0$: given this, the following diagram
+\[
+	\xymatrix{
+	  i_L RX	& i_LR Y \\
+	  0	& 0
+	  \ar "1,1";"1,2" 
+	  \ar@{>->} "1,1";"2,1" 
+	  \ar@{>->} "1,2";"2,2" 
+	  \ar@{=} "2,1";"2,2" 
+	}
+\] by 3-for-2, allows us to conclude.
+
+Now we aim to prove the converse implications, and to do that we further split the proof in several parts: assuming $Rf$ is an isomorphism in $\D$, we want to prove that $\{ q , i_R, i_L \}(f)\in \EE$. 
+
+Applying the functor $q$ to the Jacob ladder we obtain again diagram (\refbf{q-of-Jacob}): this gives directly that $R_1 qf$ is an isomorphism, since the square
+\[
+	\xymatrix{
+	  q RX	& q RY \\
+	  R_1 q X	& R_1 q Y
+	  \ar^\sim "1,1";"1,2" 
+	  \ar_\wr "1,1";"2,1" 
+	  \ar^\wr "1,2";"2,2" 
+	  \ar "2,1";"2,2" 
+	}
+\] is commutative; hence $q f \in \EE_1$. Applying $R_0$ to $i_R(Jacob)$ (\ie to diagram (\refbf{diag2})) we obtain a diagram like the following, depicted as a farsighted person would do:
+\[
+ \scalebox{.75}{\xymatrix@!C=.1mm@R=4mm{
+                  	& 	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	& 	&  \\
+                  	& 	& 	& 	& 	& 	& 
+                  \ar "1,2";"1,4" 
+                  \ar "1,4";"1,6" 
+                  \ar|\bullet "1,6";"1,8" 
+                  \ar|\bullet "1,8";"3,8" 
+                  \ar "2,1";"4,1" 
+                  \ar "2,1";"2,3" 
+                  \ar|\bullet "2,3";"4,3" 
+                  \ar "2,3";"1,4" 
+                  \ar "2,3";"2,5" 
+                  \ar|\bullet "2,5";"4,5" 
+                  \ar "2,5";"1,6" 
+                  \ar|\bullet "2,5";"2,7" 
+                  \ar@{} "2,7";"3,8" |{\cin}%{\text{\large \ding{196}}}
+                  \ar|\bullet "2,7";"4,7" 
+                  \ar|\circ "2,7";"1,8" 
+                  \ar|\bullet "3,8";"5,8" 
+                  \ar "4,1";"4,3" 
+                  \ar|\bullet "4,3";"6,3" 
+                  \ar "4,3";"4,5" 
+                  \ar|\bullet "4,5";"4,7" 
+                  \ar|\bullet "4,5";"6,5" 
+                  \ar@{} "4,7";"5,8" |{\sei}%{\text{\large \ding{197}}}
+                  \ar "4,7";"3,8" 
+                  \ar|\bullet "4,7";"6,7" 
+                  \ar "5,8";"7,8" 
+                  \ar "6,3";"6,5" 
+                  \ar|\bullet "6,5";"6,7" 
+                  \ar "6,5";"8,5" 
+                  \ar "6,7";"8,7" 
+                  \ar|\bullet "6,7";"5,8" 
+                  \ar "8,5";"8,7" 
+                  \ar "8,7";"7,8" 
+                }}
+ \] (the bulleted arrows are isomorphisms): now consider the commutative square \cin + \sei:
+\[
+	\xymatrix@C=1.5cm{
+	  R_0 i_R X	& R_0 i_R Y \\
+	  R_0 i_R R X	& R_0 i_R R Y
+	  \ar "1,1";"1,2" 
+	  \ar_\wr "1,1";"2,1" 
+	  \ar^\wr "1,2";"2,2" 
+	  \ar_{R_0 i_R R f}^\sim "2,1";"2,2" 
+	}
+\] which entails that $R_0 i_R f$ is an isomorphism, \ie that $i_R f\in \EE_0$. 
+
+Now it remains only to show that if $R(f)$ is an isomorphism, $i_L(f)\in \EE_0$; the technique is the same as before, mutatis mutandis: $i_L(Jacob)$ looks like diagram (\refbf{diag1bis}), apart from the condition $i_L(f)\in \EE_0$. From this diagram, and in particular from the sub-diagram
+\[ 
+\xymatrix{
+  i_L X	& i_L Y \\
+  i_L KX	& i_L KY \\
+  i_L RX	& i_L RY
+  \ar@{} "1,1";"2,2" |{\uno}%{\text{\large \uno}}
+  \ar "1,1";"1,2" ^{i_L f}
+  \ar_\wr "1,1";"2,1" 
+  \ar^\wr "1,2";"2,2" 
+  \ar@{} "2,1";"3,2" |{\due}%{\text{\large \ding{193}}}
+  \ar@{->>} "2,1";"2,2" 
+  \ar@{->>} "2,1";"3,1" 
+  \ar@{->>}@{->>} "2,2";"3,2" 
+  \ar_\sim "3,1";"3,2" 
+}
+\] we deduce that $i_L f\in \EE_0$, by the 3-for-2 closure property of $\EE_0$.
+\end{proof}
+\begin{remark}
+We conclude the present section with an application which shows how the Sneetches' theorem can be applied to the theory of $n$-\emph{recollement}, a slight generalization of the classical Definition in \S\refbf{classical}: applications of this formalism to derived categories of algebras, investigating the relationships between the recollements of derived categories
+and the Gorenstein properties of these algebras, can be found in \cite{nrecol1,nrecol2}.
+\end{remark}
+\begin{definition}\cite[Def. \textbf{2}]{nrecol1} Let $n\ge 1$ be an integer, and $\D^0, \D, \D^1$ three stable $\infty$\hyp{}categories, organized in a diagram
+\[\label{diag:nreco}
+	\xymatrix{
+	  \D^0	& \D	& \D^1
+	  \ar@<5pt> "1,1";"1,2" |{i_2}
+	  \ar@{<-}@<11pt> "1,1";"1,2" ^{i_1}
+	  \ar@{<-}@<-3pt> "1,1";"1,2" |{i_3}
+	  \ar@<-10pt>@{}|\vdots "1,1";"1,2" 
+	  \ar@{<-}@<-15pt> "1,1";"1,2" _{i_{n+2}}
+	  \ar@<5pt> "1,2";"1,3" |{q_2}
+	  \ar@{<-}@<11pt> "1,2";"1,3" ^{q_1}
+	  \ar@{<-}@<-3pt> "1,2";"1,3" |{q_3}
+	  \ar@<-10pt>@{}|\vdots "1,2";"1,3" 
+	  \ar@{<-}@<-15pt> "1,2";"1,3" _{q_{n+2}}
+	}
+\]with $n+2$ functors on each edge, such that every consecutive three functors form a recollement  $\rec_{2k} = (i_{2k}, q_{2k})$, $\rec_{2h+1} = (q_{2h+1}, i_{2h+1})$, for $k=1, \dots, n-1$, $h=1, \dots, n-2$.
+\end{definition}
+\begin{proposition}\label{cinese}
+Given an $n$-recollement like (\refbf{diag:nreco}), and $t$\hyp{}structures $\tee_0,\tee_1$ on $\D^0, \D^1$, all of the $t$\hyp{}structures $[\tee_0\glue \tee_1]^k$ induced on $\D$ by the various recollements $\rec_k$ coincide.
+\end{proposition}
+The same result holds when ``$t$\hyp{}structure'' is replaced with (the) ``\textsc{ntt}'' (inducing the given $t$\hyp{}structure).
+\begin{proof}[(Sketch of) proof]
+Let us consider the case $n=2$ first, where diagram (\refbf{diag:nreco}) reduces to 
+\[ 
+\xymatrix{
+  \D^0	& \D	& \D^1
+  \ar@{<-}@<9pt> "1,1";"1,2" ^{i_1}
+  \ar@<3pt> "1,1";"1,2" |{i_2}
+  \ar@{<-}@<-3pt> "1,1";"1,2" |{i_3}
+  \ar@<-9pt> "1,1";"1,2" _{i_4}
+  \ar@{<-}@<9pt> "1,2";"1,3" ^{q_1}
+  \ar@<3pt> "1,2";"1,3" |{q_2}
+  \ar@{<-}@<-3pt> "1,2";"1,3" |{q_3}
+  \ar@<-9pt> "1,2";"1,3" _{q_4}
+}
+\]It is easy to notice, now, that the \ror lemma entails that the torsion classes
+\begin{align*}
+[\tee_0\glue \tee_1]^1_{\ge 0} & = \{ X\in \D\mid \{q_2, i_1\}(X)\in \EE\}\\
+[\tee_0\glue \tee_1]^2_{\ge 0} & = \{X\in \D\mid \{i_3, q_2\}(X)\in \EE\}
+\end{align*}
+are equal. 
+We now can argue by induction. The case $n=1$ is trivial; for the inductive step one considers the diagram
+$$
+	\xymatrix{
+	  \D^0	& \D	& \D^1
+	  \ar@<5pt> "1,1";"1,2" |{i_2}
+	  \ar@{<-}@<11pt> "1,1";"1,2" ^{i_1}
+	  \ar@{<-}@<-3pt> "1,1";"1,2" |{i_3}
+	  \ar@<-10pt>@{}|\vdots "1,1";"1,2" 
+	  \ar@{<-}@<-15pt> "1,1";"1,2" _{i_{n+2}}
+	  \ar@<5pt> "1,2";"1,3" |{q_2}
+	  \ar@{<-}@<11pt> "1,2";"1,3" ^{q_1}
+	  \ar@{<-}@<-3pt> "1,2";"1,3" |{q_3}
+	  \ar@<-10pt>@{}|\vdots "1,2";"1,3" 
+	  \ar@{<-}@<-15pt> "1,2";"1,3" _{q_{n+2}}
+	}
+$$and applies the inductive hypothesis to show that $[\tee_0\glue \tee_1]^1_{1, \ge 0} = \dots = [\tee_0\glue \tee_1]^{n-1}_{\ge 0}$. namely, the same argument used in the $n=2$ case  shows that $[\tee_0\glue \tee_1]^{n-1}_{\ge 0}=[\tee_0\glue \tee_1]^n_{\ge 0}$.
+\end{proof}
