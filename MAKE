@@ -4,8 +4,5 @@ grep "\[Cleanser: .*\]" main.log > Cleanings.txt
 cp main.pdf thesis-with-sissa-titlepage/
 cd thesis-with-sissa-titlepage/
 pdftk A=thesis-frn.pdf B=main.pdf cat A1 B2-r1 output main-w.pdf
-cd ..
-findhyph main.og
-./ipenate.py
 mv main.pdf tmesi.pdf
 latexmk -C
