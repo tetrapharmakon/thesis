@@ -17,7 +17,7 @@
   ,stmaryrd
   ,todonotes
   ,mathtools
-  ,eucal
+  % ,eucal
   ,listings
   ,datetime}
 
@@ -58,7 +58,7 @@ showstringspaces=true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% comandi personali
 
-\newcommand{\cate}[1]{\textbf{#1}}
+\newcommand{\cate}[1]{\mathbf{#1}}
 	\providecommand{\CC}{\cate{C}}
 	\providecommand{\D}{\cate{D}}
   \providecommand{\Set}{\cate{Set}}
@@ -73,7 +73,7 @@ showstringspaces=true}
 \providecommand{\bDelta}{\Delta}
 \def\ter{\boldsymbol{\tau}}
 
-\newcommand{\mcal}[1]{{\hskip-.17em\text{\mycal{#1}\hskip.2em}}}
+\newcommand{\mcal}[1]{\mathcal{#1}}%{{\hskip-.17em\text{\mycal{#1}\hskip.2em}}}
 	\providecommand{\K}{\mcal{K}}
 	\newcommand{\mS}{\mcal{S}}
 	\newcommand{\TT}{\mcal{T}}
@@ -204,8 +204,8 @@ showstringspaces=true}
 
 \usepackage{graphicx}
 \usepackage{setspace}
-  \linespread{1.1}
-\usepackage{fouriernc}
+  % \linespread{1.1}
+% \usepackage{fouriernc}
 
 % SIMBOLI NON PERMESSI DAL FONT
 %=========
@@ -218,19 +218,21 @@ showstringspaces=true}
   % \DeclareMathSymbol{\coprod}{\mathop}{cmlargesymbols}{"60}
 %=========
 
-\usepackage[no-math]{fontspec}
-% \setmainfont{Sabon Next LT Pro}
+\usepackage{fontspec}
+% \usepackage{mathspec}
+
+\setmainfont[SmallCapsFont={Latin Modern Roman Caps},]{Latin Modern Roman}
 \setmonofont[Scale = MatchLowercase]{Ubuntu Mono}
 
 \newfontfamily{\japanese}{TakaoMincho}
 \newfontfamily{\bigjapanese}{TakaoExMincho}
 \newfontfamily{\hebrew}{Shlomo LB}
-\newfontfamily{\russian}{Arno Pro}
-\newfontfamily{\greek}{Arno Pro}
+\newfontfamily{\russian}{CMU Serif}
+\newfontfamily{\greek}{Latin Modern Roman}
 \newfontfamily{\georgian}{AcadNusx}
   \def\rec{\text{\georgian{r}}}
 \newfontfamily{\fraktur}{Plakat-Fraktur}
-\newfontfamily{\mycal}[Scale=MatchUppercase]{Lucida Calligraphy}
+% \newfontfamily{\mycal}{}[Scale=MatchUppercase]{Lucida Calligraphy}
 
 \usepackage{
    amsmath
@@ -244,12 +246,13 @@ showstringspaces=true}
    {\topsep}
    {}
    {}
-   {\bfseries}
+   {\scshape}
    {}
    {0em}
    {\thmname{#1}
     \thmnumber{#2}.
-    \thmnote{\big[{\scshape #3}\big]: }}
+    \thmnote{({\scshape #3}): }}
+
 \theoremstyle{reference}
   \newtheorem{theorem}{Theorem}[section]
   \newtheorem{lemma}[theorem]{Lemma}
@@ -311,7 +314,7 @@ showstringspaces=true}
 
 % stile del comando \cite
 \makeatletter
-  \def\@cite#1#2{[\textbf{#1}\if@tempswa , #2\fi]}
+  \def\@cite#1#2{[\textsf{#1}\if@tempswa , #2\fi]}
   \def\@biblabel#1{[\textsf{#1}]}
 \makeatother
 

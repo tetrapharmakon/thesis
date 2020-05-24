@@ -31,7 +31,7 @@
   output/.initial={},
   process/.code={
     \kDSanitize#1\into tmp\GO
-    \message{[Cleanser: \Meaning-> \tmp]^^J}
+    % \message{[Cleanser: \Meaning-> \tmp]^^J}
     \pgfkeysalso{/cleanser/output/.expand once=\tmp}},
 }
 

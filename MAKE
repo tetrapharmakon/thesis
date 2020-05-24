@@ -1,8 +1,14 @@
 #!/usr/bin/env sh
-latexmk -pdf -xelatex main
-grep "\[Cleanser: .*\]" main.log > Cleanings.txt
-cp main.pdf thesis-with-sissa-titlepage/
-cd thesis-with-sissa-titlepage/
-pdftk A=thesis-frn.pdf B=main.pdf cat A1 B2-r1 output main-w.pdf
-mv main.pdf tmesi.pdf
-latexmk -C
+latexmk -xelatex main
+# grep "\[Cleanser: .*\]" main.log > Cleanings.txt
+# cp main.pdf thesis-with-sissa-titlepage/
+# cd thesis-with-sissa-titlepage/
+# pdftk A=thesis-frn.pdf B=main.pdf cat A1 B2-r1 output main-w.pdf
+# mv main.pdf tmesi.pdf
+latexmk -c
+cp main.pdf ~/tetrapharmakon.github.io/stuff/
+cd ~/tetrapharmakon.gitub.io/
+git add -A 
+git commit -m "updated phd"
+git push
+cd ~/thesis/

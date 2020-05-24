@@ -26,9 +26,9 @@ played an essential r\^ole in the definition of the \emph{stable homotopy catego
 \end{center}
 The invertibility of $\Sigma$ is an essential feature of stable homotopy theory, and the construction giving the universal category where $\Sigma$ becomes an equivalence is part of the so\hyp{}called \emph{Spanier\hyp{}Whitehead stabilization} $\smallcap{sw}(\cate{Spc})$ of the category of \smallcap{cw}\hyp{}complexes $\cate{Spc}$. We briefly investigate the construction of $\smallcap{sw}(\CC)$ in \S\refbf{spanierwhite}.
 
-A first axiomatization for the phenomena giving rise to these structures dates back to A\@. Dold and D\@. Puppe's \cite{Dold1961}; subsequently, motivated by this result, Grothendieck and Verdier recognized a similar structure on the homotopy category of $\ch(\A)$ (chain complexes on the abelian category $\A$), and encoded this procedure of modding out null\hyp{}homotopic maps to construct the \index{Derived category}\emph{derived category} $\D(\A)$ of $\ch(\A)$.
+A first axiomatization for the phenomena giving rise to these structures dates back to A\@. Dold and D\@. Puppe's \cite{Dold1961a}; subsequently, motivated by this result, Grothendieck and Verdier recognized a similar structure on the homotopy category of $\ch(\A)$ (chain complexes on the abelian category $\A$), and encoded this procedure of modding out null\hyp{}homotopic maps to construct the \index{Derived category}\emph{derived category} $\D(\A)$ of $\ch(\A)$.
 
-Verdier outlined in his \cite{VerdierDesDes} a (ingenious but rather cumbersome) set of axioms, aimed at capturing the behaviour of these notable classes of the \emph{distinguished triangles} (\refbf{dt}), acting like exact sequences and involving an additive autoequivalence $\Sigma \colon \CC\to \CC$,  generalizing the reduced suspension $\Sigma$.
+Verdier outlined in his \cite{Verdier1996} a (ingenious but rather cumbersome) set of axioms, aimed at capturing the behaviour of these notable classes of the \emph{distinguished triangles} (\refbf{dt}), acting like exact sequences and involving an additive autoequivalence $\Sigma \colon \CC\to \CC$,  generalizing the reduced suspension $\Sigma$.
 
 Subsequently, D\@. Quillen axiomatized the notion of \emph{abstract homotopy theory} \cite{Baues1989} with his definition of a \emph{model category}\index{Model category!stable ---}; this in some sense unified the language of homotopy and homology theory, giving a more profound intuition of the latter being an additive manifestation of the former, and in particular conveying the idea that homotopies behave the same way also outside the category of spaces (and exist, for example, between maps of chain complexes, or maps of simplicial sets).
 
@@ -111,7 +111,7 @@ It must be said, however, that despite this highly unsatisfactory situation, a g
 \end{itemize}
 In light of this, one could argue that \adef \refbf{triangacat} behaves like the definition of topological spaces to a certain extent: the definition is not modeled to be user\hyp{}friendly, but to be pervasive, and concrete examples of the definition often enjoy additional properties making them more wieldy. 
 
-However, with the passing of time, understanding the deep meaning of the axioms in \adef \refbf{triangacat} became more and more a priority. It became evident that triangulated category where the ``false and mutilated memory of an irrecoverable process'' (\cite{borgesEN}), behaving like 1\hyp{}dimensional shadows of a higher dimensional notion: \index{Stable!--- $\infty$\hyp{}category}\index{Triangulated category!--- as shadow}
+However, with the passing of time, understanding the deep meaning of the axioms in \adef \refbf{triangacat} became more and more a priority. It became evident that triangulated category where the ``false and mutilated memory of an irrecoverable process'', behaving like 1\hyp{}dimensional shadows of a higher dimensional notion: \index{Stable!--- $\infty$\hyp{}category}\index{Triangulated category!--- as shadow}
 \begin{quote}
 triangulated categories arise as \emph{decategorification} of some structure taking place in the $\infty$\hyp{}categorical world, and the axioms defining them are designed to keep track of the 1\hyp{}categorical trace of this more refined notion.
 \end{quote}
@@ -500,7 +500,7 @@ Let $\A$ be any category, endowed with an endofunctor $\Sigma\colon \A\to \A$. T
 \end{enumerate}
 and such that the pair $(\smallcap{sw}(\A), \hat \Sigma)$ is initial with these properties?
 
-There are two ways to formalize the problem. We analyze them both, borrowing equally from Tierney's \cite{tierney1969categorical} and \cite{DeA}. The treatment of \smallcap{sw}\hyp{}stabilization given here motivates very well the meaning of \cite[\textbf{1.4.1}, \textbf{1.4.2}]{LurieHA}.
+There are two ways to formalize the problem. We analyze them both, borrowing equally from Tierney's \cite{MR0246294} and \cite{DeA}. The treatment of \smallcap{sw}\hyp{}stabilization given here motivates very well the meaning of \cite[\textbf{1.4.1}, \textbf{1.4.2}]{LurieHA}.
 \subsection{Construction via monads.}
 Let $\mathbb{N}$ be the monoid of natural numbers, considered as a category: it has a monoidal product given by the sum operation, such that the unit object is zero. Since $\mathbb{N}$ is a monoid in $(\Set\subset)\cate{Cat}$, the functor $T_{\mathbb{N}}=(-)\times\mathbb{N}$ is a monad, and the category of $T_\mathbb{N}$\hyp{}algebras can be described as the category whose objects are pairs $(\A, \Sigma \colon \A\to\A)$; more explicitly, a $T_\mathbb{N}$\hyp{}algebra is a pair $(\A,\Sigma)$ where $\A$ is a category, and $\Sigma\colon \A\to\A$ is a functor such that the diagrams
 \[
@@ -562,7 +562,7 @@ This category satisfies the desired universal property: there exists a functor
 \mor X -> Z -> Y;
 \end{kD}
 \]
-The category of \emph{topological spectra} consists of the Spanier\hyp{}Whitehead stabilization of the category of \textsc{cw}\hyp{}complexes, as well as the category of chain complexes of abelian groups (or modules over a ring $R$); these examples are discussed in \cite{tierney1969categorical}.
+The category of \emph{topological spectra} consists of the Spanier\hyp{}Whitehead stabilization of the category of \textsc{cw}\hyp{}complexes, as well as the category of chain complexes of abelian groups (or modules over a ring $R$); these examples are discussed in \cite{MR0246294}.
 \section{Stability in different models.}\label{model.stable}
 \epigraph{Whirl in circles\\ Around a stable center.}{M\@. Ueshiba}
 \subsection{Stable Model categories.}\index{Stable!--- model category}
@@ -603,7 +603,7 @@ Quoting \cite{LurieHA}:
 The theory of differential graded categories is closely related to the theory of stable $\infty$\hyp{}categories. More precisely, one can show that the data of a (pretriangulated) differential graded category over a field $k$ is equivalent to the data of a stable $\infty$\hyp{}category $\CC$ equipped with an enrichment over the monoidal $\infty$\hyp{}category of $k$\hyp{}module spectra. The theory of differential graded categories provides a convenient language for working with stable $\infty$\hyp{}categories of algebraic origin (for example, those which arise from chain complexes of coherent sheaves on algebraic varieties), but is inadequate for treating examples which arise in stable homotopy theory.
 \end{quote}
 \subsubsection{Stable \texorpdfstring{$\infty$}{infty}\hyp{}categories.}\index{Stable!--- $\infty$\hyp{}category}
-Stable $\infty$\hyp{}categories are extensively described in \cite{LurieHA}, throughout the present chapter, and throughout the present thesis; here, we outline how, in the setting of $\infty$\hyp{}categories, the lack of universality for the construction of $\D(\A)$ is completely solved: first of all, recall that the \emph{Dold\hyp{}Kan correspondence} \cite{kan1958functors,GoJ,Low2015} establishes an equivalence of categories between the category $\text{Ch}^+(\cate{Ab})$ (chain complexes of abelian groups, concentrated in positive degree) and $\cate{sAb}$ (simplicial sets whose sets of $n$\hyp{}simplices all are abelian groups). 
+Stable $\infty$\hyp{}categories are extensively described in \cite{LurieHA}, throughout the present chapter, and throughout the present thesis; here, we outline how, in the setting of $\infty$\hyp{}categories, the lack of universality for the construction of $\D(\A)$ is completely solved: first of all, recall that the \emph{Dold\hyp{}Kan correspondence} \cite{kan1958functors,GoJ} establishes an equivalence of categories between the category $\text{Ch}^+(\cate{Ab})$ (chain complexes of abelian groups, concentrated in positive degree) and $\cate{sAb}$ (simplicial sets whose sets of $n$\hyp{}simplices all are abelian groups). 
 \begin{center}
 \begin{figure}[H]
 \begin{kD}
