@@ -6,6 +6,7 @@ latexmk -xelatex main
 # pdftk A=thesis-frn.pdf B=main.pdf cat A1 B2-r1 output main-w.pdf
 # mv main.pdf tmesi.pdf
 latexmk -c
+rm chapters/*.aux
 cp main.pdf ~/tetrapharmakon.github.io/stuff/
 cd ~/tetrapharmakon.gitub.io/
 git add -A 
