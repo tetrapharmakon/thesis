@@ -1,0 +1,398 @@
+\usepackage[usenames,dvipsnames]{xcolor}
+  \definecolor{semilightgray}{rgb}{0.65, 0.65, 0.65}
+  \def\gray#1{\textcolor{semilightgray}{#1}}
+
+\emergencystretch=1.5em
+
+\usepackage[pages=some,placement=top]{background}
+
+\usepackage{%
+   manfnt
+  ,marginnote
+  ,url
+  ,cancel
+  ,verse
+  ,tipa
+  ,chessfss
+  ,stmaryrd
+  ,todonotes
+  ,mathtools
+  % ,eucal
+  ,listings
+  ,datetime}
+
+
+\lstset{language=[LaTeX]TeX,
+basicstyle=\footnotesize\ttfamily,
+classoffset=0,
+  keywordstyle=\color{blue},
+  morekeywords={obj, mor, lattice},
+classoffset=1,
+  keywordstyle=\color{red},
+  morekeywords={;, :, \\},
+classoffset=0,
+commentstyle=\color{darkgray},
+stringstyle=\color{red},
+showstringspaces=true}
+
+
+
+\def\fare{\todo[inline]{TODO!}}
+
+\usepackage{hyphenat}
+
+\usepackage{makeidx}
+  \makeindex
+
+\usepackage{float}
+
+\usepackage{tikz}
+  \usetikzlibrary{kD}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{fit}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{arrows}
+
+\usepackage[all,2cell,cmtip]{xy}\UseAllTwocells
+\usepackage[type={CC},modifier={by-nc-sa},version={3.0}]{doclicense}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% comandi personali
+
+\newcommand{\cate}[1]{\mathbf{#1}}
+	\providecommand{\CC}{\cate{C}}
+	\providecommand{\D}{\cate{D}}
+  \providecommand{\Set}{\cate{Set}}
+  \providecommand{\Cat}{\cate{Cat}}
+  \providecommand{\sSet}{\cate{sSet}}
+  \providecommand{\QCat}{\cate{QCat}}
+  \newcommand{\A}{\cate{A}}
+  \providecommand{\ch}{\cate{Ch}}
+  \newcommand{\hrt}{\cate{H}}
+  \renewcommand{\sp}{\cate{Sp}}
+
+\providecommand{\bDelta}{\Delta}
+\def\ter{\boldsymbol{\tau}}
+
+\newcommand{\mcal}[1]{\mathcal{#1}}%{{\hskip-.17em\text{\mycal{#1}\hskip.2em}}}
+	\providecommand{\K}{\mcal{K}}
+	\newcommand{\mS}{\mcal{S}}
+	\newcommand{\TT}{\mcal{T}}
+  \providecommand{\F}{\mcal{F}}
+  \providecommand{\LL}{\mcal{L}}
+  \providecommand{\R}{\mcal{R}}
+	\providecommand{\EE}{\mcal{E}}
+	\providecommand{\MM}{\mcal{M}}
+
+  \providecommand{\fF}{\mathbb{F}}
+  \providecommand{\Z}{\mathbb{Z}}
+
+\newcommand{\smallcap}[1]{\text{\scshape #1}}
+	\providecommand{\iso}{\smallcap{Eqv}}
+	\providecommand{\fs}{\smallcap{fs}}
+  \providecommand{\cart}{\smallcap{Cart}}
+  \providecommand{\cocart}{\smallcap{Cocart}}
+	\providecommand{\ts}{\smallcap{ts}}
+  \providecommand{\pf}{\smallcap{pf}}
+
+\def\dgrm#1{\mathsf{#1}}
+
+\providecommand{\abbrv}[1]{#1.\@\xspace}
+	\providecommand{\ie}{\abbrv{i.e}}
+	\providecommand{\etc}{\abbrv{etc}}
+	\providecommand{\prof}{\abbrv{prof}}
+	\providecommand{\viz}{\abbrv{viz}}
+	\providecommand{\eg}{\abbrv{e.g}}
+  \providecommand{\achap}{\abbrv{Ch}}
+
+\providecommand{\omissis}{[\dots\unkern] }
+\providecommand{\ror}{Ror\-schach\@\xspace}
+
+\providecommand{\rec}		{\text{\mxedb r}}
+\providecommand{\marked}	{\varsigma}
+\providecommand{\heart}		{\heartsuit}
+\providecommand{\iddots}	{\protect{\rotatebox[origin=c]{90}{$\ddots$}}}
+\providecommand{\sneet}		{\bigstar}
+\providecommand{\defequal}	{\overset{\triangle}{=}}
+\renewcommand{\setminus}	{\smallsetminus}
+
+%################################################### 
+
+\providecommand{\lrlarrows}{%
+	\mathrel{\substack{\leftarrow\\[-.9em] \rightarrow \\[-.9em] \leftarrow}}
+		}
+
+\newcommand{\docupdot}[2]{%
+  \ooalign{$#1\cup$\cr\hfil$#1\cdot$\hfil}
+  		}
+
+\providecommand{\cupdot}{\mathbin{\mathpalette\docupdot\relax}}
+
+\def\rwr{\raisebox{\depth}{\rotatebox[origin=c]{90}{$\wr$}}}
+\def\tilt{\mathrel{\scalebox{.75}{\rotatebox[origin=c]{-90}{\sf 6}}}}
+
+\providecommand{\tenuis}{\scalebox{.7}[.6]{\ooalign{\hss\textbar\hss\cr\hss$\equiv$\hss}}}
+\providecommand{\glue}{\mathbin{\scalebox{.8}[.6]{\ooalign{\hss{\raisebox{4.45pt}{$\cup$}}\hss\cr\hss\tenuis\hss}}}}
+%%%
+\providecommand{\smalltenuis}{\scalebox{.7}[.6]{\ooalign{\hss\textbar\hss\cr\hss$\equiv$\hss}}}
+\providecommand{\smallglue}{\mathbin{\scalebox{.8}[.6]{\ooalign{\hss{\raisebox{4pt}{$\cup$}}\hss\cr\hss\smalltenuis\hss}}}}
+
+\providecommand{\var}[2]{ \left[ \begin{smallmatrix} %
+      #1 \\ \downarrow \\ #2 %
+      \end{smallmatrix} \right]}
+
+\newcommand{\lowcons}{\ooalign{\hss\raisebox{-4pt}{$\cdot$}\hss\cr\hss$\curlywedge$\hss}}
+\newcommand{\upcons}{\ooalign{\hss\raisebox{4pt}{$\cdot$}\hss\cr\hss$\curlyvee$\hss}}
+\newcommand{\cons}{\ooalign{\hss$\curlyvee$\hss\cr\hss$\curlywedge$\hss}}%{\ooalign{\hss\raisebox{-4pt}{$\cdot$}\hss\cr\hss$\curlyvee$\hss}}
+
+\providecommand{\tee}{\mathfrak{t}}
+\renewcommand{\iff}{\Longleftrightarrow}
+%###################################################
+
+\newcommand{\id}	 {\text{id}}
+\newcommand{\fib}	 {\text{fib}}
+\newcommand{\cofib}{\text{cofib}}
+\newcommand{\coker}{\text{coker}}
+
+\newcommand{\mrk}	{\text{Mrk}}
+\newcommand{\ho}	{\text{Ho}}
+\newcommand{\ob}	{\text{Ob}}
+\newcommand{\dg}  {\smallcap{dg}}
+\newcommand{\Rex} {\text{Rex}}
+%
+\renewcommand{\hom} {\text{hom}}
+\renewcommand{\max} {\text{max}}
+\renewcommand{\min} {\text{min}}
+\renewcommand{\sup} {\text{sup}}
+\renewcommand{\inf} {\text{inf}}
+
+\providecommand{\op}{\text{op}}
+%
+\newcommand{\im}{\text{im}}
+\newcommand{\coim}{\text{coim}} 
+\def\length{\text{length}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% hyphenation
+
+\tracingparagraphs=1
+\tracingonline=1
+
+\input{hyphens/en-ipenate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% shenanigans
+
+\def\sator{\smallcap{s} & \smallcap{a} & \smallcap{t} & \smallcap{o} & \smallcap{r}}
+\def\arepo{\smallcap{a} & \smallcap{r} & \smallcap{e} & \smallcap{p} & \smallcap{o}}
+\def\tenet{\smallcap{t} & \smallcap{e} & \smallcap{n} & \smallcap{e} & \smallcap{t}}
+\def\opera{\smallcap{o} & \smallcap{p} & \smallcap{e} & \smallcap{r} & \smallcap{a}}
+\def\rotas{\smallcap{r} & \smallcap{o} & \smallcap{t} & \smallcap{a} & \smallcap{s}}
+
+\renewcommand*{\thefootnote}{(\textbf{\arabic{footnote}})}
+
+\usepackage{xspace}
+	\providecommand{\abbrv}[1]{#1.\@\xspace}
+	\providecommand{\ie}       {\abbrv{i.e}}
+	\providecommand{\etc}      {\abbrv{etc}}
+	\providecommand{\prof}     {\abbrv{prof}}
+	\providecommand{\viz}      {\abbrv{viz}}
+	\providecommand{\eg}       {\abbrv{e.g}}
+  \providecommand{\adef}     {\abbrv{Def}}
+  \providecommand{\acor}     {\abbrv{Cor}}
+  \providecommand{\aprop}    {\abbrv{Prop}}
+  \providecommand{\athm}     {\abbrv{Thm}}
+ 
+\providecommand{\refbf}[1]{\textbf{\ref{#1}}}
+
+\usepackage{graphicx}
+\usepackage{setspace}
+  % \linespread{1.1}
+% \usepackage{fouriernc}
+
+% SIMBOLI NON PERMESSI DAL FONT
+%=========
+  % \let\circledS=\undefined
+  % \let\amalg=\undefined
+  % \let\coprod=\undefined
+  % \DeclareSymbolFont{cmsymbols}{OMS}{cmsy}{m}{n}
+  % \DeclareSymbolFont{cmlargesymbols}{OMX}{cmex}{m}{n}
+  % \DeclareMathSymbol{\amalg}{\mathbin}{cmsymbols}{"71}
+  % \DeclareMathSymbol{\coprod}{\mathop}{cmlargesymbols}{"60}
+%=========
+
+\usepackage{fontspec}
+% \usepackage{mathspec}
+
+\setmainfont[SmallCapsFont={Latin Modern Roman Caps},]{Latin Modern Roman}
+\setmonofont[Scale = MatchLowercase]{Ubuntu Mono}
+
+\newfontfamily{\japanese}{TakaoMincho}
+\newfontfamily{\bigjapanese}{TakaoExMincho}
+\newfontfamily{\hebrew}{Shlomo LB}
+\newfontfamily{\russian}{CMU Serif}
+\newfontfamily{\greek}{Latin Modern Roman}
+\newfontfamily{\georgian}{AcadNusx}
+  \def\rec{\text{\georgian{r}}}
+\newfontfamily{\fraktur}{Plakat-Fraktur}
+% \newfontfamily{\mycal}{}[Scale=MatchUppercase]{Lucida Calligraphy}
+
+\usepackage{
+   amsmath
+  ,amsthm
+  ,amssymb
+  ,stmaryrd}
+
+\def\semicol{\fatsemi}
+\newtheoremstyle{reference}%
+   {\topsep}
+   {\topsep}
+   {}
+   {}
+   {\scshape}
+   {}
+   {0em}
+   {\thmname{#1}
+    \thmnumber{#2}.
+    \thmnote{({\scshape #3}): }}
+
+\theoremstyle{reference}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{example}[theorem]{Example}
+  \newtheorem{exercise}[theorem]{Exercise}
+  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{notat}[theorem]{Notation}
+  \newtheorem*{acknowledgements}{Acknowledgements}
+  \newtheorem{scholium}[theorem]{Scholium}
+  \newtheorem{df-prop}[theorem]{Definition/Proposition}
+  % starred versions
+  \newtheorem*{theorem*}{Theorem}
+  \newtheorem*{lemma*}{Lemma}
+  \newtheorem*{proposition*}{Proposition}
+  \newtheorem*{example*}{Example}
+  \newtheorem*{exercise*}{Exercise}
+  \newtheorem*{remark*}{Remark}
+  \newtheorem*{definition*}{Definition}
+  \newtheorem*{corollary*}{Corollary}
+  \newtheorem*{notat*}{Notation}
+  \newtheorem*{scholium*}{Scholium}
+
+  \newenvironment{thededication}
+  {\clearpage  
+   \thispagestyle{empty}  
+   \vspace*{\stretch{1}}  
+   \raggedleft}
+  {\par  
+   \vspace{\stretch{3}}  
+   \clearpage}
+%
+\providecommand{\attrib}[1]{%
+	\nopagebreak{\raggedleft\footnotesize\slshape #1\par}
+		}
+
+\usepackage{epigraph}
+\setcounter{chapter}{-1}
+\setcounter{secnumdepth}{3}
+
+\def\DefaultEpigraphWidth{.6\textwidth}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=2pt}
+\setlist[enumerate]{label=(\oldstylenums{\arabic*}), noitemsep, topsep=2pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[\thepage]{\smallcap{\nouppercase{\rightmark}}}
+\lhead[\smallcap{\nouppercase{\rightmark}}]{\thepage}
+\chead{}
+\lfoot{}
+\rfoot{}
+\cfoot{}
+%
+
+
+% stile del comando \cite
+\makeatletter
+  \def\@cite#1#2{[\textsf{#1}\if@tempswa , #2\fi]}
+  \def\@biblabel#1{[\textsf{#1}]}
+\makeatother
+
+\providecommand{\refbf}[1]{\textbf{\ref{#1}}}
+\providecommand{\xto}[1]{\xrightarrow{#1}}
+\providecommand{\xot}[1]{\xleftarrow{#1}}
+
+%##############################################################
+
+\providecommand{\po}{\ar@{}[dr]|(.7){\text{po}}}
+\providecommand{\pb}{\ar@{}[dr]|(.3){\text{pb}}}
+\providecommand{\pp}{\ar@{}[dr]|{\text{pp}}}
+
+
+\newcommand{\pullback}[2]{\obj at=($(#1)!.2!(#2)$):{\lrcorner}}
+\newcommand{\pushout}[2]{\obj  at=($(#1)!.8!(#2)$):{\ulcorner}}
+\newcommand{\pullout}[2]{\pullback{#1}{#2}; \pushout{#1}{#2}}
+
+\usepackage{hyperref}
+ \hypersetup{%
+   unicode=		   true,
+   pdftoolbar=	 true,
+   pdfmenubar=	 true,
+   pdffitwindow= true,
+   pdfstartview= {FitH},
+   pdftitle=	   {t-structures},
+   pdfauthor=	   {Fosco Loregian},
+   pdfcreator =  {},
+   pdfproducer = {},
+   colorlinks=	 true,
+   linkcolor=	   black,
+   urlcolor=	   blue!70,
+   citecolor=	   blue!70}
+
+
+\providecommand{\cover}[1]{\mathfrak{#1}}
+  \newcommand{\B}{\cover{B}}
+
+\usepackage[bottom=6cm,
+            left=5cm,
+            right=4.5cm,
+            top=4.5cm]{geometry}
+
+\usepackage[greek, english]{babel}
+\usepackage{bidi}
+
+% This prevents the )(1.12 phenomenon:
+\makeatletter
+\def\maketag@@@#1{\hbox{\m@th\normalfont\LRE{#1}}}
+\def\tagform@#1{\maketag@@@{(\ignorespaces#1\unskip)}}
+\makeatother
+
+\newcommand{\arXivPreprint}[1]{arXiv preprint \href{http://arxiv.org/abs/#1}{arXiv:#1}}
+
+\usepackage{pifont}
+\def\uno{\text{\ding{172}}}
+\def\due{\text{\ding{173}}}
+\def\tre{\text{\ding{174}}}
+\def\qua{\text{\ding{175}}}
+\def\cin{\text{\ding{176}}}
+\def\sei{\text{\ding{177}}}
+\def\set{\text{\ding{178}}}
+\def\ott{\text{\ding{179}}}
+\def\nov{\text{\ding{180}}}
+\def\zer{\text{\ding{181}}}
+
+
+\renewcommand{\|}{|\!|}
+
+
+\newcommand{\HebrewEpigraph}[2]{%
+\setlength{\epigraphwidth}{.75\textwidth}
+\renewcommand{\textflush}{flushright}
+\epigraph{\setRL{\hebrew{#1}}\unsetRL}
+{#2}
+\renewcommand{\textflush}{flushleft}
+\setlength{\epigraphwidth}{\DefaultEpigraphWidth}
+}
+
+\def\[{\begin{equation}}
+\def\]{\end{equation}}
