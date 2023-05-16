@@ -1,0 +1,438 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AHHK07}
+
+\bibitem[AHHK07]{tilting}
+L.~Angeleri-{H}\"ugel, D.~Happel, and H.~Krause (eds.), \emph{Handbook of
+  {T}ilting {T}heory}, London Mathematical society, vol. 332, Cambridge
+  University press, 2007.
+
+\bibitem[AHKL11]{hugel2011recollements}
+L.~Angeleri~H{\"u}gel, S.~Koenig, and Q.~Liu, \emph{Recollements and tilting
+  objects}, {J}ournal of {P}ure and {A}pplied {A}lgebra \textbf{215} (2011),
+  no.~4, 420--438.
+
+\bibitem[AHS90]{acc}
+J.~Ad{\'a}mek, H.~Herrlich, and G.E. Strecker, \emph{Abstract and concrete
+  categories: the joy of cats}, Pure and Applied Mathematics (New York), John
+  Wiley \& Sons, Inc., New York, 1990.
+
+\bibitem[Ant]{antieau201Xmo}
+B.~Antieau, \emph{t-structure induced on the {V}erdier quotient
+  $\mathcal{T}/\mathcal{S}$}, MathOverflow
+  \href{http://mathoverflow.net/q/237502}{comment}.
+
+\bibitem[Ban07]{Banagl}
+M.~Banagl, \emph{Topological invariants of stratified spaces}, Springer
+  Monographs in Mathematics, Springer, Berlin, 2007.
+
+\bibitem[Bau89]{Baues1989}
+H.J. Baues, \emph{Algebraic homotopy}, Cambridge Univ. Press, 1989.
+
+\bibitem[BBD82]{BBDPervers}
+A.A. Beilinson, J.~Bernstein, and P.~Deligne, \emph{Faisceaux pervers},
+  Analysis and topology on singular spaces, {I} ({L}uminy, 1981), Astérisque,
+  vol. 100, Soc. Math. France, Paris, 1982, pp.~5--171.
+
+\bibitem[Ber10]{Be1}
+J.E. Bergner, \emph{A survey of {$(\infty,1)$}-categories}, Towards higher
+  categories, IMA Vol. Math. Appl., vol. 152, Springer, New York, 2010,
+  pp.~69--83.
+
+\bibitem[BJ01]{BoJa}
+F.~Borceux and G.~Janelidze, \emph{Galois theories}, Cambridge Studies in
+  Advanced Mathematics, vol.~72, Cambridge University Press, Cambridge, 2001.
+
+\bibitem[Bly05]{blyth2005lattices}
+T.S. Blyth, \emph{Lattices and ordered algebraic structures}, Universitext,
+  Springer-Verlag London, Ltd., London, 2005.
+
+\bibitem[BO95]{Bondal1995}
+Alexei Bondal and Dmitri Orlov, \emph{Semiorthogonal decomposition for
+  algebraic varieties}, arXiv preprint alg-geom/9506012 (1995), 55 pp.
+
+\bibitem[BO01]{bondal2001reconstruction}
+A.I. {Bondal} and D.O. {Orlov}, \emph{Reconstruction of a variety from the
+  derived category and groups of autoequivalences}, Compositio Mathematica
+  \textbf{125} (2001), no.~03, 327--344.
+
+\bibitem[Bon13]{bondal2013operations}
+A.I. Bondal, \emph{Operations on $ t $-structures and perverse coherent
+  sheaves}, Izvestiya: Mathematics \textbf{77} (2013), no.~4, 651.
+
+\bibitem[Bor44]{Borges1963}
+J.L. Borges, \emph{Ficciones}, Editorial Sur, Buenos Aires, 1944.
+
+\bibitem[Bor97]{borges1997otras}
+\bysame, \emph{Otras inquisiciones}, Biblioteca Borges, Alianza, 1997.
+
+\bibitem[Bou77]{bousfield1977constructions}
+A.K. Bousfield, \emph{Constructions of factorization systems in categories},
+  Journal of Pure and Applied Algebra \textbf{9} (1977), no.~2, 207--220.
+
+\bibitem[Bou79]{bousfield1979localization}
+\bysame, \emph{The localization of spectra with respect to homology}, Topology
+  \textbf{18} (1979), no.~4, 257--281.
+
+\bibitem[BP13]{bazzoni2013recollements}
+S.~Bazzoni and A.~Pavarin, \emph{Recollements from partial tilting complexes},
+  Journal of Algebra \textbf{388} (2013), 338--363.
+
+\bibitem[BR07]{Beligiannisreiten}
+A.~Beligiannis and I.~Reiten, \emph{Homological and homotopical aspects of
+  torsion theories}, Mem. Amer. Math. Soc. \textbf{188} (2007), no.~883,
+  viii+207.
+
+\bibitem[Bri07]{Brid}
+T.~Bridgeland, \emph{Stability conditions on triangulated categories}, Ann. of
+  Math. (2) \textbf{166} (2007), no.~2, 317--345.
+
+\bibitem[Bri09]{Bridge2}
+\bysame, \emph{Spaces of stability conditions}, Algebraic geometry -- Seattle
+  2005. Part \textbf{1} (2009), 1--21.
+
+\bibitem[C{\etalchar{+}}14]{chen2014recollements}
+H.~Chen et~al., \emph{Recollements of derived categories \textsc{iii}:
+  Finitistic dimensions}, \arXivPreprint{1405.5090} (2014), 26.
+
+\bibitem[Car10]{Olivia}
+O.~Caramello, \emph{The unification of mathematics via topos theory},
+  \arXivPreprint{1006.3930} (2010), 42.
+
+\bibitem[CHK85]{CHK}
+C.~Cassidy, M.~Hébert, and G.M. Kelly, \emph{Reflective subcategories,
+  localizations and factorization systems}, J. Austral. Math. Soc. Ser. A
+  \textbf{38} (1985), no.~3, 287--329.
+
+\bibitem[Del04]{DeA}
+I.~Dell'Ambrogio, \emph{The {S}panier-{W}hitehead category is always
+  triangulated}, Ph.D. thesis, Diplomarbeit an der ETH Z{\"u}rich (2003-04),
+  2004.
+
+\bibitem[Dic66]{dickson1966torsion}
+S.E. Dickson, \emph{A torsion theory for abelian categories}, Transactions of
+  the American Mathematical Society \textbf{121} (1966), no.~1, 223--235.
+
+\bibitem[Dou01]{douglas2001d}
+M.R. Douglas, \emph{$d$-branes, categories and $n=1$ supersymmetry}, Journal of
+  Mathematical Physics \textbf{42} (2001), no.~7, 2818--2843.
+
+\bibitem[Dou02]{douglas2002dirichlet}
+\bysame, \emph{Dirichlet branes, homological mirror symmetry, and stability},
+  \arXivPreprint{math/0207021} (2002).
+
+\bibitem[DP61]{Dold1961a}
+A.~Dold and D.~Puppe, \emph{Homologie nicht-additiver {F}unktoren.
+  {A}nwendungen}, Ann. Inst. Fourier Grenoble \textbf{11} (1961), 201--312
+  (ger).
+
+\bibitem[DS95]{Dwyer1995}
+W.G. Dwyer and J.~Spalinski, \emph{Homotopy theories and model categories},
+  Handbook of algebraic topology \textbf{73126} (1995), 73--126.
+
+\bibitem[ER77]{BHS}
+K.~Elliger and W.~Rudolph (eds.), \emph{{B}iblia {H}ebraica {S}tuttgartensia},
+  editio quinta emendata ed., Deutsche Bibelgesellschaft, Stuttgart, 1977.
+
+\bibitem[FK72]{FK}
+P.J. Freyd and G.M. Kelly, \emph{Categories of continuous functors. {I}}, J.
+  Pure Appl. Algebra \textbf{2} (1972), 169--191.
+
+\bibitem[FL15a]{heart}
+D.~{F}iorenza and F.~{L}oregi\`an, \emph{Hearts and towers in stable
+  $\infty$-categories}, \arXivPreprint{1501.04658} (2015), 24.
+
+\bibitem[FL15b]{recol}
+\bysame, \emph{Recollements in stable $\infty$-categories},
+  \arXivPreprint{1507.03913} (2015), 33.
+
+\bibitem[FL16a]{infty-stab}
+\bysame, \emph{{S}tability conditions on stable $\infty$-categories.}, in
+  preparation (2016), $<\infty$.
+
+\bibitem[FL16b]{FL0}
+D.~Fiorenza and F.~Loregian, \emph{t-structures are normal torsion theories},
+  Applied Categorical Structures \textbf{24} (2016), no.~2, 181--208.
+
+\bibitem[Fre64]{freyd1964abelian}
+P.J. Freyd, \emph{Abelian categories. {A}n introduction to the theory of
+  functors}, Harper's Series in Modern Mathematics, Harper \& Row, Publishers,
+  New York, 1964.
+
+\bibitem[Fuc63]{Fuch63}
+L.~Fuchs, \emph{Partially ordered algebraic systems}, Pergamon Press,
+  Oxford-London-New York-Paris; Addison-Wesley Publishing Co., Inc., Reading,
+  Mass.-Palo Alto, Calif.-London, 1963.
+
+\bibitem[Gar09]{Garner2009a}
+R.~Garner, \emph{Understanding the small object argument.}, Appl. Categ.
+  Struct. \textbf{17} (2009), no.~3, 247--285 (English).
+
+\bibitem[Gen15]{nashphd}
+F.~Genovese, \emph{Quasi-functors as lifts of fourier-mukai functors: the
+  uniqueness problem}, Ph.D. thesis, Università degli studi di Pavia, 2015.
+
+\bibitem[GJ09]{goerss-jardine}
+P.G. Goerss and J.F. Jardine, \emph{Simplicial homotopy theory}, Modern
+  Birkh\"{a}user Classics, vol. 174, Birkh\"{a}user Verlag, Basel, Basel, 2009,
+  Reprint of the 1999 edition [MR1711612]. \MR{2840650}
+
+\bibitem[GKR04]{GKR}
+A.L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov, \emph{{$t$}-stabilities
+  and {$t$}-structures on triangulated categories}, Izv. R.. Akad. Nauk Ser.
+  Mat. \textbf{68} (2004), 117--150.
+
+\bibitem[Gla99]{glass1999partially}
+A.~M.~W. Glass, \emph{Partially ordered groups}, Series in Algebra, vol.~7,
+  World Scientific Publishing Co., Inc., River Edge, NJ, 1999.
+
+\bibitem[GM80]{goresky1980intersection}
+M.~Goresky and R.~MacPherson, \emph{Intersection homology theory}, Topology
+  \textbf{19} (1980), no.~2, 135--162.
+
+\bibitem[GM83]{goresky1983intersection}
+\bysame, \emph{Intersection homology \textsc{ii}}, Inventiones Mathematicae
+  \textbf{72} (1983), no.~1, 77--129.
+
+\bibitem[GM96]{gelfand2013methods}
+S.I. Gelfand and Y.I. Manin, \emph{Methods of homological algebra},
+  Springer-Verlag, Berlin, 1996, Translated from the 1988 Russian original.
+
+\bibitem[Gro10]{Gro}
+M.~Groth, \emph{A short course on $\infty$-categories},
+  \arXivPreprint{1007.2925} (2010), 77, Preprint.
+
+\bibitem[GT06]{grandis2006natural}
+M.~Grandis and W.~Tholen, \emph{Natural weak factorization systems}, Arch.
+  Math. (Brno) \textbf{42} (2006), no.~4, 397--408.
+
+\bibitem[Han14]{han2014recollements}
+Y.~Han, \emph{Recollements and hochschild theory}, Journal of Algebra
+  \textbf{397} (2014), 535--547.
+
+\bibitem[Hel68]{shc}
+A.~Heller, \emph{Stable homotopy categories}, Bull. Amer. Math. Soc.
+  \textbf{74} (1968), 28--63.
+
+\bibitem[Hew95]{hewitt1995georgian}
+B.G. Hewitt, \emph{Georgian: A structural reference grammar}, London Oriental
+  and African language library, John Benjamins Publishing Company, 1995.
+
+\bibitem[HJ10]{Hol}
+T.~Holm and P.~J{\o}rgensen, \emph{Triangulated categories: definitions,
+  properties, and examples}, Triangulated categories, London Math. Soc. Lecture
+  Note Ser., vol. 375, Cambridge Univ. Press, C., 2010, pp.~1--51.
+
+\bibitem[HM98]{harvey1998algebras}
+J.A. Harvey and G.~Moore, \emph{On the algebras of {BPS} states},
+  Communications in Mathematical Physics \textbf{197} (1998), no.~3, 489--519.
+
+\bibitem[Hov99]{Hov}
+M.~Hovey, \emph{Model categories}, Mathematical Surveys and Monographs,
+  vol.~63, American Mathematical Society, Providence, RI, 1999.
+
+\bibitem[HPS97]{HPS}
+M.~Hovey, J.~H. Palmieri, and N.~P. Strickland, \emph{Axiomatic stable homotopy
+  theory}, Mem. Amer. Math. Soc. \textbf{128} (1997), no.~610, x+114.
+
+\bibitem[HQ14]{nrecol1}
+Y.~Han and Y.~Qin, \emph{Reducing homological conjectures by $n$-recollements},
+  \arXivPreprint{1410.3223} (2014), 22.
+
+\bibitem[Hum]{why-call-it-t}
+J.~Humphreys, \emph{What does the $t$ in $t$-category stand for?}, MathOverflow
+  \href{http://mathoverflow.net/q/87623}{comment},
+  URL:http://mathoverflow.net/q/87623 (version: 2012-02-05).
+
+\bibitem[Isb64]{Isb}
+J.R. Isbell, \emph{Subobjects, adequacy, completeness and categories of
+  algebras}, Instytut Matematyczny Polskiej Akademi Nauk, 1964 (eng).
+
+\bibitem[Jan65]{jans1965}
+J.P. Jans, \emph{Some aspects of torsion.}, Pacific J. Math. \textbf{15}
+  (1965), no.~4, 1249--1259.
+
+\bibitem[JM09]{JanelidzeMarkl}
+G.~J. and L.~M{\'a}rki, \emph{A simplicial approach to factorization systems
+  and {K}urosh-{A}mitsur radicals}, Journal of Pure and Applied Algebra
+  \textbf{213} (2009), no.~12, 2229--2237.
+
+\bibitem[Joy]{Joyalcatlab}
+A.~Joyal, \emph{Factorization sytems},
+  \href{https://ncatlab.org/joyalscatlab/published/Factorisation+systems}{online
+  version}, revised on \textsc{Jan} 16, 2013 00:06:47 by Tom Hirschowitz.
+
+\bibitem[Joy08]{Joy}
+\bysame, \emph{The theory of quasi-categories and its applications},
+  Proceedings of the IMA Workshop ``$n$-Categories: Foundations and
+  Applications'', Citeseer, 2008, Lectures at the CRM (Barcelona). Preprint.
+
+\bibitem[JT99]{Janelidze1999}
+G.~Janelidze and W.~Tholen, \emph{Functorial factorization, well-pointedness
+  and separability}, J. Pure Appl. Algebra \textbf{142} (1999), no.~2, 99--130.
+
+\bibitem[Kan58]{kan1958functors}
+D.~M Kan, \emph{Functors involving css complexes}, Transactions of the American
+  Mathematical Society \textbf{87} (1958), no.~2, 330--346.
+
+\bibitem[Kel80]{kelly1980unified}
+{G}.~{M}ax Kelly, \emph{A unified treatment of transfinite constructions for
+  free algebras, free monoids, colimits, associated sheaves, and so on},
+  Bulletin of the Australian Mathematical Society \textbf{22} (1980), no.~01,
+  1--83.
+
+\bibitem[Kel05]{kelly1982basic}
+G.M. Kelly, \emph{Basic concepts of enriched category theory}, Repr. Theory
+  Appl. Categ. \textbf{64} (2005), no.~10, vi+137. \MR{2177301}
+
+\bibitem[KS94]{Kashiwara}
+M.~Kashiwara and P.~Schapira, \emph{Sheaves on manifolds}, vol. 292,
+  Grundlehren der Mathematischen Wissenschaften, no. 292, Springer-Verlag,
+  Berlin, 1994.
+
+\bibitem[KT93]{Korostenski199357}
+M.~Korostenski and W.~Tholen, \emph{Factorization systems as
+  {E}ilenberg-{M}oore algebras}, J. Pure Appl. Algebra \textbf{85} (1993),
+  no.~1, 57--72.
+
+\bibitem[Kuz11]{Kuz}
+A.~Kuznetsov, \emph{Base change for semiorthogonal decompositions}, Compos.
+  Math. \textbf{147} (2011), no.~3, 852--876.
+
+\bibitem[KV88]{KVaisles}
+B.~Keller and D.~Vossieck, \emph{Aisles in derived categories}, Bull. Soc.
+  Math. Belg. Sér. A \textbf{40} (1988), no.~2, 239--253, Deuxième Contact
+  Franco-Belge en Algèbre (Faulx-les-Tombes, 1987).
+
+\bibitem[KW01]{kiehl2001weil}
+R.~Kiehl and R.~Weissauer, \emph{Weil conjectures, perverse sheaves and
+  {$\ell$}-adic {F}ourier transform}, Ergebnisse der Mathematik und ihrer
+  Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics., vol.
+  \textbf{42}, Springer-Verlag, Berlin, 2001.
+
+\bibitem[LMV]{tderivators}
+F.~Loregiàn, F.~Mattiello, and S.~Virili, \emph{$t$-derivators}, in
+  preparation.
+
+\bibitem[Lur09]{HTT}
+J.~Lurie, \emph{Higher {T}opos {T}heory}, Annals of Mathematics Studies, vol.
+  170, Princeton University Press, Princeton, NJ, Princeton, NJ, 2009.
+
+\bibitem[Lur16]{LurieSAG}
+\bysame, \emph{Spectral algebraic geometry}, online version February 5, 2016.
+
+\bibitem[Lur17]{LurieHA}
+\bysame, \emph{Higher algebra}, \url{http://www.math.harvard.edu/~lurie/},
+  online version September 18, 2017., Preprint.
+
+\bibitem[LW]{Lucyshyn-Wright}
+R.B.B. Lucyshyn-Wright, \emph{Enriched factorization systems}.
+
+\bibitem[MG14]{Aaron}
+A.~Mazel-Gee, \emph{Model $\infty$-categories {I}: some pleasant properties of
+  the $\infty$-category of simplicial spaces}, \arXivPreprint{1412.8411v2}
+  (2014), 66.
+
+\bibitem[MK07]{maltsiniotis2007k}
+G.~Maltsiniotis and B.~Keller, \emph{La {K}-theorie d'un derivateur
+  triangulé.}, Contemporary Mathematics \textbf{431} (2007), 341.
+
+\bibitem[ML48]{maclane1948groups}
+S.~Mac~Lane, \emph{Groups, categories and duality}, Proc. Nat. Acad. Sci.
+  U.S.A. \textbf{34} (1948), 263--267.
+
+\bibitem[ML98]{working-categories}
+\bysame, \emph{Categories for the working mathematician}, second ed., Graduate
+  Texts in Mathematics, vol.~5, Springer-Verlag, New York, 1998. \MR{1712872}
+
+\bibitem[MSS07]{FMS}
+F.~Muro, S.~Schwede, and N.~Strickland, \emph{Triangulated categories without
+  models}, Invent. Math. \textbf{170} (2007), no.~2, 231--241.
+
+\bibitem[Nee91]{Neeman1991221}
+A.~Neeman, \emph{Some new axioms for triangulated categories}, Journal of
+  Algebra \textbf{139} (1991), no.~1, 221--255.
+
+\bibitem[Nee01]{Nee}
+\bysame, \emph{Triangulated categories}, Ann. of Math. Studies, vol. 148,
+  Princeton University Press, 2001.
+
+\bibitem[Nic08]{ttftriples}
+P.~Nicolas, \emph{On torsion torsionfree triples}, 2008, p.~184.
+
+\bibitem[Pfl01]{pflaum2001analytic}
+M.J. Pflaum, \emph{Analytic and geometric study of stratified spaces}, Lecture
+  Notes in Mathematics 1768, vol. 1768, Springer Berlin Heidelberg, 2001.
+
+\bibitem[PS88]{parshall1988derived}
+B.~Parshall and L.~Scott, \emph{Derived categories, quasi-hereditary algebras,
+  and algebraic groups}, Carlton University Mathematical notes \textbf{3}
+  (1988), 1--104.
+
+\bibitem[Qin15]{nrecol2}
+Y.~Qin, \emph{{J}ordan-{H}\"older theorems for derived categories of derived
+  discrete algebras}, \arXivPreprint{1506.08266} (2015), 18.
+
+\bibitem[Qui67]{Qui}
+D.G. Quillen, \emph{Homotopical algebra}, Lecture Notes in Mathematics, No. 43,
+  Springer-Verlag, Berlin-New York, 1967.
+
+\bibitem[Rie11]{riehl2011algebraic}
+E.~Riehl, \emph{Algebraic model structures}, New York J. Math. \textbf{17}
+  (2011), 173--231.
+
+\bibitem[RS76]{roth1976deutsches}
+F.~Roth-Scholtz, \emph{Deutsches {T}heatrum {C}hemicum}, vol.~2, G. Olms, 1976.
+
+\bibitem[RT07]{RT}
+J.~Rosick{\'y} and W.~Tholen, \emph{Factorization, fibration and torsion}, J.
+  Homotopy Relat. Struct. \textbf{2} (2007), no.~2, 295--314.
+
+\bibitem[Sch10]{Schwede2010}
+S.~Schwede, \emph{Algebraic versus topological triangulated categories},
+  Triangulated categories, London Math. Soc. Lecture Note Ser., vol. 375,
+  Cambridge Univ. Press, Cambridge, 2010, pp.~389--407.
+
+\bibitem[Sch15]{Schwede2015}
+Stefan Schwede, \emph{Global homotopy theory}, On-going book project (2015).
+
+\bibitem[Tie69]{MR0246294}
+Myles Tierney, \emph{Categorical constructions in stable homotopy theory}, A
+  seminar given at the ETH, Z\"urich, in 1967. Lecture Notes in Mathematics,
+  No. 87, Springer-Verlag, Berlin-New York, 1969.
+
+\bibitem[TM02]{Samurai}
+S.~Turnbull and A.~McBride, \emph{Samurai heraldry}, Osprey Publishing, 2002.
+
+\bibitem[Ver96]{Verdier1996}
+Jean-Louis Verdier, \emph{Des catégories dérivées des catégories
+  abéliennes}, Astérisque (1996), xii+253 pp. (1997) (french), With a preface
+  by Luc Illusie, Edited and with a note by Georges Maltsiniotis.
+
+\bibitem[Wei94]{Wein}
+S.~Weinberger, \emph{The topological classification of stratified spaces},
+  Chicago Lectures in Mathematics, University of Chicago Press, Chicago, IL,
+  1994.
+
+\bibitem[Wei99]{Weibel1997history}
+C.~Weibel, \emph{History of homological algebra}, pp.~797--836, Elsevier, 1999.
+
+\bibitem[Whi78]{Whitehead1978}
+George~W. Whitehead, \emph{Elements of homotopy theory}, Graduate Texts in
+  Mathematics, vol.~61, Springer-Verlag, New York-Berlin, 1978.
+
+\bibitem[Wof]{Wof}
+E.~Wofsey, \emph{Homotopy factorization of morphisms of chain complexes},
+  MathOverflow \href{http://mathoverflow.net/q/168868}{comment}.
+
+\bibitem[Zan04]{zangurashvili2004several}
+D.~Zangurashvili, \emph{Several constructions for factorization systems},
+  Theory Appl. Categ. \textbf{12} (2004), 326--354.
+
+\end{thebibliography}

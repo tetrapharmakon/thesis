@@ -1,6 +1,6 @@
 \chapter{Stable $\infty$\hyp{}categories}\label{chap:stable.cats}
 \thispagestyle{empty}
-The present chapter serves as a reference for the rest of the thesis, outlining the fundamentals of stable $\infty$\hyp{}category theory. Apart from classical literature on triangulated categories (\cite{Hol,Nee}) we follow the only available source on stable $\infty$\hyp{}categories \cite{LurieHA}, deviating a little from the presentation given there, to add some new considerations and complete, explicit proofs of certain useful classical constructions (like an extensive proof, alternative to that in \cite{LurieHA} of the validity of triangulated category axioms in the homotopy category of a stable $\infty$\hyp{}category). 
+The present chapter serves as a reference for the rest of the thesis, outlining the fundamentals of stable $\infty$\hyp{}category theory. Apart from classical literature on triangulated categories (\cite{Hol,Nee}) we follow the only available source on stable $\infty$\hyp{}categories \cite{LurieHA}, deviating a little from the presentation given there, to add some new considerations and complete, explicit proofs of certain useful classical constructions (like an extensive proof, alternative to that in \cite{LurieHA} of the validity of triangulated category axioms in the homotopy category of a stable $\infty$\hyp{}category).
 
 We start by trying to outline a bit of history of homological algebra to motivate the quest for a higher\hyp{}categorical formulation of its basic principles. For this account (which makes no claim of originality or completeness), the survey \cite{Weibel1997history} has been an essential source of inspiration.
 \section{Triangulated higher categories.}
@@ -18,7 +18,7 @@ played an essential r\^ole in the definition of the \emph{stable homotopy catego
 \begin{kD}
 \lattice[mesh]{
 \obj X; & \obj (CX1):CX; \\
-\obj (CX2):CX; & \obj (SX):\Sigma X;\\	
+\obj (CX2):CX; & \obj (SX):\Sigma X;\\
 };
 \mor X -> CX1 -> SX;
 \mor * -> CX2 -> *;
@@ -35,7 +35,7 @@ Subsequently, D\@. Quillen axiomatized the notion of \emph{abstract homotopy the
 Even at this point however the systematization of the theory of triangulated categories was far from being satisfactory, since the origin of the axioms was obscure and really far from being canonical. This ``bad behaviour'' shows up in several practical situations, populating the dense literature on the subject: after having given the definition of a triangulated category, we embark on a deep analysis of their meaning. Convenient shorthands to denote a distinguished triangle in a triangulated category $\CC$ are the following;
 \begin{quote}
 $X\to Y\to Z \to^+$, $X\to Y\to Z\to$, $X\to Y\to Z \to X[1]$
-\end{quote} 
+\end{quote}
 (see \refbf{shifteggio}) or even $X\to Y\to Z$, when no ambiguity can arise from this compactness.
 \begin{definition}[Triangulated category]\label{triangacat}\index{Triangulated category}
 A category $\CC$ is called \emph{suspended} if it is endowed with an endofunctor $\Sigma$; an additive category with suspension $(\CC,\Sigma)$ is said to be \emph{triangulated} if the following axioms are satisfied:
@@ -104,12 +104,12 @@ is determined by only two elements, is not canonical: there is no unique choice 
 From a modern perspective, is is easy to see that this situation reflects some deep features of homotopy theory: the category of chain complexes $\ch(\A)$ has a fairly natural choice of a model structure; this entails that $\ch(\A)$ is a fairly rich environment; the localization procedure outlined by Verdier does not retain these additional pieces of information encoded in the homotopy co/limits in $\ch(\A)$, because they are hidden in a higher categorical structure that the localization procedure is not able to preserve.
 
 It must be said, however, that despite this highly unsatisfactory situation, a great deal of refined mathematics stemmed from the theory of triangulated categories:
-\begin{itemize} 
-\item One of Verdier\hyp{}Grothendieck's primary tasks (to shed a light on the construction of derived functors) is easily achieved (the language of model categories clarifies best the meaning and construction of derived functors); 
+\begin{itemize}
+\item One of Verdier\hyp{}Grothendieck's primary tasks (to shed a light on the construction of derived functors) is easily achieved (the language of model categories clarifies best the meaning and construction of derived functors);
 \item In a suitable sense the derived category of sheaves on a good space contains enough information to rebuild the space from scratch (this is a result in reconstruction theory, mainly worked out in \cite{bondal2001reconstruction});
 \item \index{t-structure@$t$\hyp{}structure} Several properties of an abelian category $\A$ can be deduced from the study of a notable kind of subcategories of $\D(\A)$ (the adjacent classes of a ``$t$\hyp{}structure'') on $\D(\A)$) and of a generic triangulated category $\D$ (this is by far the most important application for the purposes of the present thesis).
 \end{itemize}
-In light of this, one could argue that \adef \refbf{triangacat} behaves like the definition of topological spaces to a certain extent: the definition is not modeled to be user\hyp{}friendly, but to be pervasive, and concrete examples of the definition often enjoy additional properties making them more wieldy. 
+In light of this, one could argue that \adef \refbf{triangacat} behaves like the definition of topological spaces to a certain extent: the definition is not modeled to be user\hyp{}friendly, but to be pervasive, and concrete examples of the definition often enjoy additional properties making them more wieldy.
 
 However, with the passing of time, understanding the deep meaning of the axioms in \adef \refbf{triangacat} became more and more a priority. It became evident that triangulated category where the ``false and mutilated memory of an irrecoverable process'', behaving like 1\hyp{}dimensional shadows of a higher dimensional notion: \index{Stable!--- $\infty$\hyp{}category}\index{Triangulated category!--- as shadow}
 \begin{quote}
@@ -172,7 +172,7 @@ A diagram $F\colon \square\to \CC$ in a (finitely bicomplete) $\infty$\hyp{}cate
 \end{center}
 is a homotopy pushout (resp., a homotopy pullback).
 \end{definition}
-Alternatively, one can characterize the category $\square$ as $\Delta[1]\times\Delta[1] =  (\Lambda_2^2)^\lhd = (\Lambda_0^2)^\rhd$ (see the diagrams below, and \cite{HTT} for the notation; 
+Alternatively, one can characterize the category $\square$ as $\Delta[1]\times\Delta[1] =  (\Lambda_2^2)^\lhd = (\Lambda_0^2)^\rhd$ (see the diagrams below, and \cite{HTT} for the notation;
 \[
 \begin{kD}
 \lattice[mesh]{
@@ -200,7 +200,7 @@ from the category of commutative squares in $\CC$, ``restricting'' a given diagr
 (i_\ulcorner)_! \dashv \boxed{i_\ulcorner^* \dashv (i_\ulcorner)_*}\colon \text{Map}(\square,\CC)\leftrightarrows \text{Map}(\ulcorner,\CC)\\
 \boxed{(i_\lrcorner)_! \dashv i_\lrcorner^*} \dashv (i_\lrcorner)_*\colon \text{Map}(\square,\CC)\leftrightarrows \text{Map}(\lrcorner,\CC)
 \end{gather}
-where $(i_\ulcorner)_!$ and $(i_\lrcorner)_*$ are easily seen to be evaluations at the initial and terminal object of $\ulcorner$ and $\lrcorner$, respectively. 
+where $(i_\ulcorner)_!$ and $(i_\lrcorner)_*$ are easily seen to be evaluations at the initial and terminal object of $\ulcorner$ and $\lrcorner$, respectively.
 
 Given $F\in \text{Map}(\square, \CC)$ the canonical morphisms obtained from the boxed adjunctions,
 \begin{gather*}
@@ -233,7 +233,7 @@ We being with the simplest remark: most of the arguments in the following discus
 The pullout axiom implies that the class $\mathcal P$ of pullout squares in a category $\CC$ satisfies a 3\hyp{}for\hyp{}2 property: in fact, it is a classical, easy result (see \cite[Prop. \textbf{11.10}]{acc} and its dual) that pullback squares, regarded as morphisms in $\CC^{\Delta[1]}$, form a \smallcap{r32} class and dually, pushout squares form a \smallcap{l32} class (these are called \emph{pasting laws} for pullback and pushout squares) in the sense of our Definition \refbf{def:3for2}.
 \end{remark}
 \begin{notat}\index{Pullout}
-It is a common practice to denote diagrammatically a (co)cartesian square by ``enhancing'' the corner where the universal object sits (this well\hyp{}established convention has been used with no further mention throughout our discussion): as a ``graphical'' representation of the auto\hyp{}duality of the pullout axiom, we choose to denote a pullout square by enhancing \emph{both} corners: 
+It is a common practice to denote diagrammatically a (co)cartesian square by ``enhancing'' the corner where the universal object sits (this well\hyp{}established convention has been used with no further mention throughout our discussion): as a ``graphical'' representation of the auto\hyp{}duality of the pullout axiom, we choose to denote a pullout square by enhancing \emph{both} corners:
 \begin{center}
 \begin{kD}
 \lattice[mesh]{
@@ -257,7 +257,7 @@ First of all notice that in a stable $\infty$\hyp{}category the functors $\Sigma
 \lattice[mesh]{
 	\obj (omega):{\Omega X}; & \obj (01):0; \\
 	\obj (02):0; & \obj X; & \obj (03):0;; \\
-	& \obj (04):0; & \obj (sigma):{\Sigma X};\\  
+	& \obj (04):0; & \obj (sigma):{\Sigma X};\\
 };
 \mor omega -> 01 -> X -> 03 -> sigma;
 \mor * -> 02 -> X -> 04 -> *;
@@ -267,12 +267,12 @@ First of all notice that in a stable $\infty$\hyp{}category the functors $\Sigma
 \end{center}
 the object $X$ has the universal property of both $\Omega\Sigma X$ and $\Sigma\Omega X$. Now, from the fact that $\Sigma X$ is the pushout of $0\leftarrow X\to 0$, we deduce that $\Sigma X\cong 0$.
 \end{proof}
-Among the most essential features of stability, there is the fact that all stable categories are naturally enriched over abelian groups (or, rather, over a ``homotopy meaningful'' notion of abelian group): Remark \refbf{pullout.is.genuinely.higher} above showed that the pullout axiom is a really strong assumption on a category, so strong that it can only live in the ``weakly\hyp{}universal'' world of $(\infty,1)$\hyp{}categories. Now, we learn that the pullout axiom characterizes almost completely the structure of a stable $\infty$\hyp{}category. 
+Among the most essential features of stability, there is the fact that all stable categories are naturally enriched over abelian groups (or, rather, over a ``homotopy meaningful'' notion of abelian group): Remark \refbf{pullout.is.genuinely.higher} above showed that the pullout axiom is a really strong assumption on a category, so strong that it can only live in the ``weakly\hyp{}universal'' world of $(\infty,1)$\hyp{}categories. Now, we learn that the pullout axiom characterizes almost completely the structure of a stable $\infty$\hyp{}category.
 \begin{remark}[The pullout axiom induces an enrichment.]
 A stable $\infty$\hyp{}category $\CC$
 \begin{itemize}
 \item has a zero object, i.e. there exists an arrow $1\to\varnothing$ (which is forced to be an isomorphism);
-\item $\CC$ has biproducts, i.e. $X\times Y\simeq X\amalg Y$ for any two $X,Y\in\CC$, naturally in both $X$ and $Y$. 
+\item $\CC$ has biproducts, i.e. $X\times Y\simeq X\amalg Y$ for any two $X,Y\in\CC$, naturally in both $X$ and $Y$.
 \end{itemize}
 \end{remark}
 We skip the proof of this statement; the interested reader can take it as an exercise and test the power of the pullout axioms.
@@ -289,7 +289,7 @@ f+g\colon X\to X\times X \xto{(f,g)} Y\times Y\cong Y\amalg Y\to Y
 \]
 In fact, this result can be retrieved in the setting of stable $\infty$\hyp{}categories (see \cite[Lemma \textbf{1.1.2.9}]{LurieHA}); we do not want to reproduce the whole argument: instead we want to investigate the construction of the \emph{loop} and \emph{suspension} functors in a pointed category.
 \end{remark}
-The \emph{suspension} $\Sigma X$ of an object $X$ in a finitely cocomplete, pointed $\infty$\hyp{}category $\CC$ can be defined as the (homotopy) colimit of the diagram $0\leftarrow X\to 0$; dually, the \emph{looping} (or \emph{loop object}) $\Omega X$ of an object $X$ in such a $\CC$ is defined as the (homotopy) limit of $0\to X\leftarrow 0$. 
+The \emph{suspension} $\Sigma X$ of an object $X$ in a finitely cocomplete, pointed $\infty$\hyp{}category $\CC$ can be defined as the (homotopy) colimit of the diagram $0\leftarrow X\to 0$; dually, the \emph{looping} (or \emph{loop object}) $\Omega X$ of an object $X$ in such a $\CC$ is defined as the (homotopy) limit of $0\to X\leftarrow 0$.
 
 This notation is natural with a topological intuition in mind, where these operations amount to the \emph{reduced suspension} (see (\refbf{redsusp})) and \emph{loop space} of $X$ (thought of as the fiber of the fibration $PX \to X$, where $PX$ is the \emph{path space} of $X$); evaluating a square $F\colon \square\to \CC$ at its right\hyp{}bottom vertex gives an endofunctor $\Sigma\colon \CC\to \CC$, and the looping $\Omega$ is the right adjoint of this functor $\Sigma$. We depict the objects $\Sigma X, \Omega X$ as vertices of the diagrams
 \index{Suspension}
@@ -297,7 +297,7 @@ This notation is natural with a topological intuition in mind, where these opera
 \begin{kD}
 \lattice[mesh]{
 \obj X; & \obj (01):*; & \obj \Omega Y; & \obj (02):*; \\
-\obj (03):*; & \obj \Sigma X; & \obj (04):*; & \obj (Y):Y.; \\	
+\obj (03):*; & \obj \Sigma X; & \obj (04):*; & \obj (Y):Y.; \\
 };
 \mor X -> 01 -> {Sigma X};
 \mor X -> 03 -> {Sigma X};
@@ -311,7 +311,7 @@ The pullout axiom defining a stable $\infty$\hyp{}category implies that these tw
 \begin{notat}\label{shifteggio}\index{Shift |see Suspension}
 In a stable setting, we will often denote the image of $X$ under the suspension $\Sigma$ as $X[1]$, and by extension $X[n]$ will denote, for any $n\ge 2$ the object $\Sigma^nX$ (obviously, $X[0]:=X$). Dually, $X[-n]:=\Omega^n X$ for any $n\ge 1$.
 \end{notat}
-This notation is in line with the long tradition of denoting by $X[1]$ the \emph{shift} of an object $X$ in a triangulated category; this notation adds to the already existing ones like $X\to Y\to Z\to^+$ and will be used together with the others with no further mention. 
+This notation is in line with the long tradition of denoting by $X[1]$ the \emph{shift} of an object $X$ in a triangulated category; this notation adds to the already existing ones like $X\to Y\to Z\to^+$ and will be used together with the others with no further mention.
 \begin{remark}[Stable $\infty$\hyp{}categories are nice]
 Due to the non\hyp{}canonical behaviour of axioms \refbf{item:pt0}--\refbf{item:tr}, during the years there have been several attempts to produce a better\hyp{}behaved axiomatics, more canonical but still general enough to encompass the interesting examples. One of these was the notion of a \emph{Neeman triangulated category}: we address the reader to \cite{Neeman1991221} to get acquainted with the definition.
 
@@ -328,7 +328,7 @@ Then the commutative square
 };
 \mor a'b -> a''b' -> a1b'' <- 0 <- a'b;
 \end{kD}
-\end{center} 
+\end{center}
 is a fiber sequence.
 \end{proposition}
 \end{remark}
@@ -353,7 +353,7 @@ In a stable $\infty$\hyp{}category $\CC$ we are in the following situation:
 \mor[dashed] Y/X -> Z/X -> Z/Y L> YX1;
 \end{kD}
 \end{center}
-where different colours denote different fiber sequences (i.e., triangles in the homotopy category). Axiom \refbf{item:tr} says that we can find arrows $Y/X\to Z/X\to Z/Y$  such that the triangle $Y/X\to Z/X\to Z/Y\to (Y/X)[1]$ is distinguished. 
+where different colours denote different fiber sequences (i.e., triangles in the homotopy category). Axiom \refbf{item:tr} says that we can find arrows $Y/X\to Z/X\to Z/Y$  such that the triangle $Y/X\to Z/X\to Z/Y\to (Y/X)[1]$ is distinguished.
 
 Here is a sketch of a direct, elementary proof for the octahedral axiom.
 
@@ -362,7 +362,7 @@ First of all one must notice that all the preceding axioms \refbf{item:pt0}--\re
 \begin{kD}
 \lattice[mesh]{
 \obj X; & \obj Y; & \obj Y/Z; & \obj (X+):X[1];\\
-\obj (Y'):Y; & \obj (Z'):Z; & \obj Z/X; & \obj (Y+):Y[1];\\	
+\obj (Y'):Y; & \obj (Z'):Z; & \obj Z/X; & \obj (Y+):Y[1];\\
 };
 \mor X f:-> Y -> Y/Z -> X+;
 \mor Y' swap:g:-> Z' -> Z/X -> Y+;
@@ -375,7 +375,7 @@ can be completed with an arrow $Y/X \xto{\phi} Z/X$, fitting in the square
 \begin{kD}
 \lattice[mesh={4em}{5em}]{
 \obj Y; & \obj Z;\\
-\obj Y/X; & \obj Z/X;\\	
+\obj Y/X; & \obj Z/X;\\
 };
 \mor Y -> Z -> Z/X \varphi:<- Y/X <- Y;
 \end{kD}
@@ -395,12 +395,12 @@ Now consider the objects $V,W$ respectively obtained as pushouts of $Y/X \xot{} 
 \mor Y/X swap:\varphi:-> Z/X;
 \end{kD}
 \]
-and the 3\hyp{}for\hyp{}2 property for pullout squares \refbf{a.3.for.2} now implies that the outer rectangle is a pushout, hence $W\cong Z/Y$. It remains to prove that $V\cong Z/X$; this follows again from the 3\hyp{}for\hyp{}2 property applied to 
+and the 3\hyp{}for\hyp{}2 property for pullout squares \refbf{a.3.for.2} now implies that the outer rectangle is a pushout, hence $W\cong Z/Y$. It remains to prove that $V\cong Z/X$; this follows again from the 3\hyp{}for\hyp{}2 property applied to
 \[
 \begin{kD}
 \lattice[mesh]{
 \obj X; & \obj Y; & \obj Z; \\
-\obj 0;  & \obj Y/X;  & \obj (V):V.;\\	
+\obj 0;  & \obj Y/X;  & \obj (V):V.;\\
 };
 \mor X -> Y -> Z -> V;
 \mor X -> 0 -> Y/X -> *;
@@ -439,20 +439,20 @@ Let $\CC$ be a stable $\infty$\hyp{}category. A \emph{$t$\hyp{}structure} on $\C
 \begin{itemize}
 \item[(i)] orthogonality: $\CC(X, Y)$ is a contractible simplicial set for each $X\in \CC_{\ge 0}$, $Y\in \CC_{< 0}$;
 \item[(ii)] Setting $\CC_{\geq 1}=\CC_{\geq 0}[1]$ and $\CC_{<-1}= \CC_{<0}[-1]$ one has $\CC_{\geq 1}\subseteq \CC_{\geq 0}$ and $\CC_{<-1}\subseteq \CC_{<0}$;
-\item[(iii)] Any object $X\in\CC$ fits into a (homotopy) fiber sequence $X_{\ge 0}\to X\to X_{< 0}$, with $X_{\ge 0}$ in $\CC_{\ge 0}$ and $X_{<0}$ in $\CC_{< 0}$. 
+\item[(iii)] Any object $X\in\CC$ fits into a (homotopy) fiber sequence $X_{\ge 0}\to X\to X_{< 0}$, with $X_{\ge 0}$ in $\CC_{\ge 0}$ and $X_{<0}$ in $\CC_{< 0}$.
 \end{itemize}
 The subcategories $\CC_{\ge 0},\CC_{< 0}$ are called respectively the \emph{coaisle} and the \emph{aisle} of the $t$\hyp{}structure (see \cite{KVaisles}).
 \end{definition}
 \begin{remark}
-The definition as it is stated is a slight reformulation of the classical one given in \cite{BBDPervers}; it is rather curious that the authors of the book do not give any reasonable rationale to explain what does the ``t'' stand for. A natural explanation is that it is a truncation (!) of the word ``\textbf{t}runcation'' (see \cite{why-call-it-t} and the discussion therein). 
+The definition as it is stated is a slight reformulation of the classical one given in \cite{BBDPervers}; it is rather curious that the authors of the book do not give any reasonable rationale to explain what does the ``t'' stand for. A natural explanation is that it is a truncation (!) of the word ``\textbf{t}runcation'' (see \cite{why-call-it-t} and the discussion therein).
 \end{remark}
 \begin{remark}\label{trunfun}\index{t-structure@$t$\hyp{}structure! --- co/truncation}\index{Co/truncation| see t-structure@$t$\hyp{}structure}\index{Subcategory!reflective ---}
 The assignments $X\mapsto X_{\ge 0}$ and $X\mapsto X_{< 0}$ define two functors $\tau_{\ge 0}$ and $\tau_{<0}$ which are, respectively, a right adjoint to the inclusion functor $\CC_{\ge 0}\hookrightarrow \CC$ and a left adjoint to the inclusion functor $\CC_{<0}\hookrightarrow \CC$. In other words, $\CC_{\ge 0},\CC_{<0} \subseteq \CC$ are respectively \cite[\textbf{1.2.1.5\hyp{}8}]{LurieHA} a coreflective and a reflective subcategory of $\CC$.
 
-This in particular implies that 
+This in particular implies that
 \begin{itemize}
-\item the full subcategories $\CC_{\ge n}=\CC_\ge[n]$, are coreflective via a coreflection $\tau_{\ge n}$; dually $\CC_{<n}=\CC_{<0}[n]$ are reflective via a reflection  $\tau_{< n}$, 
-\item $\CC_{< n}$ is stable under all limits which exist in $\CC$, and colimits are computed by applying the reflector $\tau_{< n}$ to the colimit computed in $\CC$; dually, $\CC_{\ge n}$ is stable under all colimits, and limits are $\CC$-limits coreflected via $\tau_{\ge n}$; from the last of these remarks we deduce a useful corollary: 
+\item the full subcategories $\CC_{\ge n}=\CC_\ge[n]$, are coreflective via a coreflection $\tau_{\ge n}$; dually $\CC_{<n}=\CC_{<0}[n]$ are reflective via a reflection  $\tau_{< n}$,
+\item $\CC_{< n}$ is stable under all limits which exist in $\CC$, and colimits are computed by applying the reflector $\tau_{< n}$ to the colimit computed in $\CC$; dually, $\CC_{\ge n}$ is stable under all colimits, and limits are $\CC$-limits coreflected via $\tau_{\ge n}$; from the last of these remarks we deduce a useful corollary:
 \begin{corollary}
 The functor $\tau_{<n}$ maps a pullout in $\CC$ to a pushout in $\CC_{<n}$ while $\tau_{\geq n}$ maps a pullout in $\CC$ to a pullback in $\CC_{\geq n}$.
 \end{corollary}
@@ -467,7 +467,7 @@ It's easy to see that Definition \refbf{tistru} is modeled on the classical defi
 The datum of a $t$\hyp{}structure via both classes $(\CC_{\ge 0}, \CC_{<0})$ is a bit redundant: in fact, each of the two classes uniquely determines the other via the object\hyp{}orthogonality relation \refbf{object.ortho}.
 \end{remark}
 \begin{remark}
-\marginnote{\textdbend} 
+\marginnote{\textdbend}
 The notation $\CC_{\geq 1}$ for $\CC_{\geq 0}[1]$ is powerful but potentially misleading: one is led to view $\CC_{\geq 0}$ as the seminfinite interval $[0,+\infty)$ in the real line and $\CC_{\geq 1}$ as the seminfinite interval $[1,+\infty)$. This is indeed a very useful analogy (see Remark \refbf{evocative}) but one should always keep in mind that as a particular case of the inclusion condition $\CC_{\geq 1}\subseteq \CC_{\geq 0}$ also the extreme case $\CC_{\geq 1}=\CC_{\geq 0}$ is possible, in blatant contradiction of the real line half\hyp{}intervals mental picture.
 \end{remark}
 \begin{definition}[$t$\hyp{}exact functor]\label{t.exact.func}
@@ -481,7 +481,7 @@ In light of this remark, it is natural to consider \emph{families} of $t$\hyp{}s
 An alternative description for a $t$\hyp{}structure is given in \cite[Prop. \textbf{1.2.1.16}]{LurieHA} via a $t$\hyp{}\emph{localization} $L$, \ie a reflection functor $L$ satisfying one of the following equivalent properties:
 \begin{itemize}
 \item The class of $L$\hyp{}local morphisms\footnote{An arrow $f$ in $\CC$ is called \emph{$L$\hyp{}local} if it is inverted by $L$; it's easy to see that $L$\hyp{}local objects form a quasisaturated class in the sense of \cite[Def. \textbf{1.2.1.14}]{LurieHA}.} is generated (as a quasisaturated marking) by a family of initial arrows $\{0\to X\}$;
-\item The class of $L$\hyp{}local morphisms is generated (as a quasisaturated marking) by the class of initial arrows $\{0\to X\mid LX\simeq 0\}$; 
+\item The class of $L$\hyp{}local morphisms is generated (as a quasisaturated marking) by the class of initial arrows $\{0\to X\mid LX\simeq 0\}$;
 \item The essential image $L\CC\subset\CC$ is an extension\hyp{}closed class.
 \end{itemize}
 The $t$\hyp{}structure $\tee(L)$ determined by the $t$\hyp{}localization $L\colon \CC\to \CC$ is given by the pair of subcategories
@@ -492,9 +492,9 @@ It is no surprise that the obvious example of $t$\hyp{}localization is the trunc
 \end{remark}
 This connection is precisely what motivated us to exploit the theory of factorization systems to give an alternative description of the data contained in a $t$\hyp{}structure: the synergy between orthogonality encoded in \refbf{tistru}\textbf{.(i)} and reflectivity of the subcategories generated by $\tee$, suggests taking the ``torsio\hyp{}centric'' approach.
 \section{Spanier\hyp{}Whitehead stabilization.}\label{spanierwhite}\index{Spanier\hyp{}Whitehead stabilization}
-Let $\A$ be any category, endowed with an endofunctor $\Sigma\colon \A\to \A$. The problem adressed by the Spanier\hyp{}Whitehead construction is the following: how to produce a category with endofunctor $(\smallcap{sw}(\A), \hat \Sigma)$ such that 
+Let $\A$ be any category, endowed with an endofunctor $\Sigma\colon \A\to \A$. The problem adressed by the Spanier\hyp{}Whitehead construction is the following: how to produce a category with endofunctor $(\smallcap{sw}(\A), \hat \Sigma)$ such that
 \begin{enumerate}
-\item there is an embedding $\A \hookrightarrow \smallcap{sw}(\A)$; 
+\item there is an embedding $\A \hookrightarrow \smallcap{sw}(\A)$;
 \item $\hat \Sigma|_{\A} = \Sigma$;
 \item $\hat \Sigma$ is an equivalence of categories
 \end{enumerate}
@@ -525,7 +525,7 @@ Let $\mathbb{N}$ be the monoid of natural numbers, considered as a category: it 
 \begin{notat}
 In the following, $T_\mathbb{N}$\hyp{}algebras will be called \emph{categories with endomorphism}.
 \end{notat}
-Let now $\mathbb{N}\hookrightarrow \Z$ the obvious inclusion. When regarded as a category, the group of integers is a groupoid, so $S_\Z=(-)\times\Z$ is again a monad on $\cate{Cat}$. 
+Let now $\mathbb{N}\hookrightarrow \Z$ the obvious inclusion. When regarded as a category, the group of integers is a groupoid, so $S_\Z=(-)\times\Z$ is again a monad on $\cate{Cat}$.
 
 The category of $S_\Z$\hyp{}algebras consists of pairs $(\A,\Sigma)$ where $\Sigma\colon \A\to \A$ is an \emph{auto}morphism (so in particular every $S_\Z$\hyp{}algebra is a $T_\mathbb{N}$\hyp{}algebra). Similar diagrams are requested to commute, so that if we consider the restriction $\Sigma_{(n)}=\Sigma|_{\A\times\{n\}}$ for any $n\in\Z$, and we identify $\A\times\{n\}\cong\A$, then we have that $\Sigma_{(1)}=\Sigma$, $\Sigma_{(-1)}=\Sigma^{-1}$ and so on.
 \begin{remark}
@@ -541,16 +541,16 @@ We want to give a left adjoint $F\colon \cate{Cat}^\mathbb{N}\to \cate{Cat}^\Z$ 
 \A\times\mathbb{N}\times\Z \ar@<3pt>[r]^{\Sigma\times \Z}\ar@<-3pt>[r]_{(\A\times \mu)\circ (\iota\times\Z)}& \A\times\Z \ar[r]& F(\A,\Sigma)
 }
 \]
-Now, all monads like $S_\Z$, \ie all monads of the form $(-)\times M$ for $M$ a monoid in a monoidal(ly cocomplete) category $(\A,\times)$ preserve colimits, hence there is a unique $S_\Z$-algebra structure on $F(\A,\Sigma)$ such that 
+Now, all monads like $S_\Z$, \ie all monads of the form $(-)\times M$ for $M$ a monoid in a monoidal(ly cocomplete) category $(\A,\times)$ preserve colimits, hence there is a unique $S_\Z$-algebra structure on $F(\A,\Sigma)$ such that
 \[
 \hat\Sigma\colon F(\A,\Sigma)\times\Z \to F(\A,\Sigma)
 \]
 is an automorphism of $F(\A,\Sigma)$ and the correspondence $\tilde{F}\colon (\A,\Sigma)\mapsto (F(\A,\Sigma),\hat\Sigma)$ is the desired left adjoint. The category $F(\A,\Sigma)$ can be considered the \emph{free category with automorphism} on the category with endomorphism $(\A,\Sigma)$.
 
-This category satisfies the desired universal property: there exists a functor 
+This category satisfies the desired universal property: there exists a functor
 \[
 \alpha\colon (\A,\Sigma)\to \tilde{F}(\A,\Sigma)
-\] 
+\]
 (the unit of the adjunction we built) such that for any $S_\Z$\hyp{}algebra morphism $H\colon (\A,\Sigma)\to (\cate B,\Theta)$ where $(\cate B,\Theta)$ is a $T$\hyp{}algebra, there is a unique $T_\mathbb{N}$\hyp{}algebra morphism $\bar H\colon \tilde{F}(\A,\Sigma)\to (\cate B,\Theta)$ such that the following diagram commutes:
 \[
 \begin{kD}
@@ -575,7 +575,7 @@ defined respectively as the homotopy pushout and homotopy pullback below:
 \begin{kD}
 \lattice[mesh]{
 \obj X; & \obj (01):*; & \obj \Omega Y; & \obj (02):*; \\
-\obj (03):*; & \obj \Sigma X; & \obj (04):*; & \obj (Y):Y.; \\	
+\obj (03):*; & \obj \Sigma X; & \obj (04):*; & \obj (Y):Y.; \\
 };
 \mor X -> 01 -> {Sigma X};
 \mor X -> 03 -> {Sigma X};
@@ -603,7 +603,7 @@ Quoting \cite{LurieHA}:
 The theory of differential graded categories is closely related to the theory of stable $\infty$\hyp{}categories. More precisely, one can show that the data of a (pretriangulated) differential graded category over a field $k$ is equivalent to the data of a stable $\infty$\hyp{}category $\CC$ equipped with an enrichment over the monoidal $\infty$\hyp{}category of $k$\hyp{}module spectra. The theory of differential graded categories provides a convenient language for working with stable $\infty$\hyp{}categories of algebraic origin (for example, those which arise from chain complexes of coherent sheaves on algebraic varieties), but is inadequate for treating examples which arise in stable homotopy theory.
 \end{quote}
 \subsubsection{Stable \texorpdfstring{$\infty$}{infty}\hyp{}categories.}\index{Stable!--- $\infty$\hyp{}category}
-Stable $\infty$\hyp{}categories are extensively described in \cite{LurieHA}, throughout the present chapter, and throughout the present thesis; here, we outline how, in the setting of $\infty$\hyp{}categories, the lack of universality for the construction of $\D(\A)$ is completely solved: first of all, recall that the \emph{Dold\hyp{}Kan correspondence} \cite{kan1958functors,GoJ} establishes an equivalence of categories between the category $\text{Ch}^+(\cate{Ab})$ (chain complexes of abelian groups, concentrated in positive degree) and $\cate{sAb}$ (simplicial sets whose sets of $n$\hyp{}simplices all are abelian groups). 
+Stable $\infty$\hyp{}categories are extensively described in \cite{LurieHA}, throughout the present chapter, and throughout the present thesis; here, we outline how, in the setting of $\infty$\hyp{}categories, the lack of universality for the construction of $\D(\A)$ is completely solved: first of all, recall that the \emph{Dold\hyp{}Kan correspondence} \cite{kan1958functors,goerss-jardine} establishes an equivalence of categories between the category $\text{Ch}^+(\cate{Ab})$ (chain complexes of abelian groups, concentrated in positive degree) and $\cate{sAb}$ (simplicial sets whose sets of $n$\hyp{}simplices all are abelian groups).
 \begin{center}
 \begin{figure}[H]
 \begin{kD}

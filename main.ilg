@@ -1,0 +1,21 @@
+This is makeindex, version 2.15 [TeX Live 2021] (kpathsea + Thai support).
+Scanning input file main.idx....
+!! Input index error (file = main.idx, line = 63):
+   -- Extra `!' at position 66 of first argument.
+
+!! Input index error (file = main.idx, line = 81):
+   -- Extra `!' at position 60 of first argument.
+
+!! Input index error (file = main.idx, line = 171):
+   -- Incomplete first argument (premature LFD).
+
+!! Input index error (file = main.idx, line = 191):
+   -- Illegal null field.
+
+!! Input index error (file = main.idx, line = 195):
+   -- Extra `@' at position 49 of first argument.
+done (197 entries accepted, 5 rejected).
+Sorting entries.....done (1612 comparisons).
+Generating output file main.ind....done (250 lines written, 0 warnings).
+Output written in main.ind.
+Transcript written in main.ilg.

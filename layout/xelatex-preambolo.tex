@@ -53,7 +53,7 @@ showstringspaces=true}
   \usetikzlibrary{positioning}
   \usetikzlibrary{arrows}
 
-% \usepackage[all,2cell,cmtip]{xy}\UseAllTwocells
+\usepackage[all,2cell,cmtip]{xy}\UseAllTwocells
 \usepackage[type={CC},modifier={by-nc-sa},version={3.0}]{doclicense}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% comandi personali
@@ -73,7 +73,7 @@ showstringspaces=true}
 \providecommand{\bDelta}{\Delta}
 \def\ter{\boldsymbol{\tau}}
 
-\newcommand{\mcal}[1]{\mathcal{#1}}%{{\hskip-.17em\text{\mycal{#1}\hskip.2em}}}
+\newcommand{\mcal}[1]{\mathsf{#1}}
 	\providecommand{\K}{\mcal{K}}
 	\newcommand{\mS}{\mcal{S}}
 	\newcommand{\TT}{\mcal{T}}
@@ -115,7 +115,7 @@ showstringspaces=true}
 \providecommand{\defequal}	{\overset{\triangle}{=}}
 \renewcommand{\setminus}	{\smallsetminus}
 
-%################################################### 
+%###################################################
 
 \providecommand{\lrlarrows}{%
 	\mathrel{\substack{\leftarrow\\[-.9em] \rightarrow \\[-.9em] \leftarrow}}
@@ -168,7 +168,7 @@ showstringspaces=true}
 \providecommand{\op}{\text{op}}
 %
 \newcommand{\im}{\text{im}}
-\newcommand{\coim}{\text{coim}} 
+\newcommand{\coim}{\text{coim}}
 \def\length{\text{length}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% hyphenation
@@ -199,7 +199,7 @@ showstringspaces=true}
   \providecommand{\acor}     {\abbrv{Cor}}
   \providecommand{\aprop}    {\abbrv{Prop}}
   \providecommand{\athm}     {\abbrv{Thm}}
- 
+
 \providecommand{\refbf}[1]{\textbf{\ref{#1}}}
 
 \usepackage{graphicx}
@@ -222,7 +222,7 @@ showstringspaces=true}
 % \usepackage{mathspec}
 
 \setmainfont[SmallCapsFont={Latin Modern Roman Caps},]{Latin Modern Roman}
-\setmonofont[Scale = MatchLowercase]{Ubuntu Mono}
+%\setmonofont[Scale = MatchLowercase]{Ubuntu Mono}
 
 \newfontfamily{\japanese}{TakaoMincho}
 \newfontfamily{\bigjapanese}{TakaoExMincho}
@@ -279,12 +279,12 @@ showstringspaces=true}
   \newtheorem*{scholium*}{Scholium}
 
   \newenvironment{thededication}
-  {\clearpage  
-   \thispagestyle{empty}  
-   \vspace*{\stretch{1}}  
+  {\clearpage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
    \raggedleft}
-  {\par  
-   \vspace{\stretch{3}}  
+  {\par
+   \vspace{\stretch{3}}
    \clearpage}
 %
 \providecommand{\attrib}[1]{%
@@ -349,7 +349,7 @@ showstringspaces=true}
    urlcolor=	   blue!70,
    citecolor=	   blue!70}
 
-\pdfvariable suppressoptionalinfo \numexpr 1+2+4+8+16+32+64+128+256+512 \relax
+% \pdfvariable suppressoptionalinfo \numexpr 1+2+4+8+16+32+64+128+256+512 \relax
 
 
 \providecommand{\cover}[1]{\mathfrak{#1}}

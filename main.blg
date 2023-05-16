@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/dedica.aux
+A level-1 auxiliary file: chapters/intro.aux
+A level-1 auxiliary file: chapters/less_intro.aux
+A level-1 auxiliary file: chapters/01-fact.aux
+A level-1 auxiliary file: chapters/02-refnorm.aux
+A level-1 auxiliary file: chapters/03-rosetta.aux
+A level-1 auxiliary file: chapters/04-cuori.aux
+A level-1 auxiliary file: chapters/05-recol.aux
+A level-1 auxiliary file: chapters/06-operations.aux
+A level-1 auxiliary file: chapters/07-stabilities-domenico.aux
+A level-1 auxiliary file: chapters/08-aA.aux
+The style file: amsalpha.bst
+Database file #1: allofthem.bib
+Warning--entry type for "Wof" isn't style-file defined
+--line 8961 of file allofthem.bib
+Warning--can't use both author and editor fields in Banagl
+Warning--can't use both author and editor fields in Baues1989
+Warning--missing pages in douglas2002dirichlet
+Warning--missing year in tderivators
+Warning--missing pages in tderivators
+Warning--missing pages in Schwede2015
+Warning--can't use both author and editor fields in Samurai
+You've used 101 entries,
+            2624 wiz_defined-function locations,
+            1238 strings with 17753 characters,
+and the built_in function-call counts, 34277 in all, are:
+= -- 3107
+> -- 1267
+< -- 78
++ -- 390
+- -- 378
+* -- 2801
+:= -- 5425
+add.period$ -- 101
+call.type$ -- 101
+change.case$ -- 556
+chr.to.int$ -- 99
+cite$ -- 108
+duplicate$ -- 1582
+empty$ -- 2956
+format.name$ -- 533
+if$ -- 6998
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 220
+newline$ -- 314
+num.names$ -- 293
+pop$ -- 706
+preamble$ -- 1
+purify$ -- 655
+quote$ -- 0
+skip$ -- 1086
+stack$ -- 0
+substring$ -- 1972
+swap$ -- 180
+text.length$ -- 78
+text.prefix$ -- 55
+top$ -- 0
+type$ -- 688
+warning$ -- 7
+while$ -- 337
+width$ -- 107
+write$ -- 1095
+(There were 8 warnings)

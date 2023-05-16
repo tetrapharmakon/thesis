@@ -8,7 +8,7 @@ This first chapter deals with the general definition of a \emph{factorization sy
 We do not claim originality here, aiming only at a balance between the creation of a flexible and natural formalism, to be used along the subsequent chapters, and the necessity of rigor and generality.
 
 \index{Factorization system!history of}
-The current literature seems to be too poor and too rich at the same time, when dealing with factorization systems; several authors often decide to rebuild the basic theory from scratch when they prove a new result, as there are several slightly different flavours in which one wants to interpret the basic idea behind the definition (that is, \emph{factor every arrow of a category into two distinguished pieces}). 
+The current literature seems to be too poor and too rich at the same time, when dealing with factorization systems; several authors often decide to rebuild the basic theory from scratch when they prove a new result, as there are several slightly different flavours in which one wants to interpret the basic idea behind the definition (that is, \emph{factor every arrow of a category into two distinguished pieces}).
 
 Since simple and extremely pervasive structures are often discovered independently, an accurate overview of the topic is somewhat impossible; we can however try to date back to the pioneering \cite{maclane1948groups}, published in 1948 (!) a forerunner to the modern notion of factorization system (see in particular axioms \textsc{bc}1--5).
 
@@ -59,10 +59,10 @@ We denote $\prescript{\perp}{}{(-)}\dashv (-)^\perp$ the (antitone) Galois conne
 and we consider the adjunction $\prescript{\perp}{}{(-)}\colon \mcal{P}\,(\hom(\CC)\leftrightarrows \mcal{P}\,(\hom(\CC))\colon (-)^\perp$.
 \end{notat}
 \begin{definition}[Category of markings]\label{def:mrkc}\index{Marking!category of ---s}
-If $\CC$ is a small $\infty$\hyp{}category we can define a poset $\mrk(\CC)$ whose objects are markings of $\CC$ and whose arrows are given by inclusions as subsets of $\CC_1$. 
+If $\CC$ is a small $\infty$\hyp{}category we can define a poset $\mrk(\CC)$ whose objects are markings of $\CC$ and whose arrows are given by inclusions as subsets of $\CC_1$.
 \end{definition}
 \begin{remark}\index{Marking!maximal and minimal ---}
-The maximal and the minimal markings are, respectively, the terminal and initial object of $\mrk(\CC)$; this category can also be characterized as the fiber over $\CC$ of the forgetful functor $U\colon \sSet^\marked \to \sSet$. Moreover, the Galois connection $\prescript{\perp}{}{(-)}\dashv (-)^\perp$ defined above induces an analogous adjunction on $\mrk(\CC)$, via the obvious identification. 
+The maximal and the minimal markings are, respectively, the terminal and initial object of $\mrk(\CC)$; this category can also be characterized as the fiber over $\CC$ of the forgetful functor $U\colon \sSet^\marked \to \sSet$. Moreover, the Galois connection $\prescript{\perp}{}{(-)}\dashv (-)^\perp$ defined above induces an analogous adjunction on $\mrk(\CC)$, via the obvious identification.
 \end{remark}
 This remark leads to a second
 \begin{remark}
@@ -77,7 +77,7 @@ The following conditions are equivalent, for $f\colon \Delta[1]\to \CC$:
 \item $f\perp f$.
 \end{enumerate}
 \begin{remark}
-The technique applied here (devise suitable lifting problems which, solved, prove the claim) is a standard trick in the calculus of factorization systems: we will often use arguments like the following. 
+The technique applied here (devise suitable lifting problems which, solved, prove the claim) is a standard trick in the calculus of factorization systems: we will often use arguments like the following.
 \end{remark}
 \begin{proof}
 This case is extremely simple and paradigmatic. It is evident that the implications $1 \Rightarrow 2 \Rightarrow 4$ and $1 \Rightarrow 3 \Rightarrow 4$ (the inverse of $f$, composed with the upper horizontal arrow of a lifting problem, does the trick); to close the circle of implications, it is enough to show that $4 \Rightarrow 1$: this is evident, since the solution to the lifting problem
@@ -96,17 +96,17 @@ This case is extremely simple and paradigmatic. It is evident that the implicati
 \end{proposition}
 \begin{proposition}
 There exists an adjunction  \[\underline{{}^\boxslash(-)}\dashv \underline{(-)^\boxslash}\colon \cate{QCat}/X^{\Delta[1]}\leftrightarrows\left(\cate{QCat}
-/X^{\Delta[1]}\right)^\op 
+/X^{\Delta[1]}\right)^\op
 \]
 ``lifting'' the Galois connection ${}^\boxslash(-)\dashv (-)^\boxslash\colon \mrk(X)\leftrightarrows \mrk(X)$.\end{proposition}
 This can be seen as an $\infty$\hyp{}categorical version of \cite[Prop. \textbf{3.8}]{Garner2009a}.
 \begin{remark}[Orthogonality and locality]\label{object.ortho}\index{Orthogonality!--- of objects}
-There is another notion of orthogonality of an object $X$ with respect to a morphism $f\in\hom(\CC)$; given these data, we say that $X$ is \emph{right\hyp{}orthogonal} to $f$ (or that $X$ is an \emph{$f$\hyp{}local} object) if the hom functor $\hom(-,X)$ inverts $f$. 
+There is another notion of orthogonality of an object $X$ with respect to a morphism $f\in\hom(\CC)$; given these data, we say that $X$ is \emph{right\hyp{}orthogonal} to $f$ (or that $X$ is an \emph{$f$\hyp{}local} object) if the hom functor $\hom(-,X)$ inverts $f$.
 
 If $\CC$ has a terminal object $*$, this notion is related to \adef \refbf{def:orthog}, in the sense that $X$ is right\hyp{}orthogonal to $f$ if and only if the terminal arrow $X\to *$ is right orthogonal to $f$. For this reason, we always refer to \emph{object\hyp{}orthogonality} as orthogonality with respect to terminal arrows. (Obviously, there is a dual notion of left\hyp{}object\hyp{}orthogonality between $f$ and $B\in\CC$, which in the presence of an initial object reduces to left orthogonality with respect to $\varnothing\to B$).
 \end{remark}
 \begin{notat}\label{orth.between.classes}\index{Orthogonality!--- of classes}
-Extending this notation a little bit more, we can speak about orthogonality between two objects, without introducing new definitions: in a category with both a terminal and initial object (which, since our blanket assumption in all the remaining chapters is to work in a stable $\infty$\hyp{}category, will always be the case) we can say that 
+Extending this notation a little bit more, we can speak about orthogonality between two objects, without introducing new definitions: in a category with both a terminal and initial object (which, since our blanket assumption in all the remaining chapters is to work in a stable $\infty$\hyp{}category, will always be the case) we can say that
 \begin{itemize}
 \item Two objects $B$ and $X$ are orthogonal if $\hom(B,X)$ is contractible; we denote this (non\hyp{}symmetric) relation as $B\perp X$.
 \item Two classes of object $\mcal{H}$ and $\mcal{K}$ in $\CC$ are orthogonal if each object $H\in\mcal{H}$ is orthogonal to each object $K\in\mcal{K}$; we denote this situation by $\mcal{H} \perp \mcal{K}$.
@@ -115,7 +115,7 @@ This notation will greatly help us in \achap \refbf{chap:tstruct} and \refbf{cha
 \end{notat}
 The following nomenclature is modeled on the analogous categorical notion of a \emph{prefactorization system} introduced in \cite{FK}.
 \begin{definition}\index{Factorization!prefactorization system}
-A pair of markings $(\EE,\MM)$ in an $\infty$\hyp{}category $\CC$ is said to be a \emph{($\infty$\hyp{}categorical) prefactorization} when $\EE = \prescript{\perp}{}{\MM}$ and  $\MM = \EE^\perp$. In the following we will denote a prefactorization on $\CC$ as $\fF=(\EE,\MM)$. 
+A pair of markings $(\EE,\MM)$ in an $\infty$\hyp{}category $\CC$ is said to be a \emph{($\infty$\hyp{}categorical) prefactorization} when $\EE = \prescript{\perp}{}{\MM}$ and  $\MM = \EE^\perp$. In the following we will denote a prefactorization on $\CC$ as $\fF=(\EE,\MM)$.
 \end{definition}
 \begin{remark}\label{def:prefacts}
 The collection of all prefactorizations on a given $\infty$\hyp{}category $\CC$ forms a poset, which we will call $\pf(\CC)$, with respect to the order $\fF=(\EE,\MM)\preceq \fF'= (\EE',\MM')$ iff $\MM\subset\MM'$ (or equivalently, $\EE'\subset \EE$).
@@ -126,7 +126,7 @@ It is evident (as an easy consequence of adjunction identities) that any marking
 \begin{definition}\label{df:rlgener}\index{Factorization!left\fshyp{}right generated}
 If a prefactorization $\fF$ on $\CC$ is such that there exists a marking $\mS\in\mrk(\CC)$ such that $\fF=\mathbb S_\perp$ (resp., $\fF={}_\perp\mathbb S$) then $\fF$ is said to be \emph{right} (resp., \emph{left}) \emph{generated} by $\mS$.
 \begin{remark}
-Since in a prefactorization system $\fF = (\EE,\MM)$ each class uniquely determines the other, the prefactorization is characterized by any of the two markings $\EE,\MM$ and the poset $\pf(\CC)$ defined in \refbf{def:prefacts} can be confused with a sub\hyp{}poset of $\mrk(\CC)$ defined in \refbf{def:mrkc}; accordingly with \refbf{def:prefacts} the class of all prefactorizations $\fF=(\EE,\MM)$ on an $\infty$\hyp{}category $\CC$ is a poset whose greatest and smallest elements are respectively 
+Since in a prefactorization system $\fF = (\EE,\MM)$ each class uniquely determines the other, the prefactorization is characterized by any of the two markings $\EE,\MM$ and the poset $\pf(\CC)$ defined in \refbf{def:prefacts} can be confused with a sub\hyp{}poset of $\mrk(\CC)$ defined in \refbf{def:mrkc}; accordingly with \refbf{def:prefacts} the class of all prefactorizations $\fF=(\EE,\MM)$ on an $\infty$\hyp{}category $\CC$ is a poset whose greatest and smallest elements are respectively
 \[
 {}_\perp(\CC^\sharp)  = (\iso, \CC_1)\text{ and } (\CC^\sharp)_\perp = (\CC_1, \iso).\]
 \end{remark}
@@ -174,7 +174,7 @@ A useful characterization of orthogonality available in 1\hyp{}categorical world
 \mor BX -> BY -> AY <- AX <- BX;
 \end{kD}
 \]
-is a pullback (the proof of this fact is immediate). This characterization can be used to define \emph{enriched} factorization systems (see \cite{Day1974,Lucyshyn-Wright} and our discussion in \S\refbf{model.dep}).
+is a pullback (the proof of this fact is immediate). This characterization can be used to define \emph{enriched} factorization systems (see \cite{Lucyshyn-Wright} and our discussion in \S\refbf{model.dep}).
 
 This characterization exports, \emph{mutatis mutandis}, to the $\infty$\hyp{}categorical setting: see \cite[\textbf{A.4.(41)}]{Aaron}
 \end{remark}
@@ -203,7 +203,7 @@ It all boils down to solving the right lifting problem: if $f\colon A\to B$ can 
 Given a prefactorization $\fF\in\pf(\CC)$ we say that an arrow $f\colon X\to Y$ is \emph{$\fF$\hyp{}crumbled}, (or \emph{$(\EE,\MM)$\hyp{}crumbled} for $\fF=(\EE,\MM)$) when there exists a(n essentially unique, in view of Remark \refbf{rmk:uniqueness.of.fact}) factorization for $f$ as a composition $m\circ e$, with $e\in\EE$, $m\in\MM$; let $\sigma_\fF$ be the class of all $\fF$\hyp{}crumbled morphisms, and define
 \[
 \pf_{\mS}(\CC) = \{\fF\mid \sigma_\fF\supset\mS\}\subset \pf(\CC).
-\] 
+\]
 \end{definition}
 \begin{definition}\label{def:effe.esse}\index{Factorization!factorization system}
 A prefactorization system $\fF=(\EE,\MM)$ in $\pf(\CC)$ is said to be a \emph{($\infty$\hyp{}categorical) factorization system} on $\CC$ if $\sigma_\fF=\hom(\CC)$; factorization systems, identified with $\pf_{\hom(\CC)}(\CC)$, form a sub\hyp{}poset $\smallcap{fs}(\CC)\leq \pf(\CC)$.
@@ -218,7 +218,7 @@ Let $\CC$ be an $\infty$\hyp{}category; a \emph{factorization system} (\smallcap
 \end{definition}
 It is useful to introduce the following alternative formalism to express the class of $\fF$\hyp{}crumbled morphisms:
 \begin{definition}[The ``$\semicol$'' symbol]\label{fat.notation}
-Let $\CC$ be an $\infty$\hyp{}category and $\mcal{A},\mcal{B}\subseteq \hom(\CC)$; we denote $\mcal{A}\semicol \mcal{B}$ the class of all $f\in\hom(\CC)$ such that there exists a factorization $f = b\circ a$ with $a\in\mcal{A}, b\in\mcal{B}$. 
+Let $\CC$ be an $\infty$\hyp{}category and $\mcal{A},\mcal{B}\subseteq \hom(\CC)$; we denote $\mcal{A}\semicol \mcal{B}$ the class of all $f\in\hom(\CC)$ such that there exists a factorization $f = b\circ a$ with $a\in\mcal{A}, b\in\mcal{B}$.
 \end{definition}
 It is obvious that for each prefactorization $\fF = (\EE,\MM)$, $\sigma_{\fF} = \EE\semicol \MM$ and that a prefactorization $\fF = (\EE,\MM)$ is a factorization if and only if $\EE\semicol\MM = \hom(\CC)$.
 
@@ -261,11 +261,11 @@ There is a more general notion of \emph{weak} factorization system on an $\infty
 \item Orthogonality is no longer strong: in $\infty$\hyp{}categories, this means that the space of solution is no longer contractible, but only \emph{nonempty}.
 \item Factorization is no longer unique up to a unique equivalence: this means that there are possibly many different connected components on the space of factorizations.
 \end{itemize}
-A 1\hyp{}dimensional example of such a structure is the pair of classes $(\smallcap{Mono}, \smallcap{Epi})$ in the category $\Set$ of sets and functions; there seems to be no mention of this condition in the world of $\infty$\hyp{}categories, in \cite{HTT} or \cite{Joy} (this could possibly be related to the fact that the concept of ``monomorphism'' does not naturally belong to the world of $\infty$\hyp{}categories, see also \refbf{no.easy.examples} below). 
+A 1\hyp{}dimensional example of such a structure is the pair of classes $(\smallcap{Mono}, \smallcap{Epi})$ in the category $\Set$ of sets and functions; there seems to be no mention of this condition in the world of $\infty$\hyp{}categories, in \cite{HTT} or \cite{Joy} (this could possibly be related to the fact that the concept of ``monomorphism'' does not naturally belong to the world of $\infty$\hyp{}categories, see also \refbf{no.easy.examples} below).
 
 However, a tentative definition of a \emph{model $\infty$\hyp{}category} has been given in \cite{Aaron}, with applications to Goerss\hyp{}Hopkins obstruction theory. \cite[\S\textbf{2}]{Aaron} contains plenty of examples of weak factorization systems in $\infty$\hyp{}categories.
 \begin{definition}[Weak orthogonality]\label{weak.ortho}\index{Orthogonality!weak}
-Let $f,g$ be two edges in an $\infty$\hyp{}category $\CC$. We will say that $f$ is \emph{weakly left orthogonal} to $g$ (or equivalently that $g$ is \emph{weakly right orthogonal} to $f$) if in any lifting problem like (\refbf{a.problem}) 
+Let $f,g$ be two edges in an $\infty$\hyp{}category $\CC$. We will say that $f$ is \emph{weakly left orthogonal} to $g$ (or equivalently that $g$ is \emph{weakly right orthogonal} to $f$) if in any lifting problem like (\refbf{a.problem})
 \index{.pitch@$\pitchfork$}
 the space of solutions $a$ is nonempty. We denote this binary relation as $f\pitchfork g$, and the resulting Galois connection ${}^\pitchfork(-)\dashv (-)^\pitchfork$.
 \end{definition}
@@ -279,11 +279,11 @@ A \emph{Quillen model structure} on a small\hyp{}bicomplete $\infty$\hyp{}catego
 \begin{itemize}
 \item $\mcal{Wk}$ is a 3\hyp{}for\hyp{}2 class (\adef \refbf{def:3for2}) containing all isomorphisms and closed under retracts;
 \item The markings $(\mcal{Cof},\mcal{Wk}\cap \mcal{Fib})$ and $(\mcal{Wk}\cap \mcal{Cof},\mcal{Fib})$ both form a weak factorization system on $\CC$.
-\end{itemize} 
+\end{itemize}
 \end{example}
 \section{Closure properties.}\label{closure.props}
 \begin{definition}[Closure operators associated to markings]\label{def:satusatu}
-Let $\CC$ be an $\infty$\hyp{}category. A marking $\mcal{J}\in\mrk(\CC)$ is called 
+Let $\CC$ be an $\infty$\hyp{}category. A marking $\mcal{J}\in\mrk(\CC)$ is called
 \begin{itemize}
 \item[\textsc{w}.)] \index{Marking!wide ---} \textbf{wide} if it contains all the isomorphisms and it is closed under composition;
 \end{itemize}
@@ -324,10 +324,10 @@ F(0) \ar[r] & **[r] F(\alpha) = \varinjlim_{i<\alpha}F(i)
 \]
 lies in $\mcal{J}$;
 \item[\textsc{s}.)] \index{Marking!saturated ---}\textbf{saturated} if it is almost saturated and cellular.
-\end{itemize} 
-All these properties induce suitable closure operators, encoded as suitable (idempotent) monads on $\mrk(\CC)$, defined for any property $\textsf{p}$ among $\{ \textsc{w}, \textsc{p}, \textsc{q}, \textsc{c}, \textsc{s} \}$ as 
+\end{itemize}
+All these properties induce suitable closure operators, encoded as suitable (idempotent) monads on $\mrk(\CC)$, defined for any property $\textsf{p}$ among $\{ \textsc{w}, \textsc{p}, \textsc{q}, \textsc{c}, \textsc{s} \}$ as
 \[
-\textsf{p}(-) \colon 
+\textsf{p}(-) \colon
 \mS \mapsto \textsf{p}(\mS) = \bigcap_{\mcal{U}\supseteq \mS}\Big\{ \mcal{U}\in \mrk(\CC)\mid \mcal{U} \text{ $P$ property has } \Big\}\]
 In classical category theory, the \emph{cellularization} $\textsf{c}(-)$ and the \emph{saturation} $\textsf{s}(-)$ of a marking $\mcal{J}$ on $\CC$ are of particular interest (especially in homotopical algebra), in view of what we state in \aprop \refbf{satu}.
 \begin{remark}
@@ -362,7 +362,7 @@ Given a \smallcap{fs} $(\mcal{E},\mcal{M})$ in the $\infty$\hyp{}category $\CC$,
 \begin{enumerate}
 \item \index{Colimit!closure of $\EE/\MM$ under ---}If the $\infty$\hyp{}category $\CC$ has $K$\hyp{}colimits, for $K$ a given simplicial set, then the full subcategory of $\CC^{\Delta[1]}$ spanned by $\mcal{E}$ has $K$\hyp{}colimits; dually, if  the $\infty$\hyp{}category $\CC$ has $K$\hyp{}limits, then the full subcategory of $\CC^{\Delta[1]}$ spanned by $\mcal{M}$ has $K$\hyp{}limits;
 \item The class $\mcal{E}$ is \smallcap{r32}, and the class $\mcal{M}$ is \smallcap{l32} (see Def. \refbf{def:3for2}).
-\end{enumerate} 
+\end{enumerate}
 \end{proposition}
 \begin{proof}
 Point (1) is \cite[Prop. \textbf{5.2.8.6}]{HTT}; point (2) is easy to prove for 1\hyp{}categories, and then the translation to the $\infty$\hyp{}categorical setting is straightforward.\footnote{This translation process being often straightforward, here and everywhere a bibliographic support is needed, we choose to rely on classical sources to prove most of the result involving $\infty$\hyp{}categorical factorization systems. This should cause no harm to the reader.}
@@ -374,7 +374,7 @@ We close this section with an useful observation, showing that in \adef \refbf{d
 Let $\fF=(\EE,\MM)$ be a pair of wide markings such that every $f\in\hom(\CC)$ has a unique factorization $f=m\circ e$ with $m\in\MM$, $e\in\EE$; then, $\fF$ is a prefactorization, \ie $\EE\perp\MM$.
 \end{remark}
 \begin{proof}
-Given a lifting problem 
+Given a lifting problem
 \[
 \begin{kD}
 \lattice[mesh]{
@@ -399,7 +399,7 @@ we can factor $u$ as $m\circ e$ and $v$ as $m' \circ e'$, so that the square bec
 Now, the factorizations $(m''\circ m, e)$ and $(m',e'\circ e'')$ must be isomorphic by the uniqueness assumption, so that there exists an isomorphism $U\cong V$
  which composed with $e', m$ gives a solution to the lifting problem.
 \end{proof}
-\section{A second glance at factorization.}\label{sec:2ndglance} 
+\section{A second glance at factorization.}\label{sec:2ndglance}
 \epigraph{\japanese{一条の矢は折るべく十条の矢は折るべからず}}{Japanese proverb}
 We add here a different presentation of $\infty$\hyp{}categorical factorization systems, faithfully following \cite[pp. 178---]{Joy}.
 \begin{definition}[Orthogonality and Fillers]\label{def:joyortho}\index{Filler|see {Orthogonality}}
@@ -444,7 +444,7 @@ We must observe, here, that it is rather difficult (\ie rather more difficult th
 
 This cannot be achieved in $\infty$\hyp{}category theory, as \cite[p. 562]{HTT} conveys the intuition that the notion of monomorphism is not as meaningful in $\infty$\hyp{}category theory as it is in 1\hyp{}category theory (compare, however, the statement that every topos has an $(\smallcap{Epi}, \smallcap{Mono})$\hyp{}factorization system with the existence of a ``Postnikov'' factorization system on each $\infty$\hyp{}topos, \cite{HTT}).
 \end{remark}
-Several construction can be performed inside the category of categories with factorization system: these are classical definitions that can be recovered in every text about factorization systems (especially those with an interest towards model categories). 
+Several construction can be performed inside the category of categories with factorization system: these are classical definitions that can be recovered in every text about factorization systems (especially those with an interest towards model categories).
 \begin{example}[Co\fshyp{}products, co\fshyp{}slices]\label{prod.of.fact}
 Let $\CC$ be an $\infty$\hyp{}category; then every co\fshyp{}slice of $\CC$ inherits a factorization system from $\fF = (\EE,\MM)\in\fs(\CC)$ obtained by putting
 \begin{gather}
@@ -464,7 +464,7 @@ A similar definition works for coproducts: the coproduct $\coprod \CC_i$ inherit
 We say that an arrow $f\colon X\to Y$ in an $\infty$\hyp{}category is \emph{monic} if the square
 \[
 \xymatrix{X \ar@{=}[r]\ar@{=}[d]& X \ar[d]^f \\ X \ar[r]_f & Y}
-\] 
+\]
 is cartesian. The class of monic arrows in $\CC$ is collected in a marking $\textsc{Mono}(\CC)=\textsc{Mono}$.
 
 The class of \emph{surjective} arrows is defined to be the class $\prescript{\perp}{}{\textsc{Mono}(\CC)}$; we say that the $\infty$\hyp{}category $\CC$ \emph{has a surjection\hyp{}mono factorization} if the prefactorization $(\prescript{\perp}{}{\textsc{Mono}(\CC)}, \textsc{Mono}(\CC))$ is also a factorization system.
@@ -505,13 +505,13 @@ and then observe that the chain $i_1\leq\cdots\leq i_{k-1}$ induces a $(k-1)$\hy
 \[
 Z_{i_k} \xto{\EE_{i_{k-1}}} Z_{i_{k-1}} \xto{\EE_{i_{k-2}}\cap \MM_{i_{k-1}}} Z_{i_{k-2}}\to\dots\to Z_{i_{2}}\xto{\EE_{i_{1}}\cap \MM_{i_{2}}} Z_{i_{1}} \xto{\MM_{i_{1}}} Y,
 \]
-and we are only left to prove that $Z_{i_{k}} \to Z_{i_{k-1}}$ is actually in $\EE_{i_{k-1}}\cap \MM_{i_{k}}$. This is an immediate consequence of the left cancellation property for the class $\MM_{i_{1}}$. Namely, since $\MM_{i_1}\subseteq \MM_{i_2} \subseteq\dots\subseteq \MM_{i_k}$, and $ \MM_{i_k}$ is closed for composition, the morphism $Z_{i_{k-1}}\to Y$ is in $\MM_{i_k}$. Then the \smallcap{l32} property applied to 
+and we are only left to prove that $Z_{i_{k}} \to Z_{i_{k-1}}$ is actually in $\EE_{i_{k-1}}\cap \MM_{i_{k}}$. This is an immediate consequence of the left cancellation property for the class $\MM_{i_{1}}$. Namely, since $\MM_{i_1}\subseteq \MM_{i_2} \subseteq\dots\subseteq \MM_{i_k}$, and $ \MM_{i_k}$ is closed for composition, the morphism $Z_{i_{k-1}}\to Y$ is in $\MM_{i_k}$. Then the \smallcap{l32} property applied to
 \[
 Z_{i_{k}}\to Z_{i_k-1}\xto{\MM_{i_k}} Y
 \]
 concludes the proof.
 \end{proof}
-\subsubsection{The transfinite case.}\label{transfinite.case}\index{Factorization system!transfinite|see {multiple}} We are now interested to refine the previous theory in order to deal with possibly infinite chains of factorization systems. From a conceptual point of view, it seems natural how to extend the former definition to an infinite ordinal $\alpha$; it must consists on a ``suitable'' functor $F\colon \alpha\to \textsc{fs}(\CC)$. 
+\subsubsection{The transfinite case.}\label{transfinite.case}\index{Factorization system!transfinite|see {multiple}} We are now interested to refine the previous theory in order to deal with possibly infinite chains of factorization systems. From a conceptual point of view, it seems natural how to extend the former definition to an infinite ordinal $\alpha$; it must consists on a ``suitable'' functor $F\colon \alpha\to \textsc{fs}(\CC)$.
 
 The problem is that suitable necessary co\fshyp{}continuity assumptions for such a $F$ might be covered by the fact that its domain is finite (and in particular admits an initial and a terminal object): in principle, dealing with infinite quantities could force such $F$ to fulfill some other properties in order to preserve the basic intuition behind factorization.
 
@@ -528,9 +528,9 @@ A factorization system on $\CC$ naturally defines a pair of pointed\fshyp{}co\hy
 \mor[swap] * {\overleftarrow{F}(f)}:-> {Ff} {\overrightarrow{F}(f)}:-> Y;
 \end{kD}
 \]
-(This has also been noticed in \cite{HTT}). 
+(This has also been noticed in \cite{HTT}).
 \index{Factorization system!--- as monads}
-A refinement of this  notion (see \cite{grandis2006natural, Gar, riehl2011algebraic}) regards this pair of functors as monad\fshyp{}comonad on $\CC^{\Delta[1]}$: in this case $F\colon \CC^{\Delta[1]}\to\CC$ is a functor and $f\mapsto \overleftarrow{F}(f)$ has the structure of a (idempotent) comonad, whose comultiplication is
+A refinement of this  notion (see \cite{grandis2006natural, riehl2011algebraic}) regards this pair of functors as monad\fshyp{}comonad on $\CC^{\Delta[1]}$: in this case $F\colon \CC^{\Delta[1]}\to\CC$ is a functor and $f\mapsto \overleftarrow{F}(f)$ has the structure of a (idempotent) comonad, whose comultiplication is
 \[
 \xymatrix@C=1.4cm{
 Ff \ar[r]^{\overleftarrow{F}(\overrightarrow{F}(f))}\ar[d]_{\overrightarrow{F}(f)} & FFf \ar[d]^{\overrightarrow{F}(\overrightarrow{F}(f))}\\

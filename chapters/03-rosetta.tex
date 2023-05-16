@@ -34,9 +34,9 @@ The strategy is simple: we first construct the pair of correspondences
 \mor ts \fF(-):dashed,r> ntt;
 \end{kD}
 \]
-We are obviously led to exploit the fundamental connection outlined in \S\refbf{fundconn}: \index{Subcategory!torsion and torsionfree ---} 
+We are obviously led to exploit the fundamental connection outlined in \S\refbf{fundconn}: \index{Subcategory!torsion and torsionfree ---}
 \begin{itemize}
-\item Given a normal, bireflective factorization system $\fF=(\EE,\MM)$ on $\CC$ we define the two classes $(\CC_{\ge 0}(\fF),\CC_{<0}(\fF))$ of the $t$\hyp{}structure $\tee(\fF)$ to be the torsion and torsion\hyp{}free classes $(0/\EE, \MM/0)$  associated to $\fF$, in the sense of Definition \refbf{tortorfree}. 
+\item Given a normal, bireflective factorization system $\fF=(\EE,\MM)$ on $\CC$ we define the two classes $(\CC_{\ge 0}(\fF),\CC_{<0}(\fF))$ of the $t$\hyp{}structure $\tee(\fF)$ to be the torsion and torsion\hyp{}free classes $(0/\EE, \MM/0)$  associated to $\fF$, in the sense of Definition \refbf{tortorfree}.
 \item On the other hand, given a $t$\hyp{}structure $\tee=(\CC_{\ge 0},\CC_{<0})$ in the sense of Definition \refbf{tistru}, we have to define classes $\fF(\tee) = (\EE(\tee), \MM(\tee))$ which form a factorization system. If $\tau_{\ge 0}, \tau_{<0}$ denote, respectively, the co\fshyp{}truncation of the $t$\hyp{}structures (Remark \refbf{trunfun}), we set:
 \begin{align}
 \EE(\tee) & =\{f\in \CC^{\Delta[1]} \mid \tau_{<0}(f) \text{equivalence an is }\};\notag \\
@@ -52,16 +52,16 @@ The pair $\tee(\fF)$ is a $t$\hyp{}structure on $\CC$ in the sense of Definition
 \begin{proof}
 The orthogonality condition is immediate by definition of the two classes (see Remark \refbf{only.zero}). As for the closure under positive\fshyp{}negative shifts, $(A\to B)\in\EE$ entails that $(A[1]\to B[1])\in\EE$ since left classes in factorization systems are closed under (homotopy) colimits in the arrow category (see Prop. \refbf{prop:clos}) and in particular under the homotopy pushout defining the shift $A\mapsto A[1]$ on $\CC$. This justifies the chain of implications
 \[
-X\in \cate C_{\ge 0}(\fF)  \iff \var{0}{X}\in\EE 
+X\in \cate C_{\ge 0}(\fF)  \iff \var{0}{X}\in\EE
  \Longrightarrow \var{0}{X[1]} \in\EE \iff X[1]\in \cate C_{\ge 0}(\fF) .
 \]
 The case of $\CC_{<0}$ is completely dual: since $\MM$ admits any limit, $\var{X}{0} \in\MM$ implies that $\var{X[-1]}{0} \in\MM$, so that $\CC_{<0}(\fF)[-1]\subset \CC_{<0}(\fF)$.
 
-To see that any object $X\in \CC$ fits into a fiber sequence 
+To see that any object $X\in \CC$ fits into a fiber sequence
 $
 X_{\geq 0}\to X \to X_{<0},
 $
-with $X_{\geq 0}$ in $\CC_{\geq 0}(\fF)$ and $X_{< 0}$ in $\CC_{< 0}(\fF)$, 
+with $X_{\geq 0}$ in $\CC_{\geq 0}(\fF)$ and $X_{< 0}$ in $\CC_{< 0}(\fF)$,
 it suffices to $\fF$\hyp{}factor the terminal morphism of $X$ obtaining a diagram like
 \[
 \xymatrix{
@@ -85,7 +85,7 @@ In order to prove, now, that the pair of markings $\fF(\tee)$ is a factorization
 
 Finally, we use the characterization outlined in Remark \refbf{rmk:how.to.fact} of the factorization functor in terms of its pair reflection\fshyp{}coreflection.
 
-Recall that by \adef \refbf{tistru}\textbf{.(iii)} 
+Recall that by \adef \refbf{tistru}\textbf{.(iii)}
 every object $X\in\CC$ fits into a distinguished triangle $X_{\ge 0} \to X\to X_{<0}\to X_{\ge 0}[1]$. This triangle in $\ho(\CC)$ is the image of a fiber sequence (denoted with the same symbols) in $\CC$ via the homotopy\hyp{}category functor, and can be lifted to such a sequence: this entails that given $f\colon X\to Y$ we can build the diagram\footnote{This construction, and the link with Remark \refbf{rmk:how.to.fact} was suggested to us by E. Wofsey in a public discussion on {\tt Mathoverflow} \cite{Wof}.}
 \[\label{good.factor}
 \begin{kD}
@@ -104,7 +104,7 @@ every object $X\in\CC$ fits into a distinguished triangle $X_{\ge 0} \to X\to X_
 \]
 where the decorated square is a pullout (so $C\cong X_{<0}\times_{Y_{<0}}Y$, a characterization reminiscent of simplicity for the would\hyp{}be factorization of $f$)\index{Factorization system!simple ---}, and hence the dotted arrows are determined by the obvious universal property. Now, mapping $f$ to the pair $(e_f,m_f)$ is a candidate factorization functor (a tedious but easy check) in the sense of \cite{Korostenski199357}.
 
-\index{Factorization system!Eilenberg\hyp{}Moore ---} 
+\index{Factorization system!Eilenberg\hyp{}Moore ---}
 Now, we have to summon a rather easy but subtle result, \cite[\athm \textbf{A}]{Korostenski199357}, which in a nutshell says that a factorization system on a category $\CC$ is determined by a functorial factorization $F$ such that the arrows $m_{e_f}$, $e_{m_f}$ are invertible (the meaning of this notation is self\hyp{}evident). Functors satisfying this property are called \emph{Eilenberg\hyp{}Moore factorization functors} in \cite{Korostenski199357}.\footnote{These are not the weakest assumptions to ensure that $\fF(F)=(\EE_F, \MM_F)\in \fs(\CC)$: see the final remark in \cite{Korostenski199357} and \cite[\textbf{1.3}]{Janelidze1999}.} More precisely, if one defines
 \begin{align}
 \EE_F &= \{h\in \CC^{\Delta[1]}\mid m_h \text{is invertible}\}\notag\\
@@ -116,7 +116,7 @@ then $(\EE_F,\MM_F)$ is a factorization system as soon as $e_f\in \EE_F$ and $m_
 Before we go on with the proof notice that by the very definition of the factorization functor $F$ in (\refbf{good.factor}) associated with a $t$\hyp{}structure above, we have that $\MM_F$ coincides with the class of arrows $f$ such that the naturality square of $f$ with respect to the ``truncation'' functor $\tau_{<0}$ of the $t$\hyp{}structure is cartesian: we denote this marking of $\CC$ as $\cart(\tau_{<0})$ adopting the same notation as \cite[\S \textbf{4}]{RT}. This is reminiscent of our characterization of simplicity via the pullbacks given in \adef \refbf{left.simple}.
 \end{remark}
 \begin{lemma}
-\label{another.pullout}The homotopy commutative sub\hyp{}diagram 
+\label{another.pullout}The homotopy commutative sub\hyp{}diagram
 \[
 \begin{kD}
 \lattice[mesh]{
@@ -146,7 +146,7 @@ Consider the diagram
 where all the squares are homotopy commutative and apply twice the 3\hyp{}for\hyp{}2 law for pullouts.
 \end{proof}
 \begin{lemma}
-Let $F:f\mapsto(e_f,m_f)$ be the factorization functor associated to a $t$\hyp{}structure by the diagram (\refbf{good.factor}). Then $\tau_{<0}(e_f)$ and $\tau_{\geq 0}(m_f)$ are equivalences. 
+Let $F:f\mapsto(e_f,m_f)$ be the factorization functor associated to a $t$\hyp{}structure by the diagram (\refbf{good.factor}). Then $\tau_{<0}(e_f)$ and $\tau_{\geq 0}(m_f)$ are equivalences.
 \end{lemma}
 \begin{proof}
 Since $\tau_{<0}\tau_{\ge 0}=0$, by applying $\tau_{<0}$ to the pullout diagram in $\CC$ given by lemma \refbf{another.pullout}, we get the pushout diagram
@@ -166,7 +166,7 @@ It is now rather obvious that a proof of the equations
 \[
 \EE_F = \tau_{<0}^{-1}(\iso); \qquad \MM_F = \tau_{\geq 0}^{-1}(\iso)
 \]
-will imply that $F$ is an Eilenberg\hyp{}Moore factorization functor. 
+will imply that $F$ is an Eilenberg\hyp{}Moore factorization functor.
 Once this is proved, it is obvious that the preimage of a 3\hyp{}for\hyp{}2 class along a functor is again a 3\hyp{}for\hyp{}2 class in $\CC$, and this entails that both classes in $\fF(\tee)$ are 3\hyp{}for\hyp{}2. We are now ready to prove
 \begin{proposition}
 The pair of markings $\fF(\tee)$ is a factorization system on the quasicategory $\CC$, in the sense of Definition \refbf{def:effe.esse}.
@@ -184,11 +184,11 @@ the arrow $f$ lies in $\EE_F$ if and only if it is inverted by $\tau_{<0}$; this
 \pullout{A}{D};
 \end{kD}
 \]
-is a pullout since $\tau_{\geq_0}$ preserves 
+is a pullout since $\tau_{\geq_0}$ preserves
 pullouts, and yet $\tau_{\ge 0}\tau_<0(f)$ is the identity of the zero object. So $\tau_{\ge 0}(f)$ must be an equivalence. On the other hand, the stable $\infty$\hyp{}categorical analogue of the triangulated five lemma (see \cite[Prop. \textbf{1.1.20}]{Nee}), applied to the diagram (\refbf{good.factor}) shows that if $\tau_{\ge 0}(f)$ is an equivalence then $e_f$ is an equivalence and so $C\cong X$, \ie, $f\in \cart(\tau_{<0})$.
 \end{proof}
 \begin{remark}
-As a side remark, we notice that a completely dual proof would have arisen using $D=Y_{\geq 0}\amalg_{X_{\ge 0}}X$ (see Lemma \refbf{another.pullout}) and then showing first that $\fF(\tee)$ is the factorization system $(\cocart(\tau_{\ge 0}), \tau_{\ge 0}^{-1}(\iso))$ and that $\cocart(\tau_{\ge 0})=\tau_{<0}^{-1}(\iso)$. 
+As a side remark, we notice that a completely dual proof would have arisen using $D=Y_{\geq 0}\amalg_{X_{\ge 0}}X$ (see Lemma \refbf{another.pullout}) and then showing first that $\fF(\tee)$ is the factorization system $(\cocart(\tau_{\ge 0}), \tau_{\ge 0}^{-1}(\iso))$ and that $\cocart(\tau_{\ge 0})=\tau_{<0}^{-1}(\iso)$.
 
 This is in line with remark \refbf{rmk:how.to.fact}.
 \end{remark}
@@ -201,7 +201,7 @@ In the notations above, we have $\fF(\tee(\fF))=\fF$ and $\tee(\fF(\tee))=\tee$.
 On the one side, consider the factorization system
 \[
 \fF(\tee(\fF)) =(\tau_{<0}^{-1}(\iso), \tau_{\ge 0}^{-1}(\iso)),
-\] 
+\]
 where the functor $\tau_{<0}$ is the reflection $R$ obtained from the $\fF$\hyp{}factorization of each $X\to 0$, as in the fundamental connection of \S\refbf{fundconn}: $X\xto{e}X_{<0}\xto{m}0$. Recall (Remark \refbf{funtoriali}) that the action of $\tau_{<0}\colon \CC\to \MM/0$ on arrows is obtained from a choice of solutions to lifting problems
 \[
 \begin{kD}
@@ -248,7 +248,7 @@ The above example survives to the category of chain complexes of abelian groups,
 Let $p \in \Z$ be a prime, and let $A\in\ch(\Z)$ be a chain complex of abelian groups. We say that $A$ is \emph{$p$\hyp{}acyclic} if (i) $A$ is projective and (ii) the tensor product $A \otimes_\Z \Z /p\Z$ is nullhomotopic; the class of $p$\hyp{}acyclic complexes is denoted $p\cate{-Ac}$. We call \emph{$p$\hyp{}local} complexes the elements of $(p\cate{-Ac})^\perp$.
 
 The pair $\big(p\cate{-Ac}, (p\cate{-Ac})^\perp\big)$ induces a $t$\hyp{}structure on the category of chain complexes; the reflection with respect to this $t$\hyp{}structure is called $p$\hyp{}\emph{localization}, and it is defined by
-\[\textstyle 
+\[\textstyle
 A\mapsto \widehat{A}:= \varprojlim_n \big(A\otimes \Z/p^n\Z\big)
 \]
 Since it is a homotopy limit of $p$\hyp{}local chain complexes, we conclude that $\widehat{A}$ is again $p$\hyp{}local.
@@ -348,7 +348,7 @@ A major achievement of our Rosetta stone \refbf{thm:rosetta} is, hence, the poss
 
 The scope of the present section is to pave the way to speculations in this respect, and will hopefully be a starting point for future investigations. We start recalling the various flavours of factorization systems we have to deal with, in studying (stable) $(\infty,1)$\hyp{}categories.
 \subsection{Enriched factorization systems.}
-Intuitively, an \emph{enriched} factorization system in an enriched category $\CC\in \mathcal{V}\text{-}\cate{Cat}$ consists, according to \cite{Day1974,Lucyshyn-Wright} of a pair $\fF=(\EE,\MM)$ of classes of morphisms in $\CC$ such that $\EE = {}^{\perp}\MM$, and $\MM = \EE^\perp$, where the orthogonality relation is defined in $\mathcal{V}\text{-}\cate{Cat}$ by an enriched analogue of Remark \refbf{ortho.is.pull}, and such that every arrow in $\CC$ is $\fF$\hyp{}crumbled in the obvious sense. More explicitly, if $\mathcal{V}$ is an enriched symmetric monoidal category with finite limits, then $f\perp g$ in $\mathcal{V}\text{-}\cate{Cat}$ if and only if the square in (\refbf{ortho.via.pull}) is a pullback in $\mathcal{V}$:
+Intuitively, an \emph{enriched} factorization system in an enriched category $\CC\in \mathcal{V}\text{-}\cate{Cat}$ consists, according to \cite{Lucyshyn-Wright} of a pair $\fF=(\EE,\MM)$ of classes of morphisms in $\CC$ such that $\EE = {}^{\perp}\MM$, and $\MM = \EE^\perp$, where the orthogonality relation is defined in $\mathcal{V}\text{-}\cate{Cat}$ by an enriched analogue of Remark \refbf{ortho.is.pull}, and such that every arrow in $\CC$ is $\fF$\hyp{}crumbled in the obvious sense. More explicitly, if $\mathcal{V}$ is an enriched symmetric monoidal category with finite limits, then $f\perp g$ in $\mathcal{V}\text{-}\cate{Cat}$ if and only if the square in (\refbf{ortho.via.pull}) is a pullback in $\mathcal{V}$:
 \[
 \begin{kD}
 \lattice[mesh={4em}{8em}]{
@@ -373,7 +373,7 @@ In particular, for each $\CC \in \cate{sSet}\text{-}\Cat$ we define:
 (These definitions work well only when $\CC$ is Bergner\hyp{}cofibrant \cite{Be1})
 \end{remark}
 
-Mild assumptions on $\CC$ (see \cite{Riehl2014}) ensure that enriched factorization systems on $\CC$ and 1\hyp{}dimensional factorization systems on $|\CC|$ (the $\cate{Set}$\hyp{}category naturally associated to $\CC$) are in bijection. This paves the way to the following definition of $t$\hyp{}structure in a \smallcap{dg}\hyp{}category:
+Mild assumptions on $\CC$ ensure that enriched factorization systems on $\CC$ and 1\hyp{}dimensional factorization systems on $|\CC|$ (the $\cate{Set}$\hyp{}category naturally associated to $\CC$) are in bijection. This paves the way to the following definition of $t$\hyp{}structure in a \smallcap{dg}\hyp{}category:
 \begin{definition}
 A $t$\hyp{}structure on a \dg\hyp{}category $\A$ is an enriched factorization system $(\EE,\MM)$ such that
 \begin{enumerate}
@@ -383,7 +383,7 @@ A $t$\hyp{}structure on a \dg\hyp{}category $\A$ is an enriched factorization sy
 \begin{kD}
 \lattice[mesh]{
 \obj SX; & \obj X; \\
-\obj 0; & \obj RX; \\	
+\obj 0; & \obj RX; \\
 };
 \mor SX -> X -> RX <- 0 <- SX;
 \pullout{SX}{RX};
@@ -391,7 +391,7 @@ A $t$\hyp{}structure on a \dg\hyp{}category $\A$ is an enriched factorization sy
 \]
 \end{enumerate}
 \end{definition}
-\subsection{Homotopy factorization systems.} 
+\subsection{Homotopy factorization systems.}
 Model categories $\cate M$ possess a notion of ``homotopy'' factorization system, which induces a 1\hyp{}dimensional factorization system on the homotopy category $\mathsf{Ho}(\cate{M})$; the following definition is taken from \cite[\adef \textbf{F.1.3}]{Joy}:
 \begin{definition}\label{ho.fs}\index{Factorization system!homotopy ---}
 Let $\cate{M}$ be a model category with model structure $(\mcal{Cof},\mcal{Wk}, \mcal{Fib})$. A pair $(\EE,\MM)$ of classes of maps in $\cate{M}$ is a \emph{homotopy factorisation system} if
@@ -409,7 +409,7 @@ change.
 \end{proposition}
 This paves the way to the following definition of a $t$\hyp{}structure in a stable model category:
 \begin{definition}
-Let $\cate{M}$ be a stable model category; a \emph{homotopy normal torsion theory} on $\cate{M}$ is a homotopy factorization system $(\EE,\MM)$ on $\cate{M}$ such that 
+Let $\cate{M}$ be a stable model category; a \emph{homotopy normal torsion theory} on $\cate{M}$ is a homotopy factorization system $(\EE,\MM)$ on $\cate{M}$ such that
 \begin{enumerate}
 \item both $\EE,\MM$ are 3\hyp{}for\hyp{}2 classes;
 \item the subcategories $0/\EE$, $\MM/0$ (defined in the same fashion as (\refbf{tor.and.torfre})) are respectively coreflective and reflective, and the co\fshyp{}reflection fit into the homotopy\hyp{}pullback\hyp{}and\hyp{}pushout diagram

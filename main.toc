@@ -1,0 +1,69 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Introduction}{i}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Factorization Systems}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Overview of factorization systems.}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Markings and prefactorizations.}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Factorization systems.}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Weak factorization systems.}{8}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Closure properties.}{9}{section.1.4}%
+\contentsline {section}{\numberline {1.5}A second glance at factorization.}{12}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}A factor-y of examples.}{13}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Chains of factorization systems.}{15}{subsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.2.1}The transfinite case.}{16}{subsubsection.1.5.2.1}%
+\contentsline {chapter}{\numberline {2}Reflectivity and Normality}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The fundamental connection.}{21}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Semiexactness and simplicity.}{22}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Normal torsion theories.}{24}{section.2.3}%
+\contentsline {chapter}{\numberline {3}The ``Rosetta stone''}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}$t$-structures are factorization systems.}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Examples.}{39}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Rosetta stone is model independent}{42}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Enriched factorization systems.}{43}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Homotopy factorization systems.}{44}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Hearts and towers}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Posets with $\mathbb {Z}$\hyp {}actions.}{46}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}$J$\hyp {}families of $t$\hyp {}structures.}{49}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Towers of morphisms.}{53}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Hearts of $t$\hyp {}structures.}{58}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Abelianity of the heart.}{60}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Abelian subcategories as hearts.}{65}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Semiorthogonal decompositions.}{68}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Recollements}{73}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction.}{73}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Classical Recollements.}{74}{section.5.2}%
+\contentsline {paragraph}{A geometric example.}{76}{section*.11}%
+\contentsline {paragraph}{An algebraic example.}{76}{section*.12}%
+\contentsline {paragraph}{A homotopical example.}{77}{section*.13}%
+\contentsline {subsection}{\numberline {5.2.1}The classical gluing of $t$\hyp {}structures.}{80}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Stable Recollements.}{84}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}The Jacob's ladder: building co\fshyp {}reflections.}{84}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}The {\sc ntt} of a recollement.}{87}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Properties of recollements.}{91}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Geometric associativity of the gluing.}{91}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Abstract associativity of the gluing.}{96}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Gluing $J$\hyp {}families.}{97}{subsection.5.4.3}%
+\contentsline {chapter}{\numberline {6}Operations on $t$\hyp {}structures}{101}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Basic constructions.}{102}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The poset of $t$\hyp {}structures.}{103}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Tensor product of $t$\hyp {}structures.}{104}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Tilting of $t$\hyp {}structures.}{106}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Algebras for a monad}{110}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Stability Conditions}{113}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{113}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Slicings}{115}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}A topology on slicings}{119}{subsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.1.1}A metric on $\text {\japanese {切}}_\mathbb {R}(\mathbf {C})$}{119}{subsubsection.7.2.1.1}%
+\contentsline {section}{\numberline {7.3}Stability conditions}{122}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Hearts and endocardia}{123}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Deformation of stability conditions}{126}{section.7.5}%
+\contentsline {chapter}{\numberline {A}Stable $\infty $\hyp {}categories}{139}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Triangulated higher categories.}{139}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Building stable categories.}{144}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Stable $\infty $\hyp {}categories.}{145}{subsection.A.2.1}%
+\contentsline {section}{\numberline {A.3}$t$\hyp {}structures.}{151}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Spanier\hyp {}Whitehead stabilization.}{154}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Construction via monads.}{154}{subsection.A.4.1}%
+\contentsline {section}{\numberline {A.5}Stability in different models.}{156}{section.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}Stable Model categories.}{156}{subsection.A.5.1}%
+\contentsline {subsubsection}{\numberline {A.5.1.1}$k$\hyp {}linear \textsc {dg}\hyp {}categories.}{156}{subsubsection.A.5.1.1}%
+\contentsline {subsubsection}{\numberline {A.5.1.2}Stable $\infty $\hyp {}categories.}{157}{subsubsection.A.5.1.2}%

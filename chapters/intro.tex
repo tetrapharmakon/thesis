@@ -1,22 +1,22 @@
 \chapter{Introduction}
 \thispagestyle{empty}
-The present work re\hyp{}enacts the classical theory of \emph{$t$\hyp{}structures} reducing the classical definition given in \cite{BBDPervers,Kashiwara} to a rather primitive categorical gadget: suitable \emph{reflective factorization systems} (\adef \refbf{tortorfree}, \refbf{normal}), which we call \emph{normal torsion theories} following \cite{CHK,RT}. A  relation between these two objects has previously been noticed by other authors \cite{RT,HPS,Beligiannisreiten} on the level of homotopy categories. The main achievement of the present thesis is to observe and prove that this relation exists genuinely when the definition is lifted to the higher\hyp{}dimensional world where the notion of triangulated category comes from, \ie \emph{stable $(\infty,1)$\hyp{}categories}. 
+The present work re\hyp{}enacts the classical theory of \emph{$t$\hyp{}structures} reducing the classical definition given in \cite{BBDPervers,Kashiwara} to a rather primitive categorical gadget: suitable \emph{reflective factorization systems} (\adef \refbf{tortorfree}, \refbf{normal}), which we call \emph{normal torsion theories} following \cite{CHK,RT}. A  relation between these two objects has previously been noticed by other authors \cite{RT,HPS,Beligiannisreiten} on the level of homotopy categories. The main achievement of the present thesis is to observe and prove that this relation exists genuinely when the definition is lifted to the higher\hyp{}dimensional world where the notion of triangulated category comes from, \ie \emph{stable $(\infty,1)$\hyp{}categories}.
 
 Stable $(\infty,1)$\hyp{}categories provide a far more natural setting to interpret the language of homological algebra: the main conceptual aim of the present work is to give explicit examples of this meta\hyp{}principle.
 
 To achieve this result, it seemed unavoidable to adopt a preferential model for $(\infty,1)$\hyp{}category theory: instead of working in a `model\hyp{}free' setting, we choose the ubiquitous dialect of Lurie's \emph{stable quasicategories}; discussing to which extent (if any) the results we prove are affected by this choice, and establishing a meaningful dictionary between the validity of the general statement \refbf{thm:rosetta} in various different flavours on $\infty$\hyp{}category theory occupies sections \refbf{model.stable} and \refbf{model.dep}; despite the fact that this is one of the most important issues from a categorical point of view, a rapid convergence of the present thesis into its final form has to be ensured; hence, we will defer a torough examination of the topic of model (in)dependence to subsequent works.
 
-The first part of the thesis (\achap \refbf{chap:effe.esse}--\refbf{chap:tstruct}) builds (or rather, `reinterprets') the calculus of factorization in the setting of $\infty$\hyp{}categories. The desire to link this calculus with homological algebra and higher algebra deserves further explanation. 
+The first part of the thesis (\achap \refbf{chap:effe.esse}--\refbf{chap:tstruct}) builds (or rather, `reinterprets') the calculus of factorization in the setting of $\infty$\hyp{}categories. The desire to link this calculus with homological algebra and higher algebra deserves further explanation.
 
-The language of factorization systems proved to be ubiquitous inside and outside category theory (among various different applications now established in the mathematical practice, the `modern view' in algebraic topology revolves around the notion of orthogonality and lifting\fshyp{}extension problem, as it is said in the first pages of \cite{whitehead61elements}. The modern `synthetic' approach to homotopy theory inescapably relies on the notion of a (weak) factorization system (\cite{Qui,Dwyer1995,riehl2011algebraic}).
+The language of factorization systems proved to be ubiquitous inside and outside category theory --among various different applications now established in the mathematical practice, the `modern view' in algebraic topology revolves around the notion of orthogonality and lifting\fshyp{}extension problem, as it is said in the first pages of \cite{Whitehead1978}. The modern `synthetic' approach to homotopy theory inescapably relies on the notion of a (weak) factorization system (\cite{Qui,Dwyer1995,riehl2011algebraic}).
 
 In light of this, finding `concrete' means of application for the calculus of factorization should be a natural step towards a popularization of this pervasive and deep language. And among all the various fields of application, homological algebra, a notable kind of `abelian' homotopy theory, should be the most natural test bench to measure the validity of this effort. Despite the intrinsic simplicity, almost a triviality, of \athm \refbf{thm:rosetta}, and despite the fact that the author feels he had failed at such an ambitious task, the pages you're about to read should be interpreted in this spirit.
 \section*{Structure of the thesis}
-The thesis is the results of a re\hyp{}organization and methodical arrangement of the papers \cite{FL0,heart,recol,infty-stab} (all written having my advisor as co\hyp{}author) that have appeared on the {\tt arXiv} since August 2014; the content is essentially unchanged; some sections and subsections (like \eg \refbf{sec:2ndglance}, \refbf{transfinite.case}, \refbf{sec:examples}, a renewed proof of \refbf{to.be.repeated.verbatim}, and \achap \refbf{chap:operat}) do not appear anywhere at the moment of writing\footnote{\today}, but contain little new material and serve as linking sections making the discussion more complete and streamlined, developing certain natural derivations of the basic theory which would have easily exceeded the average length of a research paper. 
+The thesis is the results of a re\hyp{}organization and methodical arrangement of the papers \cite{FL0,heart,recol,infty-stab} (all written having my advisor as co\hyp{}author) that have appeared on the {\tt arXiv} since August 2014; the content is essentially unchanged; some sections and subsections (like \eg \refbf{sec:2ndglance}, \refbf{transfinite.case}, \refbf{sec:examples}, a renewed proof of \refbf{to.be.repeated.verbatim}, and \achap \refbf{chap:operat}) do not appear anywhere at the moment of writing\footnote{\today}, but contain little new material and serve as linking sections making the discussion more complete and streamlined, developing certain natural derivations of the basic theory which would have easily exceeded the average length of a research paper.
 
 Figure (\refbf{dependen}) below depicts the dependencies among the various chapters: a dashed line indicates a feeble logical dependence, whereas a thick line indicates a stronger one, unavoidable at first reading.
 
-The first three chapters outline the main result of the present work, summarized as follows: 
+The first three chapters outline the main result of the present work, summarized as follows:
 \begin{quote}
 For each stable $\infty$\hyp{}category $\CC$ there is a bijective correspondence between $t$\hyp{}structures on the triangulated homotopy category $\ho(\CC)$ and suitable orthogonal factorization systems on $\CC$ called \emph{normal torsion theories}.
 \end{quote}
@@ -29,8 +29,8 @@ There are several minor results following from the `Rosetta stone', like the fac
 Ideally speaking, if there is an equivalence between two models for $\infty$\hyp{}categories (say, \emph{red} and \emph{blue} $\infty$\hyp{}categories), these two models both possess a notion of factorization systems and a calculus\footnote{By a `calculus' of factorization systems we na\"ively mean an analogue of the major results expressed in \achap \refbf{chap:effe.esse}, translated from the red to the blue model.} thereof; moreover, these two notions of factorization system correspond to each other under the equivalence of models. Turning this principle of equivalence and correspondence into a genuine theorem is often a subtle matter (apart from being inherently difficult and a delicate issue, this is perhaps due to the fact that the author is ignorant of how to retrieve such a result in the existing literature): it is however possible to recognize at least three different settings having each its own `calculus of factorization':
 \begin{itemize}
 \item stable model categories, where one can speak about \emph{homotopy factorization systems} following \cite{bousfield1977constructions,Joy}; this leads to the definition of a \emph{homotopy $t$\hyp{}structures} on stable model categories as suitable analogues of normal torsion theories in the set $\smallcap{hfs}(\cate{M})$ of homotopy factorization systems on a model category $\cate{M}$.
-\item \dg\hyp{}categories, where we speak about enriched (over $\textsf{Ch}(\mathbf{k})$) factorization systems (see \cite{Day1974}); this leads to the definition of \emph{\smallcap{dg}\hyp{}$t$\hyp{}structures} as enriched analogues of normal torsion theories in the set of $\smallcap{dg-fs}(\D)$ of enriched factorization systems on a \dg\hyp{}category $\D$.
-\item derivators, where we can define \emph{$t$\hyp{}derivators} via a (genuinely new) notion of factorization system on a derivator, and recognize the analogue of normal torsion theory in this setting. 
+\item \dg\hyp{}categories, where we speak about enriched (over $\textsf{Ch}(\mathbf{k})$) factorization systems; this leads to the definition of \emph{\smallcap{dg}\hyp{}$t$\hyp{}structures} as enriched analogues of normal torsion theories in the set of $\smallcap{dg-fs}(\D)$ of enriched factorization systems on a \dg\hyp{}category $\D$.
+\item derivators, where we can define \emph{$t$\hyp{}derivators} via a (genuinely new) notion of factorization system on a derivator, and recognize the analogue of normal torsion theory in this setting.
 \end{itemize}
 At the moment of writing, all these points are being studied, and will hopefully appear as separate results in the near future.
 \subsection*{A word on the state of the art}
@@ -60,17 +60,17 @@ Since an example is worth a thousand words, here is the code producing diagram (
 \begin{center}
 \begin{tikzpicture}
 \lattice[mesh]{
-	\obj  (Xge):X_{\ge 0}; & \obj X; & \obj  (Xle):X_{<0}; 
+	\obj  (Xge):X_{\ge 0}; & \obj X; & \obj  (Xle):X_{<0};
 			& \obj  (Xge+):X_{\ge 0}[1]; \\
-	\obj  (Yge):Y_{\ge 0}; & \obj C; & \obj (Xle'):X_{<0}; 
+	\obj  (Yge):Y_{\ge 0}; & \obj C; & \obj (Xle'):X_{<0};
 			& \obj  (Yge+):Y_{\ge 0}[1]; \\
-	\obj (Yge'):Y_{\ge 0}; & \obj Y; & \obj  (Yle):Y_{<0}; 
+	\obj (Yge'):Y_{\ge 0}; & \obj Y; & \obj  (Yle):Y_{<0};
 			& \obj (Yge+'):X_{\ge 0}[1]; \\
 };
-\mor Xge -> X -> Xle -> Xge+ 
+\mor Xge -> X -> Xle -> Xge+
 		{\tau_{\ge 0}(f)[1]}:-> Yge+ 2- Yge+';
-\mor Xge swap:{\tau_{\ge 0}(f)}:-> Yge 
-		dashed,-> C {crossing over},-> Xle' 
+\mor Xge swap:{\tau_{\ge 0}(f)}:-> Yge
+		dashed,-> C {crossing over},-> Xle'
 		{\tau_{<0}(f)}:-> Yle -> Yge+';
 \mor Yge 2- Yge' -> Y -> Yle;
 \mor Xle 2- Xle' -> Yge+;
@@ -81,16 +81,16 @@ Since an example is worth a thousand words, here is the code producing diagram (
 \begin{lstlisting}
 \begin{kD}
 \lattice[mesh]{
-	\obj  (Xge):X_{\ge 0}; & \obj X; & \obj  (Xle):X_{<0}; 
+	\obj  (Xge):X_{\ge 0}; & \obj X; & \obj  (Xle):X_{<0};
 			& \obj  (Xge+):X_{\ge 0}[1]; \\
-	\obj  (Yge):Y_{\ge 0}; & \obj C; & \obj (Xle'):X_{<0}; 
+	\obj  (Yge):Y_{\ge 0}; & \obj C; & \obj (Xle'):X_{<0};
 			& \obj  (Yge+):Y_{\ge 0}[1]; \\
-	\obj (Yge'):Y_{\ge 0}; & \obj Y; & \obj  (Yle):Y_{<0}; 
+	\obj (Yge'):Y_{\ge 0}; & \obj Y; & \obj  (Yle):Y_{<0};
 			& \obj (Yge+'):X_{\ge 0}[1]; \\};
-\mor Xge -> X -> Xle -> Xge+ 
+\mor Xge -> X -> Xle -> Xge+
 		{\tau_{\ge 0}(f)[1]}:-> Yge+ 2- Yge+';
-\mor Xge swap:{\tau_{\ge 0}(f)}:-> Yge 
-		dashed,-> C {crossing over},-> Xle' 
+\mor Xge swap:{\tau_{\ge 0}(f)}:-> Yge
+		dashed,-> C {crossing over},-> Xle'
 		{\tau_{<0}(f)}:-> Yle -> Yge+';
 \mor Yge 2- Yge' -> Y -> Yle; \mor Xle 2- Xle' -> Yge+;
 \mor[swap] X e_f:dashed,-> C m_f:dashed,-> Y;
